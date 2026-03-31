@@ -1,0 +1,22 @@
+[
+  {"term":"Humanitarian Law","definition":"Rules about how wars should be fought.","example":"Like rules in a game to stop players from hurting each other."},
+  {"term":"War Crime","definition":"Breaking the rules of war.","example":"Like cheating badly in a game."},
+  {"term":"International Court","definition":"A place where countries solve legal disputes.","example":"Like a school principal solving big arguments."},
+  {"term":"Jurisdiction","definition":"The power of a court to make decisions.","example":"Like a teacher having authority over their class."},
+  {"term":"Extradition","definition":"Sending a criminal back to the country where they committed a crime.","example":"Like returning a borrowed toy to its owner."},
+  {"term":"Asylum","definition":"Protection given to someone fleeing danger.","example":"Like letting a scared friend stay at your house."},
+  {"term":"Refugee Law","definition":"Rules protecting people forced to leave their homes.","example":"Like helping someone who lost their home in a storm."},
+  {"term":"Maritime Law","definition":"Rules about the oceans and ships.","example":"Like traffic rules but for boats."},
+  {"term":"Territorial Waters","definition":"Sea areas that belong to a country.","example":"Like the yard around your house."},
+  {"term":"International Crime","definition":"Very serious crimes affecting many countries.","example":"Like breaking the rules of the whole school."},
+  {"term":"Legal Treaty","definition":"A law agreement between countries.","example":"Like a contract signed by both teams."},
+  {"term":"Diplomatic Law","definition":"Rules protecting diplomats.","example":"Like giving referees special protection in games."},
+  {"term":"Genocide Law","definition":"Rules preventing destruction of groups of people.","example":"Like strict rules protecting everyone from bullying."},
+  {"term":"Human Rights Law","definition":"Laws protecting people’s basic freedoms.","example":"Like school rules ensuring everyone is treated fairly."},
+  {"term":"International Arbitration","definition":"A neutral group solving disputes.","example":"Like a referee deciding who is right."},
+  {"term":"Sovereign Equality","definition":"All countries are legally equal.","example":"Like every student having the same rights."},
+  {"term":"Law of Treaties","definition":"Rules about how treaties are made and followed.","example":"Like rules for signing class agreements."},
+  {"term":"Customary International Law","definition":"Rules countries follow because everyone always has.","example":"Like traditions everyone respects."},
+  {"term":"Environmental Law","definition":"Rules protecting nature worldwide.","example":"Like rules about not littering."},
+  {"term":"Universal Jurisdiction","definition":"Some crimes can be judged anywhere.","example":"Like serious cheating punished by any teacher."}
+]

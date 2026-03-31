@@ -1,0 +1,23 @@
+[
+  {"term":"Energy Resource","definition":"A source of power like oil or gas.","example":"Like batteries powering a toy."},
+  {"term":"Oil Supply","definition":"The amount of oil available.","example":"Like how many batteries you have."},
+  {"term":"Energy Security","definition":"Having reliable energy supplies.","example":"Like making sure your phone stays charged."},
+  {"term":"Renewable Energy","definition":"Energy that never runs out.","example":"Like sunlight powering solar panels."},
+  {"term":"Fossil Fuels","definition":"Energy from coal, oil, and gas.","example":"Like old stored energy in the earth."},
+  {"term":"Energy Exporter","definition":"A country selling energy resources.","example":"Like a student selling extra batteries."},
+  {"term":"Energy Importer","definition":"A country buying energy resources.","example":"Like a student buying batteries."},
+  {"term":"Energy Policy","definition":"Government rules about energy use.","example":"Like school rules about electricity."},
+  {"term":"Energy Crisis","definition":"A big shortage of energy.","example":"Like running out of batteries during a game."},
+  {"term":"Pipeline","definition":"Pipes transporting oil or gas.","example":"Like tubes carrying water."},
+  {"term":"Energy Market","definition":"Where energy is bought and sold.","example":"Like a store selling batteries."},
+  {"term":"Energy Alliance","definition":"Countries cooperating on energy.","example":"Like students sharing chargers."},
+  {"term":"Strategic Reserves","definition":"Extra energy saved for emergencies.","example":"Like spare batteries kept for later."},
+  {"term":"Energy Infrastructure","definition":"Systems that produce and deliver energy.","example":"Like power lines bringing electricity."},
+  {"term":"Electric Grid","definition":"A network distributing electricity.","example":"Like wires connecting classrooms."},
+  {"term":"Energy Transition","definition":"Switching to cleaner energy.","example":"Like replacing old batteries with rechargeable ones."},
+  {"term":"Energy Independence","definition":"Producing your own energy.","example":"Like charging your own device instead of borrowing."},
+  {"term":"Fuel Price","definition":"Cost of energy resources.","example":"Like paying for batteries."},
+  {"term":"Energy Investment","definition":"Spending money to improve energy systems.","example":"Like buying better chargers."},
+  {"term":"Power Plant","definition":"A place producing electricity.","example":"Like a big battery generator."},
+  {"term":"Energy Diplomacy","definition":"Using energy to influence international relations.","example":"Like trading batteries for favors."}
+]

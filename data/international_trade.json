@@ -1,0 +1,23 @@
+[
+  {"term":"Trade","definition":"Buying and selling goods between countries.","example":"Like students exchanging snacks."},
+  {"term":"Export","definition":"Selling goods to another country.","example":"Like giving your snack to a friend in another class."},
+  {"term":"Import","definition":"Buying goods from another country.","example":"Like receiving snacks from another class."},
+  {"term":"Tariff","definition":"A tax on imported goods.","example":"Like paying a fee to bring snacks into class."},
+  {"term":"Trade Agreement","definition":"A deal between countries about trading.","example":"Like two classes agreeing to share supplies."},
+  {"term":"Free Trade","definition":"Trade without many restrictions.","example":"Like students freely sharing materials."},
+  {"term":"Trade Barrier","definition":"Anything making trade harder.","example":"Like rules stopping snack sharing."},
+  {"term":"Trade Route","definition":"Path goods travel between places.","example":"Like the hallway used to move between classrooms."},
+  {"term":"Trade Partner","definition":"A country you trade with often.","example":"Like a friend you exchange snacks with."},
+  {"term":"Customs","definition":"Officials checking goods entering a country.","example":"Like teachers checking students' bags."},
+  {"term":"Global Market","definition":"The worldwide buying and selling system.","example":"Like a huge school marketplace."},
+  {"term":"Supply","definition":"The amount of goods available.","example":"Like how many snacks are in class."},
+  {"term":"Demand","definition":"How much people want something.","example":"Like everyone wanting the same candy."},
+  {"term":"Trade Balance","definition":"Difference between exports and imports.","example":"Like giving more snacks than you receive."},
+  {"term":"Trade Negotiation","definition":"Countries discussing trade deals.","example":"Like students bargaining snack exchanges."},
+  {"term":"Trade Policy","definition":"Government rules about trade.","example":"Like classroom rules about sharing."},
+  {"term":"Economic Exchange","definition":"Trading goods or services.","example":"Like swapping books."},
+  {"term":"Trade Sanction","definition":"Stopping trade to punish a country.","example":"Like refusing to share snacks with someone."},
+  {"term":"Market Competition","definition":"Businesses competing to sell goods.","example":"Like students competing in a bake sale."},
+  {"term":"Global Commerce","definition":"Business activities across countries.","example":"Like selling items in a school fair."},
+  {"term":"Merchant","definition":"A person who buys and sells goods.","example":"Like a student running a snack stand."}
+]

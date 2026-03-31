@@ -1,0 +1,22 @@
+[
+  {"term":"Climate Change","definition":"The planet is getting hotter and weather changes.","example":"Like a garden drying up in summer."},
+  {"term":"Global Warming","definition":"Earth's temperature rising.","example":"Like a classroom getting too hot in summer."},
+  {"term":"Pollution","definition":"Making air, water, or soil dirty.","example":"Like spilling paint in the playground."},
+  {"term":"Recycling","definition":"Turning old things into new things.","example":"Like making paper crafts from used sheets."},
+  {"term":"Sustainability","definition":"Using resources wisely so they last.","example":"Like not eating all snacks at once."},
+  {"term":"Deforestation","definition":"Cutting down too many trees.","example":"Like removing all trees from a playground."},
+  {"term":"Conservation","definition":"Protecting nature.","example":"Like taking care of school plants."},
+  {"term":"Renewable Energy","definition":"Energy that doesn't run out, like sun or wind.","example":"Like using sunlight to power a small toy."},
+  {"term":"Non-renewable Energy","definition":"Energy that can run out, like coal or oil.","example":"Like eating all cookies at once."},
+  {"term":"Carbon Footprint","definition":"The impact of humans on the environment.","example":"Like leaving trash everywhere."},
+  {"term":"Biodiversity","definition":"Variety of plants and animals.","example":"Like having many kinds of toys in a box."},
+  {"term":"Endangered Species","definition":"Animals that may disappear soon.","example":"Like rare toys that only a few kids have."},
+  {"term":"Ecosystem","definition":"All living things in one area.","example":"Like all classmates in one classroom."},
+  {"term":"Ozone Layer","definition":"Layer protecting Earth from the sun.","example":"Like a roof that keeps you from rain."},
+  {"term":"Greenhouse Gas","definition":"Gases that trap heat on Earth.","example":"Like a blanket making you too warm."},
+  {"term":"Water Conservation","definition":"Saving water.","example":"Like not wasting water when washing hands."},
+  {"term":"Air Quality","definition":"How clean the air is.","example":"Like having fresh air to breathe in school."},
+  {"term":"Waste Management","definition":"Properly handling trash.","example":"Like putting garbage in bins."},
+  {"term":"Eco-friendly Products","definition":"Things that don't hurt nature.","example":"Like using paper instead of plastic."},
+  {"term":"Climate Action","definition":"Steps to stop climate change.","example":"Like planting trees to make the playground cooler."}
+]

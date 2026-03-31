@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Climate Diplomacy and Global Cooperation",
+    "description": "Explore how nations collaborate through international agreements to address the global climate crisis.",
+    "category": "environment",
+    "slug": "climate-diplomacy"
+  },
+  {
+    "id": 2,
+    "title": "Nuclear Non-Proliferation and Global Security",
+    "description": "Understanding international cooperation in preventing the spread of nuclear weapons.",
+    "category": "global_security",
+    "slug": "nuclear-nonproliferation"
+  },
+  {
+    "id": 3,
+    "title": "Cyber Warfare and International Security",
+    "description": "Examine digital threats and international responses to cyber attacks.",
+    "category": "global_security",
+    "slug": "cyber-security"
+  },
+  {
+    "id": 4,
+    "title": "The Global Refugee Crisis",
+    "description": "Critically analyze legal frameworks and policies governing global migration and displacement.",
+    "category": "migration_refugee_studies",
+    "slug": "refugee-crisis"
+  },
+  {
+    "id": 5,
+    "title": "Trade Wars and Global Economic Tensions",
+    "description": "Explore how international trade disputes affect economies and political relationships.",
+    "category": "international_trade",
+    "slug": "trade-wars"
+  },
+  {
+    "id": 6,
+    "title": "Global Food Security",
+    "description": "Understand the challenges and solutions for ensuring food access worldwide.",
+    "category": "global_development",
+    "slug": "global-food-security"
+  }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Articles - GlobAffairs</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* Override body background for this page */
+		html {
+			background: url('background.jpg') no-repeat center center/cover fixed;
+		}
+
+		body {
+			background: transparent;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			z-index: 20;
+			background: rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(8px);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="index.html" class="logo-link" aria-label="Go to homepage">
+			<img src="globaffairs-logo.png" class="logo" alt="GlobAffairs Logo">
+		</a>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="quiz-selection.html">Quiz</a></li>
+				<li><a href="terminology.html">Terminology</a></li>
+				<li><a href="articles.html">Articles</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="articles-container">
+		<h1>Global Issues Articles</h1>
+		<p class="articles-subtitle">Explore in-depth analyses of pressing global challenges and international solutions</p>
+		<div class="articles-grid" id="articlesGrid">
+			<!-- Article cards will be populated here -->
+		</div>
+	</div>
+
+	<script src="articles.js"></script>
+</body>
+</html>

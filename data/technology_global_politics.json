@@ -1,0 +1,23 @@
+[
+  {"term":"Cybersecurity","definition":"Protecting computers and networks.","example":"Like locking your phone."},
+  {"term":"Cyber Attack","definition":"Hacking or damaging digital systems.","example":"Like someone breaking into your online account."},
+  {"term":"Digital Diplomacy","definition":"Using the internet for international communication.","example":"Like leaders posting messages online."},
+  {"term":"Artificial Intelligence (AI)","definition":"Machines that can think or learn.","example":"Like a smart robot helping students."},
+  {"term":"Data Privacy","definition":"Protecting personal information online.","example":"Like keeping your password secret."},
+  {"term":"Tech Regulation","definition":"Rules controlling technology companies.","example":"Like school rules for using phones."},
+  {"term":"Information Warfare","definition":"Spreading false information to influence people.","example":"Like rumors spreading in school."},
+  {"term":"Social Media Influence","definition":"Impact of online platforms on politics.","example":"Like students forming opinions through social media."},
+  {"term":"Digital Surveillance","definition":"Monitoring online activity.","example":"Like teachers checking school computers."},
+  {"term":"Tech Innovation","definition":"Creating new technology.","example":"Like inventing a new school app."},
+  {"term":"Online Propaganda","definition":"Messages used to influence opinions online.","example":"Like persuasive posts on social media."},
+  {"term":"Global Internet Governance","definition":"Rules for how the internet works worldwide.","example":"Like rules for using the school network."},
+  {"term":"Tech Competition","definition":"Countries competing in technology development.","example":"Like students competing in robotics competitions."},
+  {"term":"Digital Economy","definition":"Economic activity online.","example":"Like buying items in online games."},
+  {"term":"Smart Technology","definition":"Devices that connect and communicate.","example":"Like smart watches."},
+  {"term":"Cloud Computing","definition":"Storing data on internet servers.","example":"Like saving homework online."},
+  {"term":"Tech Sanctions","definition":"Restrictions on technology trade.","example":"Like banning certain devices in school."},
+  {"term":"Digital Infrastructure","definition":"Systems supporting internet communication.","example":"Like school Wi-Fi networks."},
+  {"term":"AI Ethics","definition":"Rules about responsible AI use.","example":"Like rules for using robots safely."},
+  {"term":"Global Tech Companies","definition":"Large companies influencing technology worldwide.","example":"Like big tech brands shaping digital life."},
+  {"term":"Digital Rights","definition":"Protections for people online.","example":"Like privacy rules for students on school networks."}
+]

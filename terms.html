@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center/cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .page-title {
+      margin: 15px 0 8px;
+      font-size: 2.2rem;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.35);
+      text-align: center;
+    }
+    .info-text {
+      margin-bottom: 18px;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 10px 14px;
+      border-radius: 10px;
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+    .terms-grid {
+      width: min(96%, 1100px);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 14px;
+    }
+    .term-card {
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.33);
+      border-radius: 12px;
+      padding: 14px 12px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s, backdrop-filter 0.2s;
+      color: #fff;
+      font-weight: 600;
+      backdrop-filter: blur(6px);
+    }
+    .term-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.32);
+      border-color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.22);
+    }
+    .status {
+      margin: 18px auto;
+      color: #ffdddd;
+      font-size: 1.05rem;
+    }
+    .back-link {
+      margin-top: 16px;
+      margin-bottom: 12px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255,255,255,0.55);
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.45);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .back-link:hover {
+      background: rgba(0, 0, 0, 0.65);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-title" id="heading">Terms List</div>
+  <div class="info-text" id="description">Loading terms...</div>
+  <a class="back-link" id="backToCategories" href="terminology.html">Back to Categories</a>
+  <div class="status" id="status"></div>
+  <div class="terms-grid" id="termsGrid"></div>
+
+  <script src="terms.js"></script>
+  <script>
+    async function loadTerms(category) {
+      try {
+        // Priority fallback for file:// usage.
+        if (window.termsData) {
+          const data = termsData;
+          return data[category] || [];
+        }
+
+        // Primary data source: a category-specific JSON file in /data/.
+        const res = await fetch(`data/${category}.json`);
+        if (!res.ok) throw new Error('Failed to fetch data/' + category + '.json: ' + res.status);
+        const data = await res.json();
+        return data || [];
+      } catch (error) {
+        console.error(error);
+        const status = document.getElementById('status');
+        if (status) {
+          status.innerText = 'Failed to load terms. Check server or file path.';
+        }
+        return null;
+      }
+    }
+
+    function slugToTitle(slug) {
+      return slug
+        .replace(/_/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    (async () => {
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get('category');
+      const heading = document.getElementById('heading');
+      const description = document.getElementById('description');
+      const termsGrid = document.getElementById('termsGrid');
+
+      if (!category) {
+        heading.innerText = 'Category not specified';
+        description.innerText = 'Please select a valid category from categories page.';
+        document.getElementById('status').innerText = 'Category query param missing.';
+        return;
+      }
+
+      const humanName = slugToTitle(category);
+      heading.innerText = `${humanName}`;
+      description.innerText = ``;
+
+      const terms = await loadTerms(category);
+      if (!terms) return;
+      if (!terms.length) {
+        document.getElementById('status').innerText = 'No terms defined for this category.';
+        return;
+      }
+
+      termsGrid.innerHTML = '';
+      terms.forEach((t, index) => {
+        const card = document.createElement('div');
+        card.className = 'term-card';
+        card.textContent = t.term;
+        card.onclick = () => {
+          window.location.href = `term.html?category=${encodeURIComponent(category)}&index=${index}`;
+        };
+        termsGrid.append(card);
+      });
+
+      document.getElementById('status').innerText = `${terms.length} terms loaded.`;
+    })();
+  </script>
+</body>
+</html>

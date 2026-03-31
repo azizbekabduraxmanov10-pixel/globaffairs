@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: rgba(0,0,0,0.15) url('background.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .center-top-message {
+      margin-top: 12px;
+      background: rgba(30, 41, 59, 0.8);
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 1rem;
+      text-align: center;
+      z-index: 10;
+      width: min(98%, 760px);
+    }
+    h1 {
+      margin-top: 14px;
+      font-size: 2rem;
+      text-align: center;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+      max-width: 760px;
+      width: 100%;
+    }
+    .terms-list {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      width: min(98%, 900px);
+      padding-bottom: 16px;
+    }
+    .term-item {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255,255,255,0.45);
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #fff;
+      transition: transform 0.2s, box-shadow 0.2s, backdrop-filter 0.2s;
+      backdrop-filter: blur(4px);
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .term-item.selected {
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.9), 0 10px 20px rgba(0,0,0,0.45);
+      transform: translateY(-1px) scale(1.02);
+      border-color: #c3dafe;
+    }
+    .term-detail {
+      background: rgba(10, 25, 48, 0.75);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 14px;
+      width: min(98%, 900px);
+      padding: 20px;
+      margin-top: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      backdrop-filter: blur(5px);
+    }
+    .term-detail h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+    .term-detail p {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #eef2ff;
+      margin: 12px 0;
+    }
+    .nav-buttons {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+      max-width: 900px;
+    }
+    .nav-buttons button {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.5);
+      color: #fff;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      min-width: 100px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .nav-buttons button:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-1px);
+    }
+    .nav-buttons button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-top-message">Tap a term to view details.</div>
+  <h1 id="fieldTitle">Field Details</h1>
+  <div class="terms-list" id="termsList"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const field = params.get('field') || 'Geopolitics';
+    document.title = field + ' - Details';
+    document.getElementById('fieldTitle').textContent = field;
+
+    const termsListEl = document.getElementById('termsList');
+
+    function updateDetail(index) {
+      if (!terms.length || index < 0 || index >= terms.length) return;
+      activeIndex = index;
+      const term = terms[index];
+
+      document.querySelectorAll('.term-item').forEach((el, idx) => {
+        el.classList.toggle('selected', idx === index);
+      });
+
+      termDetailEl.style.display = 'block';
+      navButtonsEl.style.display = 'flex';
+
+      termDetailEl.innerHTML = `
+        <h2>${term.term}</h2>
+        <p><strong>Meaning:</strong> ${term.meaning}</p>
+        <p><strong>Example:</strong> ${term.example || 'No example available.'}</p>
+      `;
+
+      navButtonsEl.innerHTML = `
+        <button id="prevBtn" ${index === 0 ? 'disabled' : ''}>Previous</button>
+        <button id="nextBtn" ${index === terms.length - 1 ? 'disabled' : ''}>Next</button>
+      `;
+
+      document.getElementById('prevBtn').addEventListener('click', () => updateDetail(activeIndex - 1));
+      document.getElementById('nextBtn').addEventListener('click', () => updateDetail(activeIndex + 1));
+    }
+
+    fetch('terms.json')
+      .then(res => res.json())
+      .then(data => {
+        const terms = data[field] || [];
+        if (!terms.length) {
+          termsListEl.innerHTML = '<div style="color:#fff;">No terms found for this field.</div>';
+          return;
+        }
+
+        terms.forEach(term => {
+          const div = document.createElement('div');
+          div.className = 'term-item';
+          div.textContent = term.term;
+          div.addEventListener('click', () => {
+            window.location.href = `term.html?field=${encodeURIComponent(field)}&term=${encodeURIComponent(term.term)}`;
+          });
+          termsListEl.appendChild(div);
+        });
+      })
+      .catch(err => {
+        termsListEl.innerHTML = '<div style="color:#fff;">Error loading terms.</div>';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>

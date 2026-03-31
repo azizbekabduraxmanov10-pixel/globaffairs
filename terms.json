@@ -1,0 +1,867 @@
+{
+  "international_relations": [
+    {
+      "term": "International Relations Term 1",
+      "definition": "International Relations definition number 1.",
+      "example": "International Relations example usage number 1."
+    },
+    {
+      "term": "International Relations Term 2",
+      "definition": "International Relations definition number 2.",
+      "example": "International Relations example usage number 2."
+    },
+    {
+      "term": "International Relations Term 3",
+      "definition": "International Relations definition number 3.",
+      "example": "International Relations example usage number 3."
+    },
+    {
+      "term": "International Relations Term 4",
+      "definition": "International Relations definition number 4.",
+      "example": "International Relations example usage number 4."
+    },
+    {
+      "term": "International Relations Term 5",
+      "definition": "International Relations definition number 5.",
+      "example": "International Relations example usage number 5."
+    },
+    {
+      "term": "International Relations Term 6",
+      "definition": "International Relations definition number 6.",
+      "example": "International Relations example usage number 6."
+    },
+    {
+      "term": "International Relations Term 7",
+      "definition": "International Relations definition number 7.",
+      "example": "International Relations example usage number 7."
+    },
+    {
+      "term": "International Relations Term 8",
+      "definition": "International Relations definition number 8.",
+      "example": "International Relations example usage number 8."
+    },
+    {
+      "term": "International Relations Term 9",
+      "definition": "International Relations definition number 9.",
+      "example": "International Relations example usage number 9."
+    },
+    {
+      "term": "International Relations Term 10",
+      "definition": "International Relations definition number 10.",
+      "example": "International Relations example usage number 10."
+    },
+    {
+      "term": "International Relations Term 11",
+      "definition": "International Relations definition number 11.",
+      "example": "International Relations example usage number 11."
+    },
+    {
+      "term": "International Relations Term 12",
+      "definition": "International Relations definition number 12.",
+      "example": "International Relations example usage number 12."
+    },
+    {
+      "term": "International Relations Term 13",
+      "definition": "International Relations definition number 13.",
+      "example": "International Relations example usage number 13."
+    },
+    {
+      "term": "International Relations Term 14",
+      "definition": "International Relations definition number 14.",
+      "example": "International Relations example usage number 14."
+    },
+    {
+      "term": "International Relations Term 15",
+      "definition": "International Relations definition number 15.",
+      "example": "International Relations example usage number 15."
+    },
+    {
+      "term": "International Relations Term 16",
+      "definition": "International Relations definition number 16.",
+      "example": "International Relations example usage number 16."
+    },
+    {
+      "term": "International Relations Term 17",
+      "definition": "International Relations definition number 17.",
+      "example": "International Relations example usage number 17."
+    },
+    {
+      "term": "International Relations Term 18",
+      "definition": "International Relations definition number 18.",
+      "example": "International Relations example usage number 18."
+    },
+    {
+      "term": "International Relations Term 19",
+      "definition": "International Relations definition number 19.",
+      "example": "International Relations example usage number 19."
+    },
+    {
+      "term": "International Relations Term 20",
+      "definition": "International Relations definition number 20.",
+      "example": "International Relations example usage number 20."
+    }
+  ],
+  "international_law": [
+    {
+      "term": "International Law Term 1",
+      "definition": "International Law definition number 1.",
+      "example": "International Law example usage number 1."
+    },
+    {
+      "term": "International Law Term 2",
+      "definition": "International Law definition number 2.",
+      "example": "International Law example usage number 2."
+    },
+    {
+      "term": "International Law Term 3",
+      "definition": "International Law definition number 3.",
+      "example": "International Law example usage number 3."
+    },
+    {
+      "term": "International Law Term 4",
+      "definition": "International Law definition number 4.",
+      "example": "International Law example usage number 4."
+    },
+    {
+      "term": "International Law Term 5",
+      "definition": "International Law definition number 5.",
+      "example": "International Law example usage number 5."
+    },
+    {
+      "term": "International Law Term 6",
+      "definition": "International Law definition number 6.",
+      "example": "International Law example usage number 6."
+    },
+    {
+      "term": "International Law Term 7",
+      "definition": "International Law definition number 7.",
+      "example": "International Law example usage number 7."
+    },
+    {
+      "term": "International Law Term 8",
+      "definition": "International Law definition number 8.",
+      "example": "International Law example usage number 8."
+    },
+    {
+      "term": "International Law Term 9",
+      "definition": "International Law definition number 9.",
+      "example": "International Law example usage number 9."
+    },
+    {
+      "term": "International Law Term 10",
+      "definition": "International Law definition number 10.",
+      "example": "International Law example usage number 10."
+    },
+    {
+      "term": "International Law Term 11",
+      "definition": "International Law definition number 11.",
+      "example": "International Law example usage number 11."
+    },
+    {
+      "term": "International Law Term 12",
+      "definition": "International Law definition number 12.",
+      "example": "International Law example usage number 12."
+    },
+    {
+      "term": "International Law Term 13",
+      "definition": "International Law definition number 13.",
+      "example": "International Law example usage number 13."
+    },
+    {
+      "term": "International Law Term 14",
+      "definition": "International Law definition number 14.",
+      "example": "International Law example usage number 14."
+    },
+    {
+      "term": "International Law Term 15",
+      "definition": "International Law definition number 15.",
+      "example": "International Law example usage number 15."
+    },
+    {
+      "term": "International Law Term 16",
+      "definition": "International Law definition number 16.",
+      "example": "International Law example usage number 16."
+    },
+    {
+      "term": "International Law Term 17",
+      "definition": "International Law definition number 17.",
+      "example": "International Law example usage number 17."
+    },
+    {
+      "term": "International Law Term 18",
+      "definition": "International Law definition number 18.",
+      "example": "International Law example usage number 18."
+    },
+    {
+      "term": "International Law Term 19",
+      "definition": "International Law definition number 19.",
+      "example": "International Law example usage number 19."
+    },
+    {
+      "term": "International Law Term 20",
+      "definition": "International Law definition number 20.",
+      "example": "International Law example usage number 20."
+    }
+  ],
+  "global_security": [
+    {
+      "term": "Cybersecurity",
+      "definition": "Protecting computers and the internet.",
+      "example": "Like locking your online accounts."
+    },
+    {
+      "term": "Terrorism",
+      "definition": "Violence used to scare people for political reasons.",
+      "example": "Like bullies trying to scare the whole school."
+    },
+    {
+      "term": "National Defense",
+      "definition": "Protecting a country from threats.",
+      "example": "Like security guards protecting a building."
+    },
+    {
+      "term": "Intelligence",
+      "definition": "Secret information about threats.",
+      "example": "Like spies gathering clues."
+    },
+    {
+      "term": "Military Alliance",
+      "definition": "Countries joining forces for defense.",
+      "example": "Like teammates protecting each other."
+    },
+    {
+      "term": "Nuclear Deterrence",
+      "definition": "Weapons that discourage attacks because they are powerful.",
+      "example": "Like a big warning sign saying \"don't start trouble.\""
+    },
+    {
+      "term": "Border Security",
+      "definition": "Protecting the edges of a country.",
+      "example": "Like fences around a playground."
+    },
+    {
+      "term": "Counterterrorism",
+      "definition": "Stopping terrorist attacks.",
+      "example": "Like teachers preventing bullying."
+    },
+    {
+      "term": "Arms Control",
+      "definition": "Agreements to limit weapons.",
+      "example": "Like rules limiting dangerous toys."
+    },
+    {
+      "term": "Security Threat",
+      "definition": "Something that could harm safety.",
+      "example": "Like a broken playground swing."
+    },
+    {
+      "term": "Peacekeeping Forces",
+      "definition": "Soldiers helping keep peace.",
+      "example": "Like referees during a game."
+    },
+    {
+      "term": "Strategic Defense",
+      "definition": "Long-term plans to stay safe.",
+      "example": "Like planning escape drills."
+    },
+    {
+      "term": "Surveillance",
+      "definition": "Watching carefully for danger.",
+      "example": "Like security cameras."
+    },
+    {
+      "term": "Crisis Management",
+      "definition": "Handling emergencies quickly.",
+      "example": "Like teachers managing a fire drill."
+    },
+    {
+      "term": "Defense Budget",
+      "definition": "Money spent on security.",
+      "example": "Like saving money for safety equipment."
+    },
+    {
+      "term": "Geopolitical Risk",
+      "definition": "Danger caused by global politics.",
+      "example": "Like tension between rival teams."
+    },
+    {
+      "term": "Security Alliance",
+      "definition": "Countries protecting each other.",
+      "example": "Like a group of friends sticking together."
+    },
+    {
+      "term": "Disarmament",
+      "definition": "Reducing weapons.",
+      "example": "Like removing dangerous toys."
+    },
+    {
+      "term": "Military Strategy",
+      "definition": "Planning how to defend or win battles.",
+      "example": "Like planning moves in chess."
+    },
+    {
+      "term": "Homeland Security",
+      "definition": "Protecting a country's people and infrastructure.",
+      "example": "Like guards protecting a school building."
+    }
+  ],
+  "diplomacy": [
+    {"term":"Negotiation","definition":"Talking to agree on something.","example":"Like two kids deciding who goes first in a game."},
+    {"term":"Diplomatic Channel","definition":"Official ways countries communicate.","example":"Like passing notes through a teacher."},
+    {"term":"Treaty Signing","definition":"Formally agreeing on rules.","example":"Like shaking hands after making a deal."},
+    {"term":"Summit Meeting","definition":"Top leaders meet to discuss issues.","example":"Like class captains meeting to plan an event."},
+    {"term":"Mediation","definition":"Helping two sides solve a conflict.","example":"Like a teacher helping friends stop arguing."},
+    {"term":"Protocol","definition":"Official rules for meetings.","example":"Like classroom rules for talking."},
+    {"term":"Ambassador","definition":"Person representing their country.","example":"Like a student council representative."},
+    {"term":"Envoy","definition":"Someone sent to deliver messages or help.","example":"Like a friend sent to invite classmates."},
+    {"term":"Good Offices","definition":"Offering a place or help to negotiate.","example":"Like letting friends use your room to discuss a project."},
+    {"term":"Cultural Diplomacy","definition":"Using art, music, or culture to connect countries.","example":"Like sharing toys or games to make friends."},
+    {"term":"Economic Diplomacy","definition":"Using money or trade to influence other countries.","example":"Like offering snacks to trade for help."},
+    {"term":"Public Diplomacy","definition":"Communicating with the people of another country.","example":"Like sending letters or messages to new classmates."},
+    {"term":"Track II Diplomacy","definition":"Private, informal talks between people.","example":"Like a secret conversation to solve a problem."},
+    {"term":"Diplomatic Mission","definition":"Team working in another country.","example":"Like a small group visiting another class to help."},
+    {"term":"Peace Talks","definition":"Meetings to stop fighting.","example":"Like friends talking to stop a playground fight."},
+    {"term":"Negotiation Table","definition":"Place to discuss agreements.","example":"Like sitting at a table to decide on game rules."},
+    {"term":"Conflict Mediation","definition":"Helping fix problems between countries.","example":"Like teachers resolving fights."},
+    {"term":"Bilateral Diplomacy","definition":"Two countries talking directly.","example":"Like two friends talking privately."},
+    {"term":"Multilateral Diplomacy","definition":"Many countries discussing together.","example":"Like a group project meeting."},
+    {"term":"Diplomatic Note","definition":"Official written message between countries.","example":"Like a polite note sent to a friend."}
+  ],
+  "international_organizations": [
+    {
+      "term": "Global Institution",
+      "definition": "A group of countries working together.",
+      "example": "Like a big school club with students from many classes."
+    },
+    {
+      "term": "Peacekeeping Mission",
+      "definition": "An organization helping keep peace in conflict areas.",
+      "example": "Like teachers sent to stop playground fights."
+    },
+    {
+      "term": "International Cooperation",
+      "definition": "Countries working together.",
+      "example": "Like teamwork during a group project."
+    },
+    {
+      "term": "Humanitarian Organization",
+      "definition": "Groups helping people in disasters.",
+      "example": "Like volunteers giving food after a storm."
+    },
+    {
+      "term": "Development Agency",
+      "definition": "Organizations helping countries grow economically.",
+      "example": "Like tutors helping students improve."
+    },
+    {
+      "term": "Global Health Agency",
+      "definition": "Organizations fighting diseases worldwide.",
+      "example": "Like doctors helping an entire school stay healthy."
+    },
+    {
+      "term": "Environmental Organization",
+      "definition": "Groups protecting nature globally.",
+      "example": "Like students cleaning the park."
+    },
+    {
+      "term": "Trade Organization",
+      "definition": "Groups managing international trade rules.",
+      "example": "Like referees for trading games."
+    },
+    {
+      "term": "Regional Organization",
+      "definition": "Organizations for countries in one region.",
+      "example": "Like a club for students from the same neighborhood."
+    },
+    {
+      "term": "Membership State",
+      "definition": "Countries that belong to an organization.",
+      "example": "Like club members."
+    },
+    {
+      "term": "Charter",
+      "definition": "The rules of an organization.",
+      "example": "Like a club rulebook."
+    },
+    {
+      "term": "Secretary-General",
+      "definition": "Leader of an international organization.",
+      "example": "Like a club president."
+    },
+    {
+      "term": "International Mission",
+      "definition": "Teams sent to help other countries.",
+      "example": "Like volunteers helping another school."
+    },
+    {
+      "term": "Peace Conference",
+      "definition": "Meetings to solve conflicts.",
+      "example": "Like a meeting to settle class disputes."
+    },
+    {
+      "term": "Observer State",
+      "definition": "Countries watching but not full members.",
+      "example": "Like guests at a club meeting."
+    },
+    {
+      "term": "Funding Program",
+      "definition": "Money given to help projects.",
+      "example": "Like school funding for clubs."
+    },
+    {
+      "term": "Global Partnership",
+      "definition": "Organizations working together.",
+      "example": "Like clubs collaborating on events."
+    },
+    {
+      "term": "Aid Program",
+      "definition": "Help programs for poor areas.",
+      "example": "Like donating supplies to a friend."
+    },
+    {
+      "term": "International Summit",
+      "definition": "Meeting of world leaders.",
+      "example": "Like a big student council meeting."
+    },
+    {
+      "term": "Development Goals",
+      "definition": "Targets to improve the world.",
+      "example": "Like school goals for better learning."
+    }
+  ],
+  "global_economics": [
+    {
+      "term": "GDP (Gross Domestic Product)",
+      "definition": "The total value of goods a country makes.",
+      "example": "Like counting all the snacks made in a bakery."
+    },
+    {
+      "term": "Inflation",
+      "definition": "When prices rise over time.",
+      "example": "Like candy becoming more expensive."
+    },
+    {
+      "term": "Trade",
+      "definition": "Buying and selling between countries.",
+      "example": "Like swapping snacks."
+    },
+    {
+      "term": "Export",
+      "definition": "Selling goods to other countries.",
+      "example": "Like selling lemonade to another class."
+    },
+    {
+      "term": "Import",
+      "definition": "Buying goods from other countries.",
+      "example": "Like buying cookies from another class."
+    },
+    {
+      "term": "Currency",
+      "definition": "A country's money.",
+      "example": "Like tokens used in games."
+    },
+    {
+      "term": "Exchange Rate",
+      "definition": "How much one currency equals another.",
+      "example": "Like trading 2 candies for 1 chocolate."
+    },
+    {
+      "term": "Economic Growth",
+      "definition": "When a country produces more over time.",
+      "example": "Like a garden growing bigger."
+    },
+    {
+      "term": "Recession",
+      "definition": "When the economy slows down.",
+      "example": "Like fewer snacks being made in the bakery."
+    },
+    {
+      "term": "Supply",
+      "definition": "How much product is available.",
+      "example": "Like how many apples are in the basket."
+    },
+    {
+      "term": "Demand",
+      "definition": "How much people want something.",
+      "example": "Like everyone wanting the same toy."
+    },
+    {
+      "term": "Market Economy",
+      "definition": "Prices decided by buyers and sellers.",
+      "example": "Like students deciding snack prices."
+    },
+    {
+      "term": "Economic Sanctions",
+      "definition": "Trade restrictions used as punishment.",
+      "example": "Like banning someone from trading cards."
+    },
+    {
+      "term": "Investment",
+      "definition": "Putting money into something to grow it.",
+      "example": "Like planting seeds to grow plants."
+    },
+    {
+      "term": "Global Trade Network",
+      "definition": "Countries connected through trade.",
+      "example": "Like many kids trading toys."
+    },
+    {
+      "term": "Labor Force",
+      "definition": "People who work in an economy.",
+      "example": "Like students helping in a school project."
+    },
+    {
+      "term": "Productivity",
+      "definition": "How much work is done efficiently.",
+      "example": "Like finishing homework quickly."
+    },
+    {
+      "term": "Economic Inequality",
+      "definition": "Differences in wealth.",
+      "example": "Like some kids having many toys and others few."
+    },
+    {
+      "term": "Trade Balance",
+      "definition": "Difference between exports and imports.",
+      "example": "Like trading more toys than you receive."
+    },
+    {
+      "term": "Financial Crisis",
+      "definition": "A big economic problem.",
+      "example": "Like the school store running out of money."
+    }
+  ],
+  "human_rights": [
+    {"term":"Equality","definition":"Everyone is treated the same.","example":"Like making sure everyone gets a turn."},
+    {"term":"Freedom of Speech","definition":"Being able to say your opinion.","example":"Like raising your hand to speak in class."},
+    {"term":"Right to Education","definition":"Everyone can go to school.","example":"Like every kid having a desk and books."},
+    {"term":"Child Rights","definition":"Special rules to protect kids.","example":"Like rules against bullying in school."},
+    {"term":"Freedom of Religion","definition":"Being able to follow your beliefs.","example":"Like letting friends pray or celebrate their festivals."},
+    {"term":"Right to Health","definition":"Everyone should be able to get medical help.","example":"Like a nurse helping sick students."},
+    {"term":"Right to Privacy","definition":"Your personal space and information is safe.","example":"Like your diary being private."},
+    {"term":"Anti-Discrimination","definition":"No one should be treated badly because of who they are.","example":"Like not excluding someone because of hair color."},
+    {"term":"Humanitarian Aid","definition":"Helping people in danger or poor conditions.","example":"Like giving food to a friend who forgot lunch."},
+    {"term":"Refugee Rights","definition":"Protection for people forced to leave home.","example":"Like letting a friend sleep over when their house is flooded."},
+    {"term":"Freedom of Assembly","definition":"People can gather peacefully.","example":"Like having a school club meeting."},
+    {"term":"Freedom of Press","definition":"Journalists can report news freely.","example":"Like letting the school newspaper write honestly."},
+    {"term":"Right to Work","definition":"Everyone can have a job.","example":"Like being allowed to help in a class project."},
+    {"term":"Right to Vote","definition":"People can choose their leaders.","example":"Like voting for class monitor."},
+    {"term":"Protection from Torture","definition":"Nobody should be hurt on purpose.","example":"Like strict rules against hurting anyone."},
+    {"term":"Right to Housing","definition":"Everyone should have a place to live.","example":"Like ensuring everyone has a desk at school."},
+    {"term":"Right to Food and Water","definition":"Everyone should have enough to eat and drink.","example":"Like sharing snacks so no one goes hungry."},
+    {"term":"Gender Equality","definition":"Boys and girls should have the same rights.","example":"Like letting everyone play the same games."},
+    {"term":"Freedom of Movement","definition":"People can travel safely.","example":"Like being allowed to move around the playground."},
+    {"term":"Right to Justice","definition":"Everyone should be treated fairly in court.","example":"Like a teacher being fair when solving conflicts."},
+    {"term":"Equal Opportunity","definition":"Everyone has the same chance to succeed.","example":"Like everyone being able to try out for a team."},
+    {"term":"Dignity","definition":"Treating people with respect.","example":"Like not making fun of someone's clothes."},
+    {"term":"Inclusivity","definition":"Making sure everyone is included.","example":"Like inviting everyone to join a game."},
+    {"term":"Fair Trial","definition":"Being judged honestly and fairly.","example":"Like hearing both sides of a story before deciding."},
+    {"term":"Social Justice","definition":"Fair treatment in society.","example":"Like making sure poor kids can go to school too."}
+  ],
+  "environment": [
+    {"term":"Climate Change","definition":"The planet is getting hotter and weather changes.","example":"Like a garden drying up in summer."},
+    {"term":"Global Warming","definition":"Earth's temperature rising.","example":"Like a classroom getting too hot in summer."},
+    {"term":"Pollution","definition":"Making air, water, or soil dirty.","example":"Like spilling paint in the playground."},
+    {"term":"Recycling","definition":"Turning old things into new things.","example":"Like making paper crafts from used sheets."},
+    {"term":"Sustainability","definition":"Using resources wisely so they last.","example":"Like not eating all snacks at once."},
+    {"term":"Deforestation","definition":"Cutting down too many trees.","example":"Like removing all trees from a playground."},
+    {"term":"Conservation","definition":"Protecting nature.","example":"Like taking care of school plants."},
+    {"term":"Renewable Energy","definition":"Energy that doesn't run out, like sun or wind.","example":"Like using sunlight to power a small toy."},
+    {"term":"Non-renewable Energy","definition":"Energy that can run out, like coal or oil.","example":"Like eating all cookies at once."},
+    {"term":"Carbon Footprint","definition":"The impact of humans on the environment.","example":"Like leaving trash everywhere."},
+    {"term":"Biodiversity","definition":"Variety of plants and animals.","example":"Like having many kinds of toys in a box."},
+    {"term":"Endangered Species","definition":"Animals that may disappear soon.","example":"Like rare toys that only a few kids have."},
+    {"term":"Ecosystem","definition":"All living things in one area.","example":"Like all classmates in one classroom."},
+    {"term":"Ozone Layer","definition":"Layer protecting Earth from the sun.","example":"Like a roof that keeps you from rain."},
+    {"term":"Greenhouse Gas","definition":"Gases that trap heat on Earth.","example":"Like a blanket making you too warm."},
+    {"term":"Water Conservation","definition":"Saving water.","example":"Like not wasting water when washing hands."},
+    {"term":"Air Quality","definition":"How clean the air is.","example":"Like having fresh air to breathe in school."},
+    {"term":"Waste Management","definition":"Properly handling trash.","example":"Like putting garbage in bins."},
+    {"term":"Eco-friendly Products","definition":"Things that don't hurt nature.","example":"Like using paper instead of plastic."},
+    {"term":"Climate Action","definition":"Steps to stop climate change.","example":"Like planting trees to make the playground cooler."}
+  ],
+  "culture_society": [
+    {"term":"Tradition","definition":"Customs passed down from older generations.","example":"Like celebrating holidays every year."},
+    {"term":"Festival","definition":"A celebration with fun activities.","example":"Like a school fair or sports day."},
+    {"term":"Language","definition":"Words we speak.","example":"Like Uzbek, English, or Russian."},
+    {"term":"Religion","definition":"Beliefs and practices.","example":"Like praying or celebrating certain holidays."},
+    {"term":"Customs","definition":"Normal behaviors in a society.","example":"Like shaking hands or greeting friends."},
+    {"term":"Heritage","definition":"Things passed down from ancestors.","example":"Like old stories or toys from grandparents."},
+    {"term":"Norms","definition":"Rules about how to behave.","example":"Like lining up in the playground."},
+    {"term":"Rituals","definition":"Special repeated actions.","example":"Like saying a prayer before meals."},
+    {"term":"Social Roles","definition":"Jobs or duties people have.","example":"Like class monitor or team captain."},
+    {"term":"Community","definition":"People living or working together.","example":"Like your classroom or neighborhood."},
+    {"term":"Identity","definition":"Who you are.","example":"Like your name, culture, and likes."},
+    {"term":"Multiculturalism","definition":"Many cultures living together.","example":"Like students from different countries in one school."},
+    {"term":"Art","definition":"Creative expression.","example":"Like drawing, painting, or singing."},
+    {"term":"Music","definition":"Sounds people make for fun or expression.","example":"Like songs played in school concerts."},
+    {"term":"Dance","definition":"Moving to music.","example":"Like dances at parties or celebrations."},
+    {"term":"Cuisine","definition":"Foods of a culture.","example":"Like plov, pizza, or sushi."},
+    {"term":"Folklore","definition":"Stories passed down.","example":"Like fairy tales or legends."},
+    {"term":"Ceremony","definition":"Formal event or celebration.","example":"Like graduation or awards day."},
+    {"term":"Social Media","definition":"Platforms to connect with people.","example":"Like sharing photos with friends."},
+    {"term":"Cultural Exchange","definition":"Sharing and learning about other cultures.","example":"Like swapping games or food with friends."}
+  ],
+  "geopolitics": [
+    {"term":"Strategic Location","definition":"A place that is important because of where it is.","example":"Like sitting in the best seat to see the whole classroom."},
+    {"term":"Territorial Dispute","definition":"Two countries arguing over land.","example":"Like two kids arguing about who owns a toy."},
+    {"term":"Sphere of Influence","definition":"Areas where a country has strong influence.","example":"Like the playground where your friend group usually hangs out."},
+    {"term":"Buffer State","definition":"A country between two powerful rivals.","example":"Like a student standing between two arguing classmates."},
+    {"term":"Geostrategy","definition":"Planning power based on geography.","example":"Like choosing the best spot in a game of chess."},
+    {"term":"Sea Routes","definition":"Important ocean paths for ships.","example":"Like roads used by school buses."},
+    {"term":"Energy Corridor","definition":"Routes used to transport oil or gas.","example":"Like pipelines acting like straws carrying drinks."},
+    {"term":"Strategic Resource","definition":"Important natural materials like oil.","example":"Like rare batteries needed for toys."},
+    {"term":"Border Control","definition":"Managing who enters a country.","example":"Like checking who enters a school."},
+    {"term":"Power Rivalry","definition":"Competition between strong countries.","example":"Like two teams competing to be the best."},
+    {"term":"Regional Power","definition":"A strong country in a certain region.","example":"Like the best team in a league."},
+    {"term":"Global Power","definition":"A country with influence worldwide.","example":"Like the most popular student in school."},
+    {"term":"Territorial Waters","definition":"Ocean areas belonging to a country.","example":"Like the yard around your house."},
+    {"term":"Strategic Alliance","definition":"Countries cooperating for power.","example":"Like teammates forming a strong team."},
+    {"term":"Geopolitical Tension","definition":"Stress between countries because of power struggles.","example":"Like tension between rival teams."},
+    {"term":"Border Conflict","definition":"Fighting over boundaries.","example":"Like arguing over the edge of a playground."},
+    {"term":"Resource Competition","definition":"Countries competing for resources.","example":"Like kids competing for the last slice of pizza."},
+    {"term":"Naval Power","definition":"Strength of a country's navy.","example":"Like having many strong boats in a race."},
+    {"term":"Strategic Region","definition":"Area important for world politics.","example":"Like the center square in tic-tac-toe."},
+    {"term":"Influence Projection","definition":"Extending power into other regions.","example":"Like a popular student influencing other classes."}
+  ],
+  "global_development": [
+    {"term":"Poverty Reduction","definition":"Helping people earn enough money for basic needs.","example":"Like making sure everyone gets lunch."},
+    {"term":"Economic Development","definition":"Improving a country's economy.","example":"Like growing a small shop into a big store."},
+    {"term":"Infrastructure","definition":"Roads, bridges, and buildings needed for society.","example":"Like hallways and classrooms in school."},
+    {"term":"Foreign Aid","definition":"Money or supplies given to help another country.","example":"Like donating books to another class."},
+    {"term":"Microfinance","definition":"Small loans for poor entrepreneurs.","example":"Like lending a friend money to start selling lemonade."},
+    {"term":"Sustainable Development","definition":"Growing the economy while protecting nature.","example":"Like using resources wisely."},
+    {"term":"Urban Development","definition":"Improving cities.","example":"Like building new playground equipment."},
+    {"term":"Rural Development","definition":"Helping villages grow economically.","example":"Like improving farms."},
+    {"term":"Economic Opportunity","definition":"Chances for people to earn money.","example":"Like opportunities to work after school."},
+    {"term":"Education Access","definition":"Ensuring everyone can attend school.","example":"Like making sure every student has books."},
+    {"term":"Healthcare Development","definition":"Improving hospitals and clinics.","example":"Like upgrading the school nurse office."},
+    {"term":"Food Security","definition":"Ensuring people always have food.","example":"Like having enough snacks for everyone."},
+    {"term":"Job Creation","definition":"Creating employment opportunities.","example":"Like starting new projects for students."},
+    {"term":"Development Program","definition":"Organized efforts to improve living conditions.","example":"Like school improvement projects."},
+    {"term":"Economic Inclusion","definition":"Making sure everyone can participate in the economy.","example":"Like letting every student join clubs."},
+    {"term":"Infrastructure Investment","definition":"Spending money on roads or bridges.","example":"Like fixing broken playground equipment."},
+    {"term":"Growth Strategy","definition":"Plans for economic improvement.","example":"Like planning how to grow a garden."},
+    {"term":"Poverty Line","definition":"Income level defining poverty.","example":"Like minimum points needed to pass a test."},
+    {"term":"Development Goals","definition":"Targets for improving society.","example":"Like class goals for better grades."},
+    {"term":"Human Development","definition":"Improving education, health, and income.","example":"Like helping students grow smarter and healthier."},
+    {"term":"Economic Empowerment","definition":"Giving people power to improve their economy.","example":"Like teaching students how to earn money."},
+    {"term":"Trade Development","definition":"Improving buying and selling between countries.","example":"Like students trading toys fairly."},
+    {"term":"Technology Transfer","definition":"Sharing technology to help poorer countries.","example":"Like sharing computer access with others."},
+    {"term":"Skills Training","definition":"Teaching people job skills.","example":"Like learning how to use new tools."},
+    {"term":"Community Development","definition":"Improving local neighborhoods.","example":"Like improving your classroom together."}
+  ],
+  "global_health": [
+    {"term":"Pandemic","definition":"Disease spreading worldwide.","example":"Like a cold spreading across the whole school."},
+    {"term":"Epidemic","definition":"Disease spreading quickly in one region.","example":"Like many students catching the flu."},
+    {"term":"Vaccination","definition":"Medicine protecting people from diseases.","example":"Like wearing armor against germs."},
+    {"term":"Public Health","definition":"Protecting health of communities.","example":"Like school hygiene rules."},
+    {"term":"Healthcare System","definition":"Hospitals and doctors in a country.","example":"Like the nurse's office in school."},
+    {"term":"Disease Prevention","definition":"Stopping illness before it spreads.","example":"Like washing hands."},
+    {"term":"Medical Research","definition":"Studying diseases to find cures.","example":"Like scientists solving puzzles."},
+    {"term":"Health Policy","definition":"Government rules about healthcare.","example":"Like school rules for health safety."},
+    {"term":"Global Immunization","definition":"Vaccination programs worldwide.","example":"Like giving every student protection."},
+    {"term":"Disease Surveillance","definition":"Tracking diseases.","example":"Like monitoring attendance for sick students."},
+    {"term":"Mental Health","definition":"Emotional and psychological wellbeing.","example":"Like helping students feel happy."},
+    {"term":"Nutrition Programs","definition":"Efforts to provide healthy food.","example":"Like school lunch programs."},
+    {"term":"Health Equity","definition":"Equal healthcare for everyone.","example":"Like every student getting help from the nurse."},
+    {"term":"Medical Aid","definition":"Doctors helping during disasters.","example":"Like emergency helpers."},
+    {"term":"Hospital Infrastructure","definition":"Buildings and equipment for healthcare.","example":"Like classrooms for doctors."},
+    {"term":"Health Education","definition":"Teaching people about healthy habits.","example":"Like learning about brushing teeth."},
+    {"term":"Disease Control","definition":"Stopping illnesses from spreading.","example":"Like isolating sick students."},
+    {"term":"Health Emergency","definition":"Serious disease outbreak.","example":"Like a sudden illness affecting many people."},
+    {"term":"Health Campaign","definition":"Programs promoting health awareness.","example":"Like posters reminding students to wash hands."},
+    {"term":"Global Health Cooperation","definition":"Countries working together on health issues.","example":"Like schools helping each other during illness outbreaks."},
+    {"term":"Infectious Disease","definition":"Illness that spreads from person to person.","example":"Like sharing a cold with friends."},
+    {"term":"Health Worker","definition":"Doctors, nurses, and medical staff.","example":"Like the school nurse helping students."},
+    {"term":"Preventive Care","definition":"Actions to stop people from getting sick.","example":"Like getting a flu shot."},
+    {"term":"Health Infrastructure","definition":"Clinics and hospitals.","example":"Like the nurse's office and doctor visits."},
+    {"term":"Maternal Health","definition":"Healthcare for pregnant women and mothers.","example":"Like special care for moms."}
+  ],
+  "migration_refugee_studies": [
+    {"term":"Migration","definition":"People moving from one place to another.","example":"Like moving to a new school."},
+    {"term":"Immigration","definition":"Entering another country to live there.","example":"Like joining a new class."},
+    {"term":"Emigration","definition":"Leaving your home country.","example":"Like transferring schools."},
+    {"term":"Refugee","definition":"Someone fleeing danger or war.","example":"Like a friend escaping bullying."},
+    {"term":"Asylum","definition":"Protection given to refugees.","example":"Like letting a friend stay at your house."},
+    {"term":"Border Crossing","definition":"Moving across national borders.","example":"Like entering another school."},
+    {"term":"Migration Policy","definition":"Rules about immigration.","example":"Like rules for new students joining school."},
+    {"term":"Economic Migration","definition":"Moving for better job opportunities.","example":"Like changing schools for better education."},
+    {"term":"Forced Migration","definition":"People forced to leave homes.","example":"Like evacuating during a storm."},
+    {"term":"Diaspora","definition":"Community living outside its homeland.","example":"Like classmates from the same town."},
+    {"term":"Border Security","definition":"Protecting national borders.","example":"Like guards at school gates."},
+    {"term":"Integration","definition":"Helping newcomers fit into society.","example":"Like helping a new student make friends."},
+    {"term":"Resettlement","definition":"Helping refugees settle in new places.","example":"Like welcoming a transfer student."},
+    {"term":"Migrant Workers","definition":"People working in another country.","example":"Like students helping another class."},
+    {"term":"Migration Flow","definition":"Movement of many people.","example":"Like students moving between classrooms."},
+    {"term":"Refugee Camp","definition":"Temporary place for displaced people.","example":"Like emergency shelters."},
+    {"term":"Legal Migration","definition":"Moving according to laws.","example":"Like enrolling officially in school."},
+    {"term":"Irregular Migration","definition":"Moving without official permission.","example":"Like sneaking into a class."},
+    {"term":"Citizenship","definition":"Legal membership in a country.","example":"Like belonging to a school."},
+    {"term":"Naturalization","definition":"Process of becoming a citizen.","example":"Like officially joining a new team."},
+    {"term":"Humanitarian Protection","definition":"Safety for people in danger.","example":"Like protecting a friend from bullying."},
+    {"term":"Migration Rights","definition":"Laws protecting migrants.","example":"Like rules protecting students' safety."},
+    {"term":"Host Country","definition":"Country receiving immigrants.","example":"Like a school accepting new students."},
+    {"term":"Displacement","definition":"Forced movement from home.","example":"Like having to leave your classroom."},
+    {"term":"Repatriation","definition":"Returning people to their home country.","example":"Like transferring a student back to their original school."}
+  ],
+  "peace_conflict_studies": [
+    {"term":"Conflict","definition":"A serious disagreement between groups or countries.","example":"Like two classes arguing over the same classroom."},
+    {"term":"Peace Agreement","definition":"An agreement to stop fighting.","example":"Like two students deciding to stop arguing and shake hands."},
+    {"term":"Ceasefire","definition":"A temporary stop in fighting.","example":"Like students pausing a fight until a teacher arrives."},
+    {"term":"Peace Negotiation","definition":"Talking to solve a conflict peacefully.","example":"Like two classmates discussing a problem instead of fighting."},
+    {"term":"Mediator","definition":"A neutral person helping both sides talk.","example":"Like a teacher helping two students solve a disagreement."},
+    {"term":"Reconciliation","definition":"Making peace after conflict.","example":"Like friends forgiving each other after a big argument."},
+    {"term":"Peacebuilding","definition":"Actions to create long-lasting peace.","example":"Like creating school rules so students don't fight again."},
+    {"term":"Armed Conflict","definition":"A fight where weapons are used.","example":"Like a very serious fight between groups."},
+    {"term":"Civil War","definition":"A war within the same country.","example":"Like two groups in the same school fighting each other."},
+    {"term":"Conflict Resolution","definition":"Solving a problem peacefully.","example":"Like students talking with a teacher to solve a dispute."},
+    {"term":"Peacekeeping Mission","definition":"International forces keeping peace in conflict areas.","example":"Like teachers supervising students after a fight."},
+    {"term":"Post-Conflict Recovery","definition":"Rebuilding after war ends.","example":"Like repairing a classroom after a big mess."},
+    {"term":"Tension","definition":"A situation where conflict might happen.","example":"Like two students angry but not yet fighting."},
+    {"term":"Dialogue","definition":"Open conversation between groups.","example":"Like students sitting down to discuss their problems."},
+    {"term":"Demilitarization","definition":"Removing weapons from an area.","example":"Like taking away sticks from students who were fighting."},
+    {"term":"Peace Treaty","definition":"A formal agreement ending war.","example":"Like signing a contract promising not to fight again."},
+    {"term":"Peace Education","definition":"Teaching people how to live peacefully.","example":"Like learning about kindness and cooperation in school."},
+    {"term":"Early Warning System","definition":"Signals that conflict might start soon.","example":"Like noticing students getting angry before a fight starts."},
+    {"term":"Confidence Building","definition":"Actions that build trust between groups.","example":"Like teammates learning to trust each other."},
+    {"term":"Restorative Justice","definition":"Repairing harm after conflict.","example":"Like a student apologizing and fixing what they broke."},
+    {"term":"Long-term Peace","definition":"Lasting peace maintained over time.","example":"Like keeping peace in class throughout the school year."}
+  ],
+  "global_governance": [
+    {"term":"Global Governance","definition":"Countries working together to solve global problems.","example":"Like all school classes following the same school rules."},
+    {"term":"International Cooperation","definition":"Countries helping each other.","example":"Like students helping classmates finish a group project."},
+    {"term":"Global Rules","definition":"Shared rules countries agree to follow.","example":"Like school rules everyone must obey."},
+    {"term":"International Summit","definition":"A big meeting of world leaders.","example":"Like a school assembly with all students."},
+    {"term":"Decision-Making Council","definition":"A group deciding global issues.","example":"Like a student council making school decisions."},
+    {"term":"Policy Coordination","definition":"Countries aligning their policies together.","example":"Like teachers agreeing on the same homework rules."},
+    {"term":"Global Agreement","definition":"A deal made by many countries.","example":"Like the whole class agreeing on project rules."},
+    {"term":"Multilateral Decision","definition":"A decision made by many countries together.","example":"Like a class vote."},
+    {"term":"International Regulation","definition":"Rules controlling global activities.","example":"Like school rules for using the library."},
+    {"term":"Global Leadership","definition":"Countries guiding others on world issues.","example":"Like a class leader organizing a project."},
+    {"term":"Transparency","definition":"Being open and honest in decisions.","example":"Like explaining why a teacher gave a certain grade."},
+    {"term":"Accountability","definition":"Being responsible for actions.","example":"Like students answering for breaking rules."},
+    {"term":"International Monitoring","definition":"Checking if countries follow agreements.","example":"Like teachers checking homework."},
+    {"term":"Global Coordination","definition":"Countries organizing actions together.","example":"Like students planning a group event."},
+    {"term":"Global Problem-Solving","definition":"Working together to solve world issues.","example":"Like classmates fixing a group project problem."},
+    {"term":"Policy Framework","definition":"A system guiding decisions.","example":"Like a school handbook."},
+    {"term":"International Standards","definition":"Common rules used globally.","example":"Like grading systems in school."},
+    {"term":"Collective Action","definition":"Many countries acting together.","example":"Like the whole class cleaning the classroom."},
+    {"term":"Institutional Cooperation","definition":"Organizations working together.","example":"Like different school clubs organizing an event."},
+    {"term":"Global Decision System","definition":"The structure used to make world decisions.","example":"Like school administration making school policies."},
+    {"term":"Consensus Building","definition":"Getting agreement from many parties.","example":"Like the whole class agreeing on a field trip."}
+  ],
+  "international_trade": [
+    {"term":"Trade","definition":"Buying and selling goods between countries.","example":"Like students exchanging snacks."},
+    {"term":"Export","definition":"Selling goods to another country.","example":"Like giving your snack to a friend in another class."},
+    {"term":"Import","definition":"Buying goods from another country.","example":"Like receiving snacks from another class."},
+    {"term":"Tariff","definition":"A tax on imported goods.","example":"Like paying a fee to bring snacks into class."},
+    {"term":"Trade Agreement","definition":"A deal between countries about trading.","example":"Like two classes agreeing to share supplies."},
+    {"term":"Free Trade","definition":"Trade without many restrictions.","example":"Like students freely sharing materials."},
+    {"term":"Trade Barrier","definition":"Anything making trade harder.","example":"Like rules stopping snack sharing."},
+    {"term":"Trade Route","definition":"Path goods travel between places.","example":"Like the hallway used to move between classrooms."},
+    {"term":"Trade Partner","definition":"A country you trade with often.","example":"Like a friend you exchange snacks with."},
+    {"term":"Customs","definition":"Officials checking goods entering a country.","example":"Like teachers checking students' bags."},
+    {"term":"Global Market","definition":"The worldwide buying and selling system.","example":"Like a huge school marketplace."},
+    {"term":"Supply","definition":"The amount of goods available.","example":"Like how many snacks are in class."},
+    {"term":"Demand","definition":"How much people want something.","example":"Like everyone wanting the same candy."},
+    {"term":"Trade Balance","definition":"Difference between exports and imports.","example":"Like giving more snacks than you receive."},
+    {"term":"Trade Negotiation","definition":"Countries discussing trade deals.","example":"Like students bargaining snack exchanges."},
+    {"term":"Trade Policy","definition":"Government rules about trade.","example":"Like classroom rules about sharing."},
+    {"term":"Economic Exchange","definition":"Trading goods or services.","example":"Like swapping books."},
+    {"term":"Trade Sanction","definition":"Stopping trade to punish a country.","example":"Like refusing to share snacks with someone."},
+    {"term":"Market Competition","definition":"Businesses competing to sell goods.","example":"Like students competing in a bake sale."},
+    {"term":"Global Commerce","definition":"Business activities across countries.","example":"Like selling items in a school fair."},
+    {"term":"Merchant","definition":"A person who buys and sells goods.","example":"Like a student running a snack stand."}
+  ],
+  "energy_politics": [
+    {"term":"Energy Resource","definition":"A source of power like oil or gas.","example":"Like batteries powering a toy."},
+    {"term":"Oil Supply","definition":"The amount of oil available.","example":"Like how many batteries you have."},
+    {"term":"Energy Security","definition":"Having reliable energy supplies.","example":"Like making sure your phone stays charged."},
+    {"term":"Renewable Energy","definition":"Energy that never runs out.","example":"Like sunlight powering solar panels."},
+    {"term":"Fossil Fuels","definition":"Energy from coal, oil, and gas.","example":"Like old stored energy in the earth."},
+    {"term":"Energy Exporter","definition":"A country selling energy resources.","example":"Like a student selling extra batteries."},
+    {"term":"Energy Importer","definition":"A country buying energy resources.","example":"Like a student buying batteries."},
+    {"term":"Energy Policy","definition":"Government rules about energy use.","example":"Like school rules about electricity."},
+    {"term":"Energy Crisis","definition":"A big shortage of energy.","example":"Like running out of batteries during a game."},
+    {"term":"Pipeline","definition":"Pipes transporting oil or gas.","example":"Like tubes carrying water."},
+    {"term":"Energy Market","definition":"Where energy is bought and sold.","example":"Like a store selling batteries."},
+    {"term":"Energy Alliance","definition":"Countries cooperating on energy.","example":"Like students sharing chargers."},
+    {"term":"Strategic Reserves","definition":"Extra energy saved for emergencies.","example":"Like spare batteries kept for later."},
+    {"term":"Energy Infrastructure","definition":"Systems that produce and deliver energy.","example":"Like power lines bringing electricity."},
+    {"term":"Electric Grid","definition":"A network distributing electricity.","example":"Like wires connecting classrooms."},
+    {"term":"Energy Transition","definition":"Switching to cleaner energy.","example":"Like replacing old batteries with rechargeable ones."},
+    {"term":"Energy Independence","definition":"Producing your own energy.","example":"Like charging your own device instead of borrowing."},
+    {"term":"Fuel Price","definition":"Cost of energy resources.","example":"Like paying for batteries."},
+    {"term":"Energy Investment","definition":"Spending money to improve energy systems.","example":"Like buying better chargers."},
+    {"term":"Power Plant","definition":"A place producing electricity.","example":"Like a big battery generator."},
+    {"term":"Energy Diplomacy","definition":"Using energy to influence international relations.","example":"Like trading batteries for favors."}
+  ],
+  "technology_global_politics": [
+    {"term":"Cybersecurity","definition":"Protecting computers and networks.","example":"Like locking your phone."},
+    {"term":"Cyber Attack","definition":"Hacking or damaging digital systems.","example":"Like someone breaking into your online account."},
+    {"term":"Digital Diplomacy","definition":"Using the internet for international communication.","example":"Like leaders posting messages online."},
+    {"term":"Artificial Intelligence (AI)","definition":"Machines that can think or learn.","example":"Like a smart robot helping students."},
+    {"term":"Data Privacy","definition":"Protecting personal information online.","example":"Like keeping your password secret."},
+    {"term":"Tech Regulation","definition":"Rules controlling technology companies.","example":"Like school rules for using phones."},
+    {"term":"Information Warfare","definition":"Spreading false information to influence people.","example":"Like rumors spreading in school."},
+    {"term":"Social Media Influence","definition":"Impact of online platforms on politics.","example":"Like students forming opinions through social media."},
+    {"term":"Digital Surveillance","definition":"Monitoring online activity.","example":"Like teachers checking school computers."},
+    {"term":"Tech Innovation","definition":"Creating new technology.","example":"Like inventing a new school app."},
+    {"term":"Online Propaganda","definition":"Messages used to influence opinions online.","example":"Like persuasive posts on social media."},
+    {"term":"Global Internet Governance","definition":"Rules for how the internet works worldwide.","example":"Like rules for using the school network."},
+    {"term":"Tech Competition","definition":"Countries competing in technology development.","example":"Like students competing in robotics competitions."},
+    {"term":"Digital Economy","definition":"Economic activity online.","example":"Like buying items in online games."},
+    {"term":"Smart Technology","definition":"Devices that connect and communicate.","example":"Like smart watches."},
+    {"term":"Cloud Computing","definition":"Storing data on internet servers.","example":"Like saving homework online."},
+    {"term":"Tech Sanctions","definition":"Restrictions on technology trade.","example":"Like banning certain devices in school."},
+    {"term":"Digital Infrastructure","definition":"Systems supporting internet communication.","example":"Like school Wi-Fi networks."},
+    {"term":"AI Ethics","definition":"Rules about responsible AI use.","example":"Like rules for using robots safely."},
+    {"term":"Global Tech Companies","definition":"Large companies influencing technology worldwide.","example":"Like big tech brands shaping digital life."},
+    {"term":"Digital Rights","definition":"Protections for people online.","example":"Like privacy rules for students on school networks."}
+  ],
+  "global_finance": [
+    {"term":"Global Finance","definition":"Money moving between countries around the world.","example":"Like students lending and borrowing money between classes."},
+    {"term":"Currency","definition":"The type of money used in a country.","example":"Like different classes using different tokens."},
+    {"term":"Exchange Rate","definition":"The value of one country's money compared to another.","example":"Like trading two candies for one chocolate."},
+    {"term":"International Investment","definition":"Money put into businesses or projects in another country.","example":"Like helping a friend start a lemonade stand."},
+    {"term":"Foreign Direct Investment (FDI)","definition":"When a company builds or buys a business in another country.","example":"Like opening a new branch of a school club in another class."},
+    {"term":"Global Bank","definition":"A bank that works in many countries.","example":"Like a school bank helping students from every class."},
+    {"term":"Financial Market","definition":"A place where money, stocks, and investments are traded.","example":"Like a big school marketplace."},
+    {"term":"Stock Market","definition":"A system where people buy and sell company shares.","example":"Like owning a small part of a school club."},
+    {"term":"Economic Crisis","definition":"A major financial problem affecting many countries.","example":"Like the school shop suddenly running out of supplies."},
+    {"term":"Inflation","definition":"When prices increase over time.","example":"Like candy costing more each week in the school store."},
+    {"term":"Debt","definition":"Money that must be paid back.","example":"Like borrowing money from a friend."},
+    {"term":"Loan","definition":"Money borrowed with the promise to return it later.","example":"Like borrowing lunch money and paying it back tomorrow."},
+    {"term":"Interest","definition":"Extra money paid when returning a loan.","example":"Like returning two candies when you borrowed one."},
+    {"term":"Financial Stability","definition":"When the economy is stable and not in crisis.","example":"Like a school shop always having enough supplies."},
+    {"term":"Central Bank","definition":"The main bank controlling a country's money system.","example":"Like the school administration managing school funds."},
+    {"term":"International Monetary Fund (IMF)","definition":"An organization helping countries with financial problems.","example":"Like a school helping a class that ran out of supplies."},
+    {"term":"Economic Growth","definition":"When a country's economy becomes stronger.","example":"Like a school club becoming bigger and more successful."},
+    {"term":"Capital Flow","definition":"Movement of money between countries.","example":"Like students sharing money across classes."},
+    {"term":"Financial Regulation","definition":"Rules controlling banks and financial systems.","example":"Like school rules about spending money in the cafeteria."},
+    {"term":"Global Financial System","definition":"The worldwide network of banks and financial institutions.","example":"Like the entire school system managing money."}
+  ],
+  "humanitarian_affairs": [
+    {"term":"Humanitarian Aid","definition":"Help given to people suffering from disasters or conflict.","example":"Like students helping classmates after an accident."},
+    {"term":"Relief Aid","definition":"Emergency support such as food, water, or shelter.","example":"Like giving supplies to students after a school emergency."},
+    {"term":"Disaster Response","definition":"Actions taken after a natural disaster.","example":"Like teachers organizing help after a school flood."},
+    {"term":"Humanitarian Organization","definition":"A group helping people in need.","example":"Like a school charity club."},
+    {"term":"Emergency Shelter","definition":"Temporary housing for people who lost homes.","example":"Like students staying in the gym during an emergency."},
+    {"term":"Food Aid","definition":"Providing food to people who don't have enough.","example":"Like sharing lunch with someone who forgot theirs."},
+    {"term":"Medical Aid","definition":"Providing healthcare to those in need.","example":"Like the school nurse helping injured students."},
+    {"term":"Humanitarian Mission","definition":"A project to help people in crisis.","example":"Like students organizing a charity event."},
+    {"term":"Refugee Assistance","definition":"Support given to people forced to leave their homes.","example":"Like helping a new student settle in school."},
+    {"term":"Disaster Relief Team","definition":"A group responding to emergencies.","example":"Like teachers helping students during a school emergency."},
+    {"term":"Aid Worker","definition":"A person helping people during crises.","example":"Like volunteers helping in school activities."},
+    {"term":"Humanitarian Crisis","definition":"A situation where many people need urgent help.","example":"Like a big emergency affecting the whole school."},
+    {"term":"Safe Water Access","definition":"Providing clean drinking water.","example":"Like making sure every student has clean water."},
+    {"term":"Emergency Supplies","definition":"Essential items like food, water, and medicine.","example":"Like first aid kits in classrooms."},
+    {"term":"Protection of Civilians","definition":"Keeping ordinary people safe during conflict.","example":"Like teachers protecting students during a fight."},
+    {"term":"Reconstruction Aid","definition":"Help rebuilding after disasters.","example":"Like fixing classrooms after damage."},
+    {"term":"Humanitarian Logistics","definition":"Organizing delivery of aid supplies.","example":"Like planning how to distribute school supplies."},
+    {"term":"Volunteer Work","definition":"Helping others without payment.","example":"Like students helping clean the school."},
+    {"term":"Crisis Management","definition":"Organizing actions during emergencies.","example":"Like the school creating an emergency plan."},
+    {"term":"Community Support","definition":"People helping each other during difficult times.","example":"Like classmates supporting a student in trouble."}
+  ]
+}

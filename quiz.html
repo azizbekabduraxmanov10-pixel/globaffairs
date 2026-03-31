@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz - GlobAffairs</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* Override body background for this page */
+		html {
+			background: url('background.jpg') no-repeat center center/cover fixed;
+		}
+
+		body {
+			background: transparent;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			z-index: 20;
+			background: rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(8px);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="index.html" class="logo-link" aria-label="Go to homepage">
+			<img src="globaffairs-logo.png" class="logo" alt="GlobAffairs Logo">
+		</a>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="quiz-selection.html">Quiz</a></li>
+				<li><a href="terminology.html">Terminology</a></li>
+				<li><a href="articles.html">Articles</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="quiz-bg">
+		<div class="quiz-container">
+			<div class="quiz-header">
+				<h1 id="fieldTitle">Quiz</h1>
+				<p id="questionCounter">Question 1 of 20</p>
+			</div>
+
+			<div class="quiz-content">
+				<div class="question-box">
+					<h2 id="questionText">What is the meaning of <strong>Term</strong>?</h2>
+				</div>
+
+				<div class="options-container">
+					<div class="option" data-index="0">
+						<input type="radio" id="option0" name="answer" value="0">
+						<label for="option0" id="optionLabel0">Option 1</label>
+					</div>
+					<div class="option" data-index="1">
+						<input type="radio" id="option1" name="answer" value="1">
+						<label for="option1" id="optionLabel1">Option 2</label>
+					</div>
+					<div class="option" data-index="2">
+						<input type="radio" id="option2" name="answer" value="2">
+						<label for="option2" id="optionLabel2">Option 3</label>
+					</div>
+					<div class="option" data-index="3">
+						<input type="radio" id="option3" name="answer" value="3">
+						<label for="option3" id="optionLabel3">Option 4</label>
+					</div>
+				</div>
+
+				<div id="feedbackMessage" class="feedback-message"></div>
+			</div>
+
+			<div class="quiz-controls">
+				<button id="prevBtn" class="nav-btn prev-btn">Previous</button>
+				<button id="checkBtn" class="check-btn">Check</button>
+				<button id="nextBtn" class="nav-btn next-btn">Next</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="quiz-mc.js"></script>
+</body>
+</html>

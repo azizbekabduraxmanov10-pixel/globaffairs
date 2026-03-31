@@ -1,0 +1,22 @@
+[
+  {"term":"Humanitarian Aid","definition":"Help given to people suffering from disasters or conflict.","example":"Like students helping classmates after an accident."},
+  {"term":"Relief Aid","definition":"Emergency support such as food, water, or shelter.","example":"Like giving supplies to students after a school emergency."},
+  {"term":"Disaster Response","definition":"Actions taken after a natural disaster.","example":"Like teachers organizing help after a school flood."},
+  {"term":"Humanitarian Organization","definition":"A group helping people in need.","example":"Like a school charity club."},
+  {"term":"Emergency Shelter","definition":"Temporary housing for people who lost homes.","example":"Like students staying in the gym during an emergency."},
+  {"term":"Food Aid","definition":"Providing food to people who don't have enough.","example":"Like sharing lunch with someone who forgot theirs."},
+  {"term":"Medical Aid","definition":"Providing healthcare to those in need.","example":"Like the school nurse helping injured students."},
+  {"term":"Humanitarian Mission","definition":"A project to help people in crisis.","example":"Like students organizing a charity event."},
+  {"term":"Refugee Assistance","definition":"Support given to people forced to leave their homes.","example":"Like helping a new student settle in school."},
+  {"term":"Disaster Relief Team","definition":"A group responding to emergencies.","example":"Like teachers helping students during a school emergency."},
+  {"term":"Aid Worker","definition":"A person helping people during crises.","example":"Like volunteers helping in school activities."},
+  {"term":"Humanitarian Crisis","definition":"A situation where many people need urgent help.","example":"Like a big emergency affecting the whole school."},
+  {"term":"Safe Water Access","definition":"Providing clean drinking water.","example":"Like making sure every student has clean water."},
+  {"term":"Emergency Supplies","definition":"Essential items like food, water, and medicine.","example":"Like first aid kits in classrooms."},
+  {"term":"Protection of Civilians","definition":"Keeping ordinary people safe during conflict.","example":"Like teachers protecting students during a fight."},
+  {"term":"Reconstruction Aid","definition":"Help rebuilding after disasters.","example":"Like fixing classrooms after damage."},
+  {"term":"Humanitarian Logistics","definition":"Organizing delivery of aid supplies.","example":"Like planning how to distribute school supplies."},
+  {"term":"Volunteer Work","definition":"Helping others without payment.","example":"Like students helping clean the school."},
+  {"term":"Crisis Management","definition":"Organizing actions during emergencies.","example":"Like the school creating an emergency plan."},
+  {"term":"Community Support","definition":"People helping each other during difficult times.","example":"Like classmates supporting a student in trouble."}
+]

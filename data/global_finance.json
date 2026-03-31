@@ -1,0 +1,22 @@
+[
+  {"term":"Global Finance","definition":"Money moving between countries around the world.","example":"Like students lending and borrowing money between classes."},
+  {"term":"Currency","definition":"The type of money used in a country.","example":"Like different classes using different tokens."},
+  {"term":"Exchange Rate","definition":"The value of one country's money compared to another.","example":"Like trading two candies for one chocolate."},
+  {"term":"International Investment","definition":"Money put into businesses or projects in another country.","example":"Like helping a friend start a lemonade stand."},
+  {"term":"Foreign Direct Investment (FDI)","definition":"When a company builds or buys a business in another country.","example":"Like opening a new branch of a school club in another class."},
+  {"term":"Global Bank","definition":"A bank that works in many countries.","example":"Like a school bank helping students from every class."},
+  {"term":"Financial Market","definition":"A place where money, stocks, and investments are traded.","example":"Like a big school marketplace."},
+  {"term":"Stock Market","definition":"A system where people buy and sell company shares.","example":"Like owning a small part of a school club."},
+  {"term":"Economic Crisis","definition":"A major financial problem affecting many countries.","example":"Like the school shop suddenly running out of supplies."},
+  {"term":"Inflation","definition":"When prices increase over time.","example":"Like candy costing more each week in the school store."},
+  {"term":"Debt","definition":"Money that must be paid back.","example":"Like borrowing money from a friend."},
+  {"term":"Loan","definition":"Money borrowed with the promise to return it later.","example":"Like borrowing lunch money and paying it back tomorrow."},
+  {"term":"Interest","definition":"Extra money paid when returning a loan.","example":"Like returning two candies when you borrowed one."},
+  {"term":"Financial Stability","definition":"When the economy is stable and not in crisis.","example":"Like a school shop always having enough supplies."},
+  {"term":"Central Bank","definition":"The main bank controlling a country's money system.","example":"Like the school administration managing school funds."},
+  {"term":"International Monetary Fund (IMF)","definition":"An organization helping countries with financial problems.","example":"Like a school helping a class that ran out of supplies."},
+  {"term":"Economic Growth","definition":"When a country's economy becomes stronger.","example":"Like a school club becoming bigger and more successful."},
+  {"term":"Capital Flow","definition":"Movement of money between countries.","example":"Like students sharing money across classes."},
+  {"term":"Financial Regulation","definition":"Rules controlling banks and financial systems.","example":"Like school rules about spending money in the cafeteria."},
+  {"term":"Global Financial System","definition":"The worldwide network of banks and financial institutions.","example":"Like the entire school system managing money."}
+]

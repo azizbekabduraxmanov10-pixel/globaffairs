@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz Selection - GlobAffairs</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* Override body background for this page */
+		html {
+			background: url('background.jpg') no-repeat center center/cover fixed;
+		}
+
+		body {
+			background: transparent;
+			margin: 0;
+			padding: 0;
+		}
+
+		/* Quiz Selection Page Styles */
+		.quiz-selection-bg {
+			background: transparent;
+			min-height: auto;
+			width: 100%;
+			position: relative;
+			z-index: 0;
+			padding-top: 90px;
+		}
+
+		.quiz-selection-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 40px 20px;
+			min-height: auto;
+			position: relative;
+			z-index: 1;
+		}
+
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			z-index: 20;
+			background: rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(8px);
+		}
+
+		.quiz-selection-container h1 {
+			color: #fff;
+			text-align: center;
+			margin-bottom: 40px;
+			font-size: 2.5rem;
+			font-weight: 700;
+			letter-spacing: 1px;
+			text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+		}
+
+		/* Control buttons at the top */
+		.quiz-controls {
+			display: flex;
+			justify-content: center;
+			gap: 16px;
+			margin-bottom: 40px;
+			flex-wrap: wrap;
+		}
+
+		.quiz-btn {
+			font-size: 16px;
+			padding: 12px 28px;
+			background: #1e3a8a;
+			color: #fff;
+			border: none;
+			border-radius: 6px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+		}
+
+		.quiz-btn:hover {
+			background: #2747a8;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+		}
+
+		.quiz-btn:active {
+			background: #152b63;
+			transform: translateY(0);
+		}
+
+		.quiz-btn:disabled {
+			background: #9ca3af;
+			cursor: not-allowed;
+			transform: none;
+		}
+
+		/* Field grid layout */
+		.fields-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 20px;
+			margin-bottom: 40px;
+		}
+
+		.field-card {
+			background: rgba(30, 58, 138, 0.15);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			border-radius: 12px;
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+			cursor: pointer;
+			backdrop-filter: blur(10px);
+			min-height: 70px;
+		}
+
+		.field-card:hover {
+			background: rgba(30, 58, 138, 0.25);
+			border-color: rgba(255, 255, 255, 0.4);
+			transform: translateY(-2px);
+			box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+		}
+
+		.field-card.selected {
+			background: rgba(30, 58, 138, 0.35);
+			border-color: #93c5fd;
+			box-shadow: 0 0 12px rgba(147, 197, 253, 0.3);
+		}
+
+		.field-checkbox {
+			width: 22px;
+			height: 22px;
+			cursor: pointer;
+			accent-color: #3b82f6;
+			flex-shrink: 0;
+		}
+
+		.field-label {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+			text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+			flex: 1;
+			cursor: pointer;
+		}
+
+		/* Message for validation */
+		.validation-message {
+			color: #fca5a5;
+			text-align: center;
+			font-size: 16px;
+			margin-bottom: 20px;
+			text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+			font-weight: 500;
+			display: none;
+		}
+
+		.validation-message.show {
+			display: block;
+		}
+
+		/* Success message */
+		.success-message {
+			color: #86efac;
+			text-align: center;
+			font-size: 16px;
+			margin-bottom: 20px;
+			text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+			font-weight: 500;
+			display: none;
+		}
+
+		.success-message.show {
+			display: block;
+		}
+
+		/* Counter for selected fields */
+		.selection-counter {
+			color: #e0e7ff;
+			text-align: center;
+			margin-bottom: 20px;
+			font-size: 16px;
+			font-weight: 500;
+			text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+		}
+
+		@media (max-width: 768px) {
+			.quiz-selection-container h1 {
+				font-size: 2rem;
+				margin-bottom: 30px;
+			}
+
+			.fields-grid {
+				grid-template-columns: 1fr;
+				gap: 16px;
+			}
+
+			.quiz-controls {
+				flex-direction: column;
+			}
+
+			.quiz-btn {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="index.html" class="logo-link" aria-label="Go to homepage">
+			<img src="globaffairs-logo.png" class="logo" alt="GlobAffairs Logo">
+		</a>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="quiz-selection.html">Quiz</a></li>
+				<li><a href="terminology.html">Terminology</a></li>
+				<li><a href="articles.html">Articles</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="quiz-selection-bg">
+		<div class="quiz-selection-container">
+			<h1>Select Quiz Fields</h1>
+
+			<div class="quiz-controls">
+				<button id="selectAllBtn" class="quiz-btn">Select All</button>
+				<button id="clearBtn" class="quiz-btn">Clear</button>
+				<button id="startQuizBtn" class="quiz-btn">Start Quiz</button>
+			</div>
+
+			<div class="validation-message" id="validationMessage">
+				Please select at least one field.
+			</div>
+
+			<div class="success-message" id="successMessage">
+				Quiz starting...
+			</div>
+
+			<div class="selection-counter" id="selectionCounter">
+				Selected: 0 / 20 fields
+			</div>
+
+			<div class="fields-grid" id="fieldsGrid">
+				<!-- Fields will be populated by JavaScript -->
+			</div>
+		</div>
+	</div>
+
+	<script src="quiz-selection.js"></script>
+</body>
+</html>

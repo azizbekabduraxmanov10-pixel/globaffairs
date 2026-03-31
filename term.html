@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Term Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center/cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .container {
+      width: min(96%, 920px);
+      background: rgba(0,0,20,0.55);
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 18px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+      backdrop-filter: blur(7px);
+    }
+    .title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.35);
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      margin: 0;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #eff6ff;
+      font-weight: 600;
+    }
+    .term-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.45);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+    .term-card p {
+      margin: 12px 0;
+      line-height: 1.5;
+    }
+    .term-card p strong {
+      color: #ffffff;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    .nav button, .nav a {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.6);
+      color: #fff;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+      min-width: 120px;
+      text-align: center;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+    .nav button:hover, .nav a:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.28);
+    }
+    .nav button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .error {
+      color: #ff9c9c;
+      text-align: center;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title" id="categoryTitle">Term</div>
+    <div class="subtitle" id="termTitle">Loading...</div>
+
+    <div class="term-card">
+      <p id="definition"><strong>Definition:</strong> ...</p>
+      <p id="example"><strong>Example:</strong> ...</p>
+    </div>
+
+    <div class="nav">
+      <button id="prevBtn">Previous</button>
+      <a id="backBtn" href="terms.html">Back to List</a>
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <p class="error" id="errorText"></p>
+  </div>
+
+  <script src="terms.js"></script>
+  <script>
+    async function loadTerms(category) {
+      try {
+        if (window.termsData) {
+          const data = termsData;
+          return data[category] || [];
+        }
+
+        const res = await fetch(`data/${category}.json`);
+        if (!res.ok) throw new Error('Failed to fetch data/' + category + '.json: ' + res.status);
+        const data = await res.json();
+        return data || [];
+      } catch (err) {
+        console.error(err);
+        document.getElementById('errorText').textContent = 'Failed to load terms. Check server or file path.';
+        return null;
+      }
+    }
+
+    function titleizeSlug(slug) {
+      return slug
+        .replace(/_/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    (async () => {
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get('category');
+      let index = parseInt(params.get('index'), 10);
+
+      if (!category) {
+        document.getElementById('errorText').textContent = 'Category not specified.';
+        return;
+      }
+
+      const terms = await loadTerms(category);
+      if (!terms) return;
+      if (!terms.length) {
+        document.getElementById('errorText').textContent = 'No terms found for this category.';
+        return;
+      }
+
+      if (Number.isNaN(index) || index < 0 || index >= terms.length) {
+        index = 0;
+      }
+
+      const categoryTitle = document.getElementById('categoryTitle');
+      const termTitle = document.getElementById('termTitle');
+      const defEl = document.getElementById('definition');
+      const exEl = document.getElementById('example');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const backBtn = document.getElementById('backBtn');
+      const errorText = document.getElementById('errorText');
+
+      categoryTitle.innerText = titleizeSlug(category);
+      backBtn.href = `terms.html?category=${encodeURIComponent(category)}`;
+
+      function render() {
+        const term = terms[index];
+        termTitle.innerText = term.term;
+        defEl.innerHTML = `<strong>Definition:</strong> ${term.definition || 'No definition available.'}`;
+        exEl.innerHTML = `<strong>Example:</strong> ${term.example || 'No example available.'}`;
+
+        prevBtn.disabled = index === 0;
+        nextBtn.disabled = index === terms.length - 1;
+
+        history.replaceState(null, '', `term.html?category=${encodeURIComponent(category)}&index=${index}`);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (index > 0) {
+          index -= 1;
+          render();
+        }
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (index < terms.length - 1) {
+          index += 1;
+          render();
+        }
+      });
+
+      render();
+      errorText.textContent = '';
+    })();
+  </script>
+</body>
+</html>

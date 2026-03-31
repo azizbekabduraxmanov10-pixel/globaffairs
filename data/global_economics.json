@@ -1,0 +1,22 @@
+[
+  {"term":"GDP (Gross Domestic Product)","definition":"The total value of goods a country makes.","example":"Like counting all the snacks made in a bakery."},
+  {"term":"Inflation","definition":"When prices rise over time.","example":"Like candy becoming more expensive."},
+  {"term":"Trade","definition":"Buying and selling between countries.","example":"Like swapping snacks."},
+  {"term":"Export","definition":"Selling goods to other countries.","example":"Like selling lemonade to another class."},
+  {"term":"Import","definition":"Buying goods from other countries.","example":"Like buying cookies from another class."},
+  {"term":"Currency","definition":"A country's money.","example":"Like tokens used in games."},
+  {"term":"Exchange Rate","definition":"How much one currency equals another.","example":"Like trading 2 candies for 1 chocolate."},
+  {"term":"Economic Growth","definition":"When a country produces more over time.","example":"Like a garden growing bigger."},
+  {"term":"Recession","definition":"When the economy slows down.","example":"Like fewer snacks being made in the bakery."},
+  {"term":"Supply","definition":"How much product is available.","example":"Like how many apples are in the basket."},
+  {"term":"Demand","definition":"How much people want something.","example":"Like everyone wanting the same toy."},
+  {"term":"Market Economy","definition":"Prices decided by buyers and sellers.","example":"Like students deciding snack prices."},
+  {"term":"Economic Sanctions","definition":"Trade restrictions used as punishment.","example":"Like banning someone from trading cards."},
+  {"term":"Investment","definition":"Putting money into something to grow it.","example":"Like planting seeds to grow plants."},
+  {"term":"Global Trade Network","definition":"Countries connected through trade.","example":"Like many kids trading toys."},
+  {"term":"Labor Force","definition":"People who work in an economy.","example":"Like students helping in a school project."},
+  {"term":"Productivity","definition":"How much work is done efficiently.","example":"Like finishing homework quickly."},
+  {"term":"Economic Inequality","definition":"Differences in wealth.","example":"Like some kids having many toys and others few."},
+  {"term":"Trade Balance","definition":"Difference between exports and imports.","example":"Like trading more toys than you receive."},
+  {"term":"Financial Crisis","definition":"A big economic problem.","example":"Like the school store running out of money."}
+]
