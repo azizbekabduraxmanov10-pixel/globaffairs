@@ -6,7 +6,9 @@
 	<title>Authentication - GlobAffairs</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="auth.css">
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
 </head>
 <body class="auth-page">
 	<header>
@@ -155,6 +157,21 @@
 		</div>
 	</div>
 
+	<script>
+		// Firebase Configuration
+		// TODO: Replace with your Firebase project config from Firebase Console
+		const firebaseConfig = {
+			apiKey: "YOUR_API_KEY",
+			authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+			projectId: "YOUR_PROJECT_ID",
+			storageBucket: "YOUR_PROJECT_ID.appspot.com",
+			messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+			appId: "YOUR_APP_ID"
+		};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
 	<script src="auth.js"></script>
 </body>
 </html>

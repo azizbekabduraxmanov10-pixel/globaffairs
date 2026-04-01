@@ -1,13 +1,13 @@
-// Profile page functionality
+// Profile page functionality - Firebase Edition
 class ProfileManager {
 	constructor() {
+		this.auth = firebase.auth();
 		this.currentUser = null;
 		this.initializeProfile();
 	}
 
 	initializeProfile() {
 		this.checkLogin();
-		this.displayUserInfo();
 		this.setupEventListeners();
 		// Update profile UI
 		if (window.GlobAffairsAuth) {
@@ -16,13 +16,22 @@ class ProfileManager {
 	}
 
 	checkLogin() {
-		const user = localStorage.getItem('loggedInUser');
-		if (!user) {
-			alert('You must be logged in to view your profile!');
-			window.location.href = 'index.html';
-			return;
-		}
-		this.currentUser = JSON.parse(user);
+		this.auth.onAuthStateChanged((user) => {
+			if (!user) {
+				alert('You must be logged in to view your profile!');
+				window.location.href = 'index.html';
+				return;
+			}
+
+			if (!user.emailVerified) {
+				alert('Please verify your email to access your profile!');
+				window.location.href = 'index.html';
+				return;
+			}
+
+			this.currentUser = user;
+			this.displayUserInfo();
+		});
 	}
 
 	displayUserInfo() {
@@ -32,23 +41,19 @@ class ProfileManager {
 		const displayEmail = document.getElementById('displayEmail');
 		const displayCreatedAt = document.getElementById('displayCreatedAt');
 
-		if (displayName) displayName.textContent = this.currentUser.name;
+		if (displayName) displayName.textContent = this.currentUser.displayName || 'User';
 		if (displayEmail) displayEmail.textContent = this.currentUser.email;
 
-		// Get account creation date from user data
-		if (displayCreatedAt) {
-			const users = this.getUsers();
-			const userData = users.find(u => u.email.toLowerCase() === this.currentUser.email.toLowerCase());
-			if (userData && userData.createdAt) {
-				const date = new Date(userData.createdAt);
-				displayCreatedAt.textContent = date.toLocaleDateString('en-US', {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric'
-				});
-			} else {
-				displayCreatedAt.textContent = 'Unknown';
-			}
+		// Display account creation date from Firebase metadata
+		if (displayCreatedAt && this.currentUser.metadata) {
+			const createdDate = new Date(this.currentUser.metadata.creationTime);
+			displayCreatedAt.textContent = createdDate.toLocaleDateString('en-US', {
+				year: 'numeric',
+				month: 'long',
+				day: 'numeric'
+			});
+		} else if (displayCreatedAt) {
+			displayCreatedAt.textContent = 'Unknown';
 		}
 	}
 
@@ -114,38 +119,46 @@ class ProfileManager {
 	deleteAccount() {
 		if (!this.currentUser) return;
 
-		// Get all users
-		const users = this.getUsers();
-		
-		// Find and remove the current user
-		const filteredUsers = users.filter(u => u.email.toLowerCase() !== this.currentUser.email.toLowerCase());
-		
-		// Save updated users
-		this.saveUsers(filteredUsers);
-
-		// Clear logged in user
-		localStorage.removeItem('loggedInUser');
-
-		// Show success message
 		const messageDiv = document.getElementById('profileMessage');
-		if (messageDiv) {
-			messageDiv.className = 'message success';
-			messageDiv.textContent = 'Account deleted successfully. Redirecting...';
-		}
+		const deleteModal = document.getElementById('deleteModal');
 
-		// Redirect to home page
-		setTimeout(() => {
-			window.location.href = 'index.html';
-		}, 1500);
-	}
+		// Delete user from Firebase
+		this.currentUser.delete()
+			.then(() => {
+				// User deleted successfully
+				if (messageDiv) {
+					messageDiv.className = 'message success';
+					messageDiv.textContent = 'Account deleted successfully. Redirecting...';
+				}
 
-	getUsers() {
-		const users = localStorage.getItem('globaffairs_users');
-		return users ? JSON.parse(users) : [];
-	}
+				if (deleteModal) {
+					deleteModal.style.display = 'none';
+				}
 
-	saveUsers(users) {
-		localStorage.setItem('globaffairs_users', JSON.stringify(users));
+				// Redirect to home page
+				setTimeout(() => {
+					window.location.href = 'index.html';
+				}, 1500);
+			})
+			.catch((error) => {
+				// Handle errors (e.g., user needs to have recently authenticated)
+				if (error.code === 'auth/requires-recent-login') {
+					if (messageDiv) {
+						messageDiv.className = 'message error';
+						messageDiv.textContent = 'Please log in again before deleting your account.';
+					}
+					// Sign out and redirect to login
+					setTimeout(() => {
+						this.auth.signOut();
+						window.location.href = 'auth.html';
+					}, 2000);
+				} else {
+					if (messageDiv) {
+						messageDiv.className = 'message error';
+						messageDiv.textContent = 'Error deleting account. Please try again.';
+					}
+				}
+			});
 	}
 }
 
@@ -153,3 +166,4 @@ class ProfileManager {
 document.addEventListener('DOMContentLoaded', () => {
 	window.profileManager = new ProfileManager();
 });
+

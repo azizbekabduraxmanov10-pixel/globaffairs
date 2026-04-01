@@ -1,15 +1,7 @@
-// Registered users database (stored in localStorage for static site)
-// Structure: { email, password, name, verified }
-
-// Initialize EmailJS
-emailjs.init('Qun865-3iZq1tZjC7');
-
+// Firebase Authentication Manager
 class AuthManager {
 	constructor() {
-		this.currentEmail = null;
-		this.currentName = null;
-		this.currentVerificationCode = null;
-		this.currentResetCode = null;
+		this.auth = firebase.auth();
 		this.initializeApp();
 	}
 
@@ -22,10 +14,13 @@ class AuthManager {
 
 	// Check if user is already logged in
 	checkExistingLogin() {
-		const user = localStorage.getItem('loggedInUser');
-		if (user) {
-			window.location.href = 'index.html';
-		}
+		// Listen for authenticated users with verified email
+		this.auth.onAuthStateChanged((user) => {
+			if (user && user.emailVerified) {
+				// User is logged in and verified, redirect to index.html
+				window.location.href = 'index.html';
+			}
+		});
 	}
 
 	// Setup tab switching
@@ -108,30 +103,12 @@ class AuthManager {
 			});
 		}
 
-		// Verify Form
-		const verifyForm = document.getElementById('verifyForm');
-		if (verifyForm) {
-			verifyForm.addEventListener('submit', (e) => {
-				e.preventDefault();
-				this.handleVerification();
-			});
-		}
-
 		// Forgot Password Form
 		const forgotForm = document.getElementById('forgotForm');
 		if (forgotForm) {
 			forgotForm.addEventListener('submit', (e) => {
 				e.preventDefault();
 				this.handleForgotPassword();
-			});
-		}
-
-		// Reset Password Form
-		const resetForm = document.getElementById('resetForm');
-		if (resetForm) {
-			resetForm.addEventListener('submit', (e) => {
-				e.preventDefault();
-				this.handleResetPassword();
 			});
 		}
 	}
@@ -159,26 +136,22 @@ class AuthManager {
 		});
 	}
 
-	// Generate random 6-digit code
-	generateCode() {
-		return String(Math.floor(100000 + Math.random() * 900000));
-	}
+	// Convert Firebase error codes to user-friendly messages
+	getErrorMessage(errorCode) {
+		const errors = {
+			'auth/email-already-in-use': 'This email is already registered. Please sign in instead.',
+			'auth/weak-password': 'Password should be at least 6 characters long.',
+			'auth/invalid-email': 'Please enter a valid email address.',
+			'auth/user-not-found': 'Email not registered. Please sign up first.',
+			'auth/wrong-password': 'Incorrect password. Please try again.',
+			'auth/too-many-requests': 'Too many failed login attempts. Please try again later.',
+			'auth/operation-not-allowed': 'Email/password accounts are not enabled.',
+			'auth/account-exists-with-different-credential': 'An account already exists with this email.',
+			'auth/invalid-credential': 'Invalid email or password.',
+			'auth/user-disabled': 'This account has been disabled.'
+		};
 
-	// Get registered users (from localStorage)
-	getUsers() {
-		const users = localStorage.getItem('globaffairs_users');
-		return users ? JSON.parse(users) : [];
-	}
-
-	// Save users to localStorage
-	saveUsers(users) {
-		localStorage.setItem('globaffairs_users', JSON.stringify(users));
-	}
-
-	// Find user by email
-	findUserByEmail(email) {
-		const users = this.getUsers();
-		return users.find(u => u.email.toLowerCase() === email.toLowerCase());
+		return errors[errorCode] || 'An error occurred. Please try again.';
 	}
 
 	// Handle Sign In
@@ -193,29 +166,29 @@ class AuthManager {
 			return;
 		}
 
-		// Check user
-		const user = this.findUserByEmail(email);
+		// Sign in with Firebase
+		this.auth.signInWithEmailAndPassword(email, password)
+			.then((userCredential) => {
+				const user = userCredential.user;
 
-		if (!user) {
-			this.showMessage(messageDiv, 'Email not registered. Please sign up first!', 'error');
-			return;
-		}
+				// Check if email is verified
+				if (!user.emailVerified) {
+					this.showMessage(messageDiv, 'Please verify your email before logging in. Check your inbox for the verification email.', 'error');
+					this.auth.signOut();
+					return;
+				}
 
-		if (user.password !== password) {
-			this.showMessage(messageDiv, 'Invalid password!', 'error');
-			return;
-		}
-
-		// Login successful
-		this.showMessage(messageDiv, 'Login successful! Redirecting...', 'success');
-		localStorage.setItem('loggedInUser', JSON.stringify({
-			email: user.email,
-			name: user.name
-		}));
-
-		setTimeout(() => {
-			window.location.href = 'index.html';
-		}, 1500);
+				// Email verified, login successful
+				this.showMessage(messageDiv, 'Login successful! Redirecting...', 'success');
+				setTimeout(() => {
+					window.location.href = 'index.html';
+				}, 1500);
+			})
+			.catch((error) => {
+				const errorMessage = this.getErrorMessage(error.code);
+				this.showMessage(messageDiv, errorMessage, 'error');
+				document.getElementById('signin-password').value = '';
+			});
 	}
 
 	// Handle Sign Up
@@ -251,59 +224,77 @@ class AuthManager {
 			return;
 		}
 
-		// Check if email already exists
-		if (this.findUserByEmail(email)) {
-			this.showMessage(messageDiv, 'Email already registered! Please sign in instead.', 'error');
-			return;
-		}
+		// Create user with Firebase
+		this.auth.createUserWithEmailAndPassword(email, password)
+			.then((userCredential) => {
+				const user = userCredential.user;
 
-		// Generate verification code
-		this.currentEmail = email;
-		this.currentName = name;
-		this.currentVerificationCode = this.generateCode();
+				// Update user profile with name
+				return user.updateProfile({
+					displayName: name
+				}).then(() => {
+					// Send verification email
+					return user.sendEmailVerification();
+				}).then(() => {
+					// Show success message
+					this.showMessage(messageDiv, 'Account created! Verification email sent to ' + email + '. Please verify your email to log in.', 'success');
+					
+					// Clear form
+					document.getElementById('signup-name').value = '';
+					document.getElementById('signup-email').value = '';
+					document.getElementById('signup-password').value = '';
+					document.getElementById('signup-confirm').value = '';
 
-		// Store temporary data
-		sessionStorage.setItem('signup_name', name);
-		sessionStorage.setItem('signup_email', email);
-		sessionStorage.setItem('signup_password', password);
-
-		// Send verification code via email
-		this.sendVerificationEmail(name, email, this.currentVerificationCode, messageDiv);
-	}
-
-	// Send verification email using EmailJS
-	sendVerificationEmail(name, email, code, messageDiv) {
-		const templateParams = {
-			to_email: email,
-			user_name: name,
-			user_email: email,
-			verification_code: code
-		};
-
-		emailjs.send('service_dipb9c7', 'template_l7kf18s', templateParams)
-			.then(() => {
-				this.showMessage(messageDiv, 'Verification code sent to your email!', 'success');
-				setTimeout(() => {
-					this.showVerificationTab();
-				}, 1000);
+					// Redirect to sign in after 3 seconds
+					setTimeout(() => {
+						this.switchTab('signin');
+					}, 3000);
+				});
 			})
 			.catch((error) => {
-				console.log('EmailJS Error:', error);
-				// Fallback if email service fails
-				this.showMessage(messageDiv, 'Code displayed on next screen. (Email service unavailable)', 'success');
-				setTimeout(() => {
-					this.showVerificationTab();
-				}, 1000);
+				const errorMessage = this.getErrorMessage(error.code);
+				this.showMessage(messageDiv, errorMessage, 'error');
 			});
 	}
 
-	// Show verification tab
-	showVerificationTab() {
-		document.getElementById('verify').classList.add('active');
-		document.getElementById('signup').classList.remove('active');
-		document.getElementById('verification-email').textContent = `Code sent to: ${this.currentEmail}`;
+	// Handle Forgot Password
+	handleForgotPassword() {
+		const email = document.getElementById('forgot-email').value.trim();
+		const messageDiv = document.getElementById('forgot-message');
 
-		// Hide tab buttons
+		if (!email) {
+			this.showMessage(messageDiv, 'Please enter your email!', 'error');
+			return;
+		}
+
+		// Send password reset email via Firebase
+		this.auth.sendPasswordResetEmail(email)
+			.then(() => {
+				this.showMessage(messageDiv, 'Password reset email sent! Please check your inbox and follow the link to reset your password.', 'success');
+				document.getElementById('forgot-email').value = '';
+				
+				// Redirect to sign in after 3 seconds
+				setTimeout(() => {
+					this.switchTab('signin');
+				}, 3000);
+			})
+			.catch((error) => {
+				const errorMessage = this.getErrorMessage(error.code);
+				this.showMessage(messageDiv, errorMessage, 'error');
+			});
+	}
+
+	// Show message helper
+	showMessage(element, text, type) {
+		element.textContent = text;
+		element.className = 'message ' + type;
+	}
+}
+
+// Initialize app when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+	window.authManager = new AuthManager();
+});
 		document.querySelectorAll('.tab-btn').forEach(btn => btn.style.display = 'none');
 
 		// Show back link
