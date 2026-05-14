@@ -1,0 +1,98 @@
+⚙️ EMAILJS SETUP GUIDE
+=====================
+
+Your GlobAffairs authentication system is now ready to send real emails for verification and password reset codes!
+
+STEP 1: Create EmailJS Account
+------------------------------
+1. Go to https://www.emailjs.com/
+2. Click "Sign Up" and create a free account
+3. Verify your email address
+
+STEP 2: Set Up Email Service
+----------------------------
+1. In EmailJS dashboard, go to "Email Services"
+2. Click "Add Service"
+3. Choose your email provider (Gmail, Outlook, Yahoo, etc.)
+4. Follow the authentication process
+5. Copy your SERVICE_ID (you'll need this)
+
+STEP 3: Create Email Templates
+------------------------------
+Create TWO email templates:
+
+TEMPLATE 1 - Verification Email:
+- Template Name: "verification_email" (or any name)
+- Subject: "GlobAffairs Email Verification Code"
+- Content:
+  Hi {{user_name}},
+  
+  Your email verification code is: {{verification_code}}
+  
+  Enter this code to complete your account registration.
+  
+  Best regards,
+  GlobAffairs Team
+
+TEMPLATE 2 - Password Reset Email:
+- Template Name: "password_reset_email" (or any name)
+- Subject: "GlobAffairs Password Reset Code"
+- Content:
+  Hi {{user_name}},
+  
+  Your password reset code is: {{reset_code}}
+  
+  Enter this code to create a new password.
+  
+  Best regards,
+  GlobAffairs Team
+
+STEP 4: Get Your Credentials
+----------------------------
+1. Go to "Account" in EmailJS dashboard
+2. Copy your PUBLIC KEY (not private key!)
+3. Note your SERVICE_ID from Step 2
+4. Note your TEMPLATE_IDs from Step 3
+
+STEP 5: Update Your Code
+------------------------
+Open auth.js and replace:
+- 'YOUR_EMAILJS_PUBLIC_KEY' with your actual public key from EmailJS
+- 'YOUR_SERVICE_ID' with your actual service ID (2 places)
+- 'YOUR_TEMPLATE_ID' with your actual template ID (2 places)
+
+EXAMPLE in auth.js:
+emailjs.init('YOUR_EMAILJS_PUBLIC_KEY');
+
+Should become:
+emailjs.init('j1k2l3m4n5o6p7q8r9s0t1u2');
+
+And later:
+emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+
+Should become:
+emailjs.send('service_abc123xyz', 'template_def456uvw', templateParams)
+
+STEP 6: Test It Out
+-------------------
+1. Go to auth.html
+2. Click "Sign Up"
+3. Fill in the form and submit
+4. Check if you received the verification email!
+
+NOTES
+-----
+- EmailJS is free for up to 200 emails per month
+- For production, you might want to upgrade to a paid plan
+- The verification code is also displayed in the browser (fallback)
+- If email fails, the user can still see the code to enter
+
+TROUBLESHOOTING
+---------------
+If emails aren't sending:
+1. Check your EmailJS dashboard for error logs
+2. Make sure your SERVICE_ID matches the email service you set up
+3. Make sure your email address is correct when testing
+4. Check the browser console for error messages
+
+Happy emailing! 🎉

@@ -1,31 +1,29 @@
-// Predefined list of allowed users with name, email, and password
-const allowedUsers = [
-	{ name: "Azizbek Aziz", email: "azizbek@globaffairs.com", password: "mypassword123" },
-	{ name: "Admin User", email: "admin@globaffairs.com", password: "admin123" },
-	{ name: "John Doe", email: "john@example.com", password: "password123" }
-];
+// Firebase Authentication - Login Page Handler
+// This file provides simple Firebase authentication for login page
 
-// Get form elements
-const loginForm = document.getElementById('loginForm');
+const auth = firebase.auth();
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const messageDiv = document.getElementById('message');
+const loginForm = document.getElementById('loginForm');
 
-// Add form submission event listener
-loginForm.addEventListener('submit', function(e) {
-	e.preventDefault();
-	login();
-});
+// Only proceed if form exists on this page
+if (loginForm) {
+	// Add form submission event listener
+	loginForm.addEventListener('submit', function(e) {
+		e.preventDefault();
+		login();
+	});
+}
 
-// Login function
+// Login function using Firebase
 function login() {
-	const name = nameInput.value.trim();
 	const email = emailInput.value.trim();
 	const password = passwordInput.value.trim();
 
 	// Check if all fields are filled
-	if (!name || !email || !password) {
+	if (!email || !password) {
 		showMessage('Please fill in all fields!', 'error');
 		return;
 	}
@@ -37,24 +35,45 @@ function login() {
 		return;
 	}
 
-	// Check credentials against allowed users
-	const user = allowedUsers.find(u => u.name === name && u.email === email && u.password === password);
+	// Sign in with Firebase
+	auth.signInWithEmailAndPassword(email, password)
+		.then((userCredential) => {
+			const user = userCredential.user;
 
-	if (user) {
-		// Login successful
-		showMessage('Login successful! Redirecting...', 'success');
-		// Save logged-in user to localStorage
-		localStorage.setItem('loggedInUser', JSON.stringify({name: user.name, email: user.email}));
-		// Redirect to index.html after 1 second
-		setTimeout(() => {
-			window.location.href = 'index.html';
-		}, 1000);
-	} else {
-		// Login failed
-		showMessage('Invalid name, email, or password!', 'error');
-		// Clear password field
-		passwordInput.value = '';
-	}
+			// Check if email is verified
+			if (!user.emailVerified) {
+				showMessage('Please verify your email before logging in. Check your inbox for the verification email.', 'error');
+				auth.signOut();
+				return;
+			}
+
+			// Email verified, login successful
+			showMessage('Login successful! Redirecting...', 'success');
+			// Redirect to index.html after 1 second
+			setTimeout(() => {
+				window.location.href = 'index.html';
+			}, 1000);
+		})
+		.catch((error) => {
+			const errorMessage = getFirebaseErrorMessage(error.code);
+			showMessage(errorMessage, 'error');
+			// Clear password field
+			passwordInput.value = '';
+		});
+}
+
+// Convert Firebase error codes to user-friendly messages
+function getFirebaseErrorMessage(errorCode) {
+	const errors = {
+		'auth/user-not-found': 'Email not registered. Please sign up first!',
+		'auth/wrong-password': 'Invalid password!',
+		'auth/invalid-email': 'Please enter a valid email address!',
+		'auth/too-many-requests': 'Too many failed login attempts. Please try again later.',
+		'auth/user-disabled': 'This account has been disabled.',
+		'auth/invalid-credential': 'Invalid email or password.'
+	};
+
+	return errors[errorCode] || 'Login failed. Please try again.';
 }
 
 // Function to display messages
@@ -63,14 +82,16 @@ function showMessage(text, type) {
 	messageDiv.className = 'message ' + type;
 }
 
-// Optional: Check if user is already logged in and redirect to home
+// Check if user is already logged in and redirect to home
 function checkExistingLogin() {
-	const loggedInUser = localStorage.getItem('loggedInUser');
-	if (loggedInUser) {
-		// User is already logged in, redirect to index.html
-		window.location.href = 'index.html';
-	}
+	auth.onAuthStateChanged((user) => {
+		if (user && user.emailVerified) {
+			// User is already logged in and verified, redirect to index.html
+			window.location.href = 'index.html';
+		}
+	});
 }
 
 // Check on page load
 window.addEventListener('load', checkExistingLogin);
+

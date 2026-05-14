@@ -1,18 +1,29 @@
 (function() {
-  // Authentication utilities
+  // Authentication utilities - Firebase Edition
   window.GlobAffairsAuth = {
+    auth: firebase.auth(),
+    currentUser: null,
+
     logout: function() {
-      localStorage.removeItem('loggedInUser');
-      window.location.href = 'index.html';
+      this.auth.signOut().then(() => {
+        window.location.href = 'index.html';
+      }).catch(function(error) {
+        console.error('Sign out error:', error);
+      });
     },
     
     isLoggedIn: function() {
-      return !!localStorage.getItem('loggedInUser');
+      return this.currentUser !== null && this.currentUser.emailVerified;
     },
     
     getCurrentUser: function() {
-      const user = localStorage.getItem('loggedInUser');
-      return user ? JSON.parse(user) : null;
+      if (!this.currentUser || !this.currentUser.emailVerified) {
+        return null;
+      }
+      return {
+        name: this.currentUser.displayName || 'User',
+        email: this.currentUser.email
+      };
     },
     
     requireLogin: function() {
@@ -41,6 +52,12 @@
       }
     }
   };
+
+  // Initialize Firebase auth state listener
+  window.GlobAffairsAuth.auth.onAuthStateChanged(function(user) {
+    window.GlobAffairsAuth.currentUser = user;
+    window.GlobAffairsAuth.updateProfileUI();
+  });
 
   // Map field display names to category IDs used in terms.json
   const map = {

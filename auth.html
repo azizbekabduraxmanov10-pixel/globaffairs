@@ -6,6 +6,9 @@
 	<title>Authentication - GlobAffairs</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="auth.css">
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
 </head>
 <body class="auth-page">
 	<header>
@@ -48,7 +51,7 @@
 					</div>
 					</div>
 					<div id="signin-message" class="message"></div>
-					<button type="button" onclick="login()" class="auth-btn">Login</button>
+					<button type="submit" class="auth-btn">Login</button>
 				</form>
 				<div class="forgot-password-section">
 					<a href="#" id="forgotPasswordLink" class="forgot-password-link">Forgot password?</a>
@@ -81,7 +84,7 @@
 					</div>
 					</div>
 					<div id="signup-message" class="message"></div>
-					<button type="button" onclick="signup()" class="auth-btn">Continue</button>
+					<button type="submit" class="auth-btn">Continue</button>
 				</form>
 			</div>
 
@@ -114,7 +117,7 @@
 						<input type="email" id="forgot-email" name="email" placeholder="Enter your email" required>
 					</div>
 					<div id="forgot-message" class="message"></div>
-					<button type="button" onclick="sendPasswordReset()" class="auth-btn">Send Reset Code</button>
+					<button type="submit" class="auth-btn">Send Reset Code</button>
 				</form>
 			</div>
 
@@ -154,7 +157,21 @@
 		</div>
 	</div>
 
-	<script src="firebase-config.js"></script>
+	<script>
+		// Firebase Configuration
+		// TODO: Replace with your Firebase project config from Firebase Console
+		const firebaseConfig = {
+			apiKey: "YOUR_API_KEY",
+			authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+			projectId: "YOUR_PROJECT_ID",
+			storageBucket: "YOUR_PROJECT_ID.appspot.com",
+			messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+			appId: "YOUR_APP_ID"
+		};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
 	<script src="auth.js"></script>
 </body>
 </html>
