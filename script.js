@@ -1,10 +1,11 @@
 (function() {
   // Authentication utilities - Firebase Edition
   window.GlobAffairsAuth = {
-    auth: firebase.auth(),
+    auth: null,
     currentUser: null,
 
     logout: function() {
+      if (!this.auth) return;
       this.auth.signOut().then(() => {
         window.location.href = 'index.html';
       }).catch(function(error) {
@@ -53,11 +54,18 @@
     }
   };
 
-  // Initialize Firebase auth state listener
-  window.GlobAffairsAuth.auth.onAuthStateChanged(function(user) {
-    window.GlobAffairsAuth.currentUser = user;
-    window.GlobAffairsAuth.updateProfileUI();
-  });
+  // Initialize Firebase auth state listener - safely handle if Firebase is not available
+  try {
+    if (typeof firebase !== 'undefined' && firebase.auth) {
+      window.GlobAffairsAuth.auth = firebase.auth();
+      window.GlobAffairsAuth.auth.onAuthStateChanged(function(user) {
+        window.GlobAffairsAuth.currentUser = user;
+        window.GlobAffairsAuth.updateProfileUI();
+      });
+    }
+  } catch (error) {
+    console.warn('Firebase not available:', error);
+  }
   // Map field display names to category IDs used in terms.json
   const map = {
     'International Relations': 'international_relations',
