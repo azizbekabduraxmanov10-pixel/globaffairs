@@ -18,13 +18,23 @@
                 <li><a href="terminology.html">Terminology</a></li>
                 <li><a href="articles.html">Articles</a></li>
                 <li><a href="#about">About</a></li>
+                <li id="authLink"><a href="auth.html" class="login-link">Login</a></li>
             </ul>
         </nav>
+        <!-- Profile Section (Top Right) -->
+        <div id="profileSection" class="profile-section" style="display:none;">
+            <button class="profile-btn" id="profileBtn">👤 <span id="profileName"></span></button>
+            <div class="profile-dropdown" id="profileDropdown">
+                <a href="#" id="profileViewBtn" class="profile-item">View Profile</a>
+                <a href="#" id="logoutBtn" class="profile-item">Logout</a>
+            </div>
+        </div>
     </header>
     <div class="hero">
         <h1>GlobAffairs</h1>
         <p>Explore International Relations, Diplomacy, and Global Politics</p>
         <a href="terminology.html" class="start-learning-btn">Start Learning</a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

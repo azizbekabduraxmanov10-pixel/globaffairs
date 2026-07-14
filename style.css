@@ -1,9 +1,17 @@
+html {
+	overflow-x: hidden;
+}
+
 body {
-	background: url('background.jpg') no-repeat center center/cover;
+	background: url('homepage.jpg') no-repeat center center/cover;
+	background-attachment: fixed;
 	min-height: 100vh;
 	margin: 0;
+	padding: 0;
 	font-family: 'Segoe UI', Arial, sans-serif;
 	position: relative;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 header {
@@ -92,6 +100,122 @@ header {
 
 .main-nav a:hover {
 	color: #a3c9f7;
+}
+
+.login-link {
+	transition: color 0.2s;
+}
+
+.login-link:hover {
+	color: #a3c9f7;
+}
+
+/* Profile Section - Top Right Corner */
+.profile-section {
+	position: fixed;
+	top: 24px;
+	right: 24px;
+	z-index: 100;
+}
+
+/* Profile Menu Styles */
+.profile-menu {
+	position: relative;
+}
+
+.profile-btn {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color 0.2s;
+	letter-spacing: 0.5px;
+	padding: 8px 12px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	border-radius: 6px;
+}
+
+.profile-btn:hover {
+	color: #a3c9f7;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.profile-dropdown {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background: rgba(30, 30, 40, 0.98);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
+	min-width: 200px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+	display: none;
+	flex-direction: column;
+	margin-top: 12px;
+	backdrop-filter: blur(8px);
+}
+
+.profile-dropdown.show {
+	display: flex;
+}
+
+.profile-item {
+	padding: 12px 16px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	transition: background-color 0.2s, color 0.2s;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-item:last-child {
+	border-bottom: none;
+}
+
+.profile-item:hover {
+	background-color: rgba(30, 58, 138, 0.3);
+	color: #a3c9f7;
+}
+
+/* Responsive Profile Section */
+@media (max-width: 768px) {
+	.profile-section {
+		top: 16px;
+		right: 16px;
+	}
+
+	.profile-btn {
+		font-size: 16px;
+		padding: 6px 10px;
+	}
+
+	.profile-dropdown {
+		min-width: 180px;
+		font-size: 13px;
+	}
+
+	.profile-item {
+		padding: 10px 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.profile-section {
+		top: 12px;
+		right: 12px;
+	}
+
+	.profile-btn {
+		font-size: 14px;
+	}
+
+	.profile-dropdown {
+		min-width: 160px;
+	}
 }
 
 .hero{
@@ -249,16 +373,7 @@ header {
 	text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 1px 0 #fff;
 	z-index: 2;
 }
-/* Full-screen background image */
-body {
-	margin: 0;
-	padding: 0;
-	min-height: 100vh;
-	width: 100vw;
-	background: url('homepage.jpg') no-repeat center center/cover;
-	font-family: 'Segoe UI', Arial, sans-serif;
-	position: relative;
-}
+/* Body already defined above - consolidated styles */
 
 /* Hamburger menu button */
 .menu-btn {

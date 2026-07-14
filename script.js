@@ -1,4 +1,47 @@
 (function() {
+  // Authentication utilities
+  window.GlobAffairsAuth = {
+    logout: function() {
+      localStorage.removeItem('loggedInUser');
+      window.location.href = 'index.html';
+    },
+    
+    isLoggedIn: function() {
+      return !!localStorage.getItem('loggedInUser');
+    },
+    
+    getCurrentUser: function() {
+      const user = localStorage.getItem('loggedInUser');
+      return user ? JSON.parse(user) : null;
+    },
+    
+    requireLogin: function() {
+      if (!this.isLoggedIn()) {
+        alert('You must log in first!');
+        window.location.href = 'auth.html';
+      }
+    },
+
+    updateProfileUI: function() {
+      const authLink = document.getElementById('authLink');
+      const profileSection = document.getElementById('profileSection');
+      const profileName = document.getElementById('profileName');
+      
+      if (!authLink || !profileSection) return;
+
+      const user = this.getCurrentUser();
+      
+      if (user) {
+        authLink.style.display = 'none';
+        profileSection.style.display = 'block';
+        profileName.textContent = user.name;
+      } else {
+        authLink.style.display = 'list-item';
+        profileSection.style.display = 'none';
+      }
+    }
+  };
+
   // Map field display names to category IDs used in terms.json
   const map = {
     'International Relations': 'international_relations',
@@ -24,6 +67,44 @@
   };
 
   document.addEventListener('DOMContentLoaded', function() {
+    // Update profile UI
+    window.GlobAffairsAuth.updateProfileUI();
+
+    // Setup profile button handlers
+    const profileBtn = document.getElementById('profileBtn');
+    const profileDropdown = document.getElementById('profileDropdown');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const profileViewBtn = document.getElementById('profileViewBtn');
+
+    if (profileBtn && profileDropdown) {
+      profileBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        profileDropdown.classList.toggle('show');
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.profile-section')) {
+          profileDropdown.classList.remove('show');
+        }
+      });
+    }
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.GlobAffairsAuth.logout();
+      });
+    }
+
+    if (profileViewBtn) {
+      profileViewBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'profile.html';
+      });
+    }
+
+    // Terminology card handling
     const cards = document.querySelectorAll('.terminology-card');
     cards.forEach(card => {
       card.style.cursor = 'pointer';
