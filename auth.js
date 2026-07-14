@@ -289,14 +289,6 @@ class AuthManager {
 		element.textContent = text;
 		element.className = 'message ' + type;
 	}
-}
-
-// Initialize app when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-	window.authManager = new AuthManager();
-});
-		this.sendResetEmail(user.name, email, this.currentResetCode, messageDiv);
-	}
 
 	// Send reset code email
 	sendResetEmail(name, email, code, messageDiv) {
