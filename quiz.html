@@ -87,6 +87,35 @@
 		</div>
 	</div>
 
+	<!-- Quiz Completion Screen -->
+	<div id="completionScreen" class="completion-screen" style="display: none;">
+		<div class="completion-container">
+			<h1 id="completionMessage" class="completion-message">Quiz Complete!</h1>
+			
+			<div class="score-comparison">
+				<div class="score-box first-attempt">
+					<h3>First Attempt</h3>
+					<p class="score" id="firstAttemptScore">0/0 (0%)</p>
+				</div>
+				
+				<div class="score-box current-attempt">
+					<h3>Current Score</h3>
+					<p class="score" id="currentScore">0/0 (0%)</p>
+				</div>
+			</div>
+			
+			<div class="improvement-box" id="improvementBox">
+				<p id="improvementText">Improvement: <strong id="scoreImprovement">0</strong> points</p>
+			</div>
+			
+			<div class="completion-actions">
+				<button id="retakeBtn" class="btn btn-primary">Retake Quiz</button>
+				<button id="newQuizBtn" class="btn btn-secondary">Select Different Quiz</button>
+				<button id="homeBtn" class="btn btn-tertiary">Return Home</button>
+			</div>
+		</div>
+	</div>
+
 	<script src="quiz-mc.js"></script>
 </body>
 </html>

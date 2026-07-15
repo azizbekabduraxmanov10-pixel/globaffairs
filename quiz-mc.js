@@ -1,11 +1,15 @@
-// Quiz Multiple Choice Script
+// Quiz Multiple Choice Script - Enhanced Version
 let currentQuestionIndex = 0;
 let selectedFields = [];
 let quizData = [];
 let answeredQuestions = {};
-let questionOptions = {}; // Store shuffled options for each question
+let questionFormats = {}; // Store question format (term->def or def->term) for each question
+let firstAttemptAnswers = {}; // Track first attempt separately
+let isFirstAttempt = true;
+let quizStartTime = null;
 
-const successMessages = ['Great!', 'Awesome!', 'Good job!'];
+const successMessages = ['Great!', 'Awesome!', 'Good job!', 'Excellent!', 'Well done!'];
+const questionFormatTypes = ['term-to-definition', 'definition-to-term'];
 
 document.addEventListener('DOMContentLoaded', async function() {
 	// Get selected fields from sessionStorage
@@ -27,8 +31,14 @@ document.addEventListener('DOMContentLoaded', async function() {
 	// Load quiz data for all selected fields
 	await loadQuizDataMultipleFields(selectedFields);
 
+	// Randomize question order
+	randomizeQuestionOrder();
+
 	// Initialize event listeners
 	setupEventListeners();
+
+	// Record quiz start time
+	quizStartTime = Date.now();
 
 	// Display first question
 	displayQuestion();
@@ -64,17 +74,24 @@ function fieldToJsonFile(field) {
 // Load quiz data from multiple fields
 async function loadQuizDataMultipleFields(fields) {
 	quizData = [];
+	const categoryDataMap = {}; // Map to store all data by category for distractor generation
 	
 	for (const field of fields) {
 		const jsonFile = fieldToJsonFile(field);
 		try {
 			const response = await fetch(`data/${jsonFile}.json`);
 			const data = await response.json();
+			
+			// Store all data for this category for distractor generation
+			categoryDataMap[field] = data;
+			
+			// Create quiz items with additional metadata
 			const fieldData = data.map((item, index) => ({
 				...item,
 				correctAnswer: item.advanced || item.definition,
 				field: field,
-				id: `${field}-${index}`
+				id: `${field}-${index}`,
+				categoryJsonFile: jsonFile
 			}));
 			quizData = quizData.concat(fieldData);
 		} catch (error) {
@@ -82,9 +99,25 @@ async function loadQuizDataMultipleFields(fields) {
 		}
 	}
 	
+	// Store category data map for distractor generation
+	window.categoryDataMap = categoryDataMap;
+	
 	if (quizData.length === 0) {
 		alert('Error loading quiz data. Please try again.');
 		window.location.href = 'quiz-selection.html';
+	}
+}
+
+// Randomize the order of questions
+function randomizeQuestionOrder() {
+	quizData = shuffleArray(quizData);
+}
+
+// Assign random question formats to each question
+function assignQuestionFormats() {
+	for (let i = 0; i < quizData.length; i++) {
+		const randomFormat = questionFormatTypes[Math.floor(Math.random() * questionFormatTypes.length)];
+		questionFormats[i] = randomFormat;
 	}
 }
 
@@ -94,10 +127,17 @@ function setupEventListeners() {
 	const prevBtn = document.getElementById('prevBtn');
 	const nextBtn = document.getElementById('nextBtn');
 	const options = document.querySelectorAll('.option');
+	const retakeBtn = document.getElementById('retakeBtn');
+	const homeBtn = document.getElementById('homeBtn');
+	const newQuizBtn = document.getElementById('newQuizBtn');
 
 	checkBtn.addEventListener('click', checkAnswer);
 	prevBtn.addEventListener('click', goToPreviousQuestion);
 	nextBtn.addEventListener('click', goToNextQuestion);
+	
+	if (retakeBtn) retakeBtn.addEventListener('click', retakeQuiz);
+	if (homeBtn) homeBtn.addEventListener('click', goHome);
+	if (newQuizBtn) newQuizBtn.addEventListener('click', selectNewQuiz);
 
 	options.forEach((option, index) => {
 		const radio = option.querySelector('input[type="radio"]');
@@ -127,6 +167,33 @@ function setupEventListeners() {
 	});
 }
 
+// Get intelligent distractors from the SAME category
+function getIntelligentDistractors(questionIndex, numDistracters = 3) {
+	const question = quizData[questionIndex];
+	const questionField = question.field;
+	
+	// Get all terms from the same category/field
+	const sameFieldTerms = quizData.filter(item => 
+		item.field === questionField && 
+		item.id !== question.id
+	);
+	
+	if (sameFieldTerms.length < numDistracters) {
+		// If not enough terms in category, use what we have
+		return sameFieldTerms.map(item => ({
+			term: item.term,
+			definition: item.advanced || item.definition
+		})).slice(0, numDistracters);
+	}
+	
+	// Randomly select distractors from same category
+	const shuffledTerms = shuffleArray(sameFieldTerms);
+	return shuffledTerms.slice(0, numDistracters).map(item => ({
+		term: item.term,
+		definition: item.advanced || item.definition
+	}));
+}
+
 // Helper function to shuffle array
 function shuffleArray(array) {
 	const shuffled = [...array];
@@ -137,41 +204,57 @@ function shuffleArray(array) {
 	return shuffled;
 }
 
-// Display current question
+// Display current question with variable format
 function displayQuestion() {
 	if (currentQuestionIndex < 0 || currentQuestionIndex >= quizData.length) {
 		return;
 	}
 
-	const question = quizData[currentQuestionIndex];
-	const questionId = currentQuestionIndex;
-
-	// Check if we've already shuffled options for this question
-	if (!questionOptions[questionId]) {
-		const otherDefinitions = quizData
-			.filter((item, index) => index !== currentQuestionIndex)
-			.map(item => item.advanced || item.definition);
-
-		// Shuffle to get 3 random incorrect options
-		const shuffledIncorrect = shuffleArray(otherDefinitions).slice(0, 3);
-		const allOptions = shuffleArray([question.correctAnswer, ...shuffledIncorrect]);
-
-		// Store the shuffled options for this question
-		questionOptions[questionId] = allOptions;
+	// Initialize question formats if not done yet
+	if (Object.keys(questionFormats).length === 0) {
+		assignQuestionFormats();
 	}
 
-	const allOptions = questionOptions[questionId];
+	const question = quizData[currentQuestionIndex];
+	const questionId = currentQuestionIndex;
+	const format = questionFormats[questionId];
+	let allOptions = [];
+	let questionText = '';
+	let correctAnswerDisplay = '';
+
+	// Generate options based on question format
+	if (format === 'term-to-definition') {
+		// Format: "What is the meaning of [TERM]?"
+		questionText = `What is the meaning of <strong>${question.term}</strong>?`;
+		correctAnswerDisplay = question.advanced || question.definition;
+		
+		// Get distractors from same category
+		const distractors = getIntelligentDistractors(questionId);
+		const distractorDefinitions = distractors.map(d => d.definition);
+		
+		allOptions = shuffleArray([correctAnswerDisplay, ...distractorDefinitions]);
+	} else {
+		// Format: "Which term matches this definition?"
+		questionText = `Which term matches this definition: <strong>"${question.advanced || question.definition}"</strong>?`;
+		correctAnswerDisplay = question.term;
+		
+		// Get distractors from same category
+		const distractors = getIntelligentDistractors(questionId);
+		const distractorTerms = distractors.map(d => d.term);
+		
+		allOptions = shuffleArray([correctAnswerDisplay, ...distractorTerms]);
+	}
 
 	// Update question text
-	document.getElementById('questionText').innerHTML = `What is the meaning of <strong>${question.term}</strong>?`;
+	document.getElementById('questionText').innerHTML = questionText;
 	document.getElementById('questionCounter').textContent = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
 
 	// Update options
 	const optionLabels = document.querySelectorAll('[id^="optionLabel"]');
 	optionLabels.forEach((label, index) => {
 		label.textContent = allOptions[index];
-		label.dataset.definition = allOptions[index];
-		label.dataset.isCorrect = allOptions[index] === question.correctAnswer;
+		label.dataset.optionValue = allOptions[index];
+		label.dataset.isCorrect = allOptions[index] === correctAnswerDisplay;
 	});
 
 	// Reset UI
@@ -226,8 +309,16 @@ function checkAnswer() {
 	// Store the answer
 	answeredQuestions[currentQuestionIndex] = {
 		selectedIndex: selectedIndex,
-		isCorrect: isCorrect
+		isCorrect: isCorrect,
+		selectedValue: selectedLabel.dataset.optionValue
 	};
+
+	// Track first attempt separately
+	if (isFirstAttempt && !firstAttemptAnswers[currentQuestionIndex]) {
+		firstAttemptAnswers[currentQuestionIndex] = {
+			isCorrect: isCorrect
+		};
+	}
 
 	if (isCorrect) {
 		optionElement.classList.add('correct');
@@ -271,6 +362,38 @@ function restoreAnswerState(questionIndex) {
 	}
 }
 
+// Check if all questions have been answered
+function areAllQuestionsAnswered() {
+	for (let i = 0; i < quizData.length; i++) {
+		if (!answeredQuestions[i] || !answeredQuestions[i].isCorrect) {
+			return false;
+		}
+	}
+	return true;
+}
+
+// Calculate score
+function calculateScore() {
+	let totalCorrect = 0;
+	for (let i = 0; i < quizData.length; i++) {
+		if (answeredQuestions[i] && answeredQuestions[i].isCorrect) {
+			totalCorrect++;
+		}
+	}
+	return totalCorrect;
+}
+
+// Calculate first attempt score
+function calculateFirstAttemptScore() {
+	let totalCorrect = 0;
+	for (let i = 0; i < quizData.length; i++) {
+		if (firstAttemptAnswers[i] && firstAttemptAnswers[i].isCorrect) {
+			totalCorrect++;
+		}
+	}
+	return totalCorrect;
+}
+
 // Navigate to previous question
 function goToPreviousQuestion() {
 	if (currentQuestionIndex > 0) {
@@ -284,14 +407,111 @@ function goToNextQuestion() {
 	if (currentQuestionIndex < quizData.length - 1) {
 		currentQuestionIndex++;
 		displayQuestion();
+	} else {
+		// On last question, check if user wants to submit
+		checkAndShowCompletion();
 	}
+}
+
+// Check if quiz is complete and show completion screen
+function checkAndShowCompletion() {
+	if (!areAllQuestionsAnswered()) {
+		alert('Please answer all questions before submitting.');
+		return;
+	}
+	
+	showCompletionScreen();
+}
+
+// Show quiz completion screen
+function showCompletionScreen() {
+	// Record that first attempt is complete
+	isFirstAttempt = false;
+	
+	const firstAttemptScore = calculateFirstAttemptScore();
+	const currentScore = calculateScore();
+	const totalQuestions = quizData.length;
+	const firstAttemptPercentage = Math.round((firstAttemptScore / totalQuestions) * 100);
+	const currentPercentage = Math.round((currentScore / totalQuestions) * 100);
+	
+	// Store scores in sessionStorage for profile access
+	const quizResults = {
+		categories: selectedFields,
+		firstAttemptScore: firstAttemptScore,
+		firstAttemptPercentage: firstAttemptPercentage,
+		currentScore: currentScore,
+		currentPercentage: currentPercentage,
+		totalQuestions: totalQuestions,
+		timestamp: new Date().toISOString(),
+		timeTaken: Math.round((Date.now() - quizStartTime) / 1000)
+	};
+	
+	sessionStorage.setItem('lastQuizResults', JSON.stringify(quizResults));
+	
+	// Hide quiz container and show completion screen
+	document.querySelector('.quiz-container').style.display = 'none';
+	document.getElementById('completionScreen').style.display = 'flex';
+	
+	// Populate completion screen
+	document.getElementById('firstAttemptScore').textContent = `${firstAttemptScore}/${totalQuestions} (${firstAttemptPercentage}%)`;
+	document.getElementById('currentScore').textContent = `${currentScore}/${totalQuestions} (${currentPercentage}%)`;
+	document.getElementById('scoreImprovement').textContent = currentScore - firstAttemptScore;
+	
+	// Show appropriate message based on performance
+	const messageEl = document.getElementById('completionMessage');
+	if (currentPercentage === 100) {
+		messageEl.textContent = 'Perfect Score! 🎉';
+		messageEl.className = 'completion-message perfect';
+	} else if (currentPercentage >= 80) {
+		messageEl.textContent = 'Excellent Work! 🌟';
+		messageEl.className = 'completion-message excellent';
+	} else if (currentPercentage >= 60) {
+		messageEl.textContent = 'Good Effort! 👍';
+		messageEl.className = 'completion-message good';
+	} else {
+		messageEl.textContent = 'Keep Practicing! 💪';
+		messageEl.className = 'completion-message fair';
+	}
+}
+
+// Retake quiz - reset without creating new quiz session
+function retakeQuiz() {
+	currentQuestionIndex = 0;
+	answeredQuestions = {}; // Reset attempts but keep first attempt tracked
+	
+	// Hide completion screen and show quiz
+	document.querySelector('.quiz-container').style.display = 'block';
+	document.getElementById('completionScreen').style.display = 'none';
+	
+	// Reset UI
+	resetQuestionUI();
+	displayQuestion();
+}
+
+// Return to home
+function goHome() {
+	window.location.href = 'index.html';
+}
+
+// Return to quiz selection
+function selectNewQuiz() {
+	window.location.href = 'quiz-selection.html';
 }
 
 // Update button states
 function updateButtonStates() {
 	const prevBtn = document.getElementById('prevBtn');
 	const nextBtn = document.getElementById('nextBtn');
+	const checkBtn = document.getElementById('checkBtn');
 
 	prevBtn.disabled = currentQuestionIndex === 0;
-	nextBtn.disabled = currentQuestionIndex === quizData.length - 1;
+	
+	// On last question, check if answered before enabling next
+	if (currentQuestionIndex === quizData.length - 1) {
+		nextBtn.textContent = answeredQuestions[currentQuestionIndex] ? 'Submit Quiz' : 'Next';
+		nextBtn.disabled = false;
+	} else {
+		nextBtn.textContent = 'Next';
+		nextBtn.disabled = false;
+	}
 }
