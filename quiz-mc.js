@@ -7,6 +7,7 @@ let questionFormats = {}; // Store question format (term->def or def->term) for 
 let firstAttemptAnswers = {}; // Track first attempt separately
 let isFirstAttempt = true;
 let quizStartTime = null;
+let quizSubmitted = false; // Track if quiz has been submitted (locks answers)
 
 const successMessages = ['Great!', 'Awesome!', 'Good job!', 'Excellent!', 'Well done!'];
 const questionFormatTypes = ['term-to-definition', 'definition-to-term'];
@@ -142,6 +143,11 @@ function setupEventListeners() {
 	options.forEach((option, index) => {
 		const radio = option.querySelector('input[type="radio"]');
 		option.addEventListener('click', function() {
+			// If quiz is submitted, prevent any clicks
+			if (quizSubmitted) {
+				return;
+			}
+			
 			// If selecting a different option, re-enable Check button
 			const wasChecked = radio.checked;
 			radio.checked = true;
@@ -362,10 +368,10 @@ function restoreAnswerState(questionIndex) {
 	}
 }
 
-// Check if all questions have been answered
+// Check if all questions have been answered (regardless of correctness)
 function areAllQuestionsAnswered() {
 	for (let i = 0; i < quizData.length; i++) {
-		if (!answeredQuestions[i] || !answeredQuestions[i].isCorrect) {
+		if (!answeredQuestions[i]) {
 			return false;
 		}
 	}
@@ -425,6 +431,15 @@ function checkAndShowCompletion() {
 
 // Show quiz completion screen
 function showCompletionScreen() {
+	// Mark quiz as submitted - locks all answers
+	quizSubmitted = true;
+	
+	// Disable all radio buttons and check button
+	document.querySelectorAll('input[type="radio"]').forEach(radio => {
+		radio.disabled = true;
+	});
+	document.getElementById('checkBtn').disabled = true;
+	
 	// Record that first attempt is complete
 	isFirstAttempt = false;
 	
@@ -457,6 +472,9 @@ function showCompletionScreen() {
 	document.getElementById('currentScore').textContent = `${currentScore}/${totalQuestions} (${currentPercentage}%)`;
 	document.getElementById('scoreImprovement').textContent = currentScore - firstAttemptScore;
 	
+	// Generate and show results review
+	generateResultsReview();
+	
 	// Show appropriate message based on performance
 	const messageEl = document.getElementById('completionMessage');
 	if (currentPercentage === 100) {
@@ -474,18 +492,11 @@ function showCompletionScreen() {
 	}
 }
 
-// Retake quiz - reset without creating new quiz session
+// Retake quiz - creates a new fresh quiz attempt with new question order
 function retakeQuiz() {
-	currentQuestionIndex = 0;
-	answeredQuestions = {}; // Reset attempts but keep first attempt tracked
-	
-	// Hide completion screen and show quiz
-	document.querySelector('.quiz-container').style.display = 'block';
-	document.getElementById('completionScreen').style.display = 'none';
-	
-	// Reset UI
-	resetQuestionUI();
-	displayQuestion();
+	// Go back to quiz selection to start a completely new attempt
+	// This ensures new question order and resets all tracking
+	window.location.href = 'quiz-selection.html';
 }
 
 // Return to home
@@ -496,6 +507,62 @@ function goHome() {
 // Return to quiz selection
 function selectNewQuiz() {
 	window.location.href = 'quiz-selection.html';
+}
+
+// Generate and display results review showing correct/wrong answers
+function generateResultsReview() {
+	const reviewContainer = document.getElementById('resultsReview');
+	if (!reviewContainer) return;
+	
+	let reviewHTML = '<h2>Review Your Answers</h2>';
+	
+	for (let i = 0; i < quizData.length; i++) {
+		const question = quizData[i];
+		const answer = answeredQuestions[i];
+		const format = questionFormats[i];
+		
+		// Determine correct answer display
+		let correctAnswerDisplay = '';
+		let questionText = '';
+		
+		if (format === 'term-to-definition') {
+			questionText = `What is the meaning of <strong>${question.term}</strong>?`;
+			correctAnswerDisplay = question.advanced || question.definition;
+		} else {
+			questionText = `Which term matches this definition: <strong>"${question.advanced || question.definition}"</strong>?`;
+			correctAnswerDisplay = question.term;
+		}
+		
+		const isCorrect = answer.selectedValue === correctAnswerDisplay;
+		const resultClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+		const resultIcon = isCorrect ? '✓' : '✗';
+		
+		reviewHTML += `
+			<div class="review-item ${resultClass}">
+				<div class="review-question">
+					<strong>Question ${i + 1}:</strong> ${questionText}
+				</div>
+				<div class="review-user-answer">
+					<span class="result-icon ${isCorrect ? 'icon-correct' : 'icon-incorrect'}">${resultIcon}</span>
+					<strong>Your Answer:</strong> ${answer.selectedValue}
+		`;
+		
+		if (!isCorrect) {
+			reviewHTML += `
+					<div class="review-correct-answer">
+						<strong>Correct Answer:</strong> ${correctAnswerDisplay}
+					</div>
+			`;
+		}
+		
+		reviewHTML += `
+				</div>
+			</div>
+		`;
+	}
+	
+	reviewContainer.innerHTML = reviewHTML;
+	reviewContainer.style.display = 'block';
 }
 
 // Update button states
