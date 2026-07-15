@@ -25,3 +25,8 @@ const termsData = {
     }
   ]
 };
+
+// Export for Node.js/CommonJS environments
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = termsData;
+}
