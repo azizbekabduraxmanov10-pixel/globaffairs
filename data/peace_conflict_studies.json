@@ -1,23 +1,128 @@
 [
-  {"term":"Conflict","definition":"A serious disagreement between groups or countries.","example":"Like two classes arguing over the same classroom."},
-  {"term":"Peace Agreement","definition":"An agreement to stop fighting.","example":"Like two students deciding to stop arguing and shake hands."},
-  {"term":"Ceasefire","definition":"A temporary stop in fighting.","example":"Like students pausing a fight until a teacher arrives."},
-  {"term":"Peace Negotiation","definition":"Talking to solve a conflict peacefully.","example":"Like two classmates discussing a problem instead of fighting."},
-  {"term":"Mediator","definition":"A neutral person helping both sides talk.","example":"Like a teacher helping two students solve a disagreement."},
-  {"term":"Reconciliation","definition":"Making peace after conflict.","example":"Like friends forgiving each other after a big argument."},
-  {"term":"Peacebuilding","definition":"Actions to create long-lasting peace.","example":"Like creating school rules so students don't fight again."},
-  {"term":"Armed Conflict","definition":"A fight where weapons are used.","example":"Like a very serious fight between groups."},
-  {"term":"Civil War","definition":"A war within the same country.","example":"Like two groups in the same school fighting each other."},
-  {"term":"Conflict Resolution","definition":"Solving a problem peacefully.","example":"Like students talking with a teacher to solve a dispute."},
-  {"term":"Peacekeeping Mission","definition":"International forces keeping peace in conflict areas.","example":"Like teachers supervising students after a fight."},
-  {"term":"Post-Conflict Recovery","definition":"Rebuilding after war ends.","example":"Like repairing a classroom after a big mess."},
-  {"term":"Tension","definition":"A situation where conflict might happen.","example":"Like two students angry but not yet fighting."},
-  {"term":"Dialogue","definition":"Open conversation between groups.","example":"Like students sitting down to discuss their problems."},
-  {"term":"Demilitarization","definition":"Removing weapons from an area.","example":"Like taking away sticks from students who were fighting."},
-  {"term":"Peace Treaty","definition":"A formal agreement ending war.","example":"Like signing a contract promising not to fight again."},
-  {"term":"Peace Education","definition":"Teaching people how to live peacefully.","example":"Like learning about kindness and cooperation in school."},
-  {"term":"Early Warning System","definition":"Signals that conflict might start soon.","example":"Like noticing students getting angry before a fight starts."},
-  {"term":"Confidence Building","definition":"Actions that build trust between groups.","example":"Like teammates learning to trust each other."},
-  {"term":"Restorative Justice","definition":"Repairing harm after conflict.","example":"Like a student apologizing and fixing what they broke."},
-  {"term":"Long-term Peace","definition":"Lasting peace maintained over time.","example":"Like keeping peace in class throughout the school year."}
+  {
+    "term": "Conflict",
+    "advanced": "A serious disagreement or clash between states, groups, or actors over interests, values, or territory.",
+    "simple": "A serious disagreement between groups or countries.",
+    "example": "Like two classes arguing over the same classroom."
+  },
+  {
+    "term": "Peace Agreement",
+    "advanced": "A formal accord that sets terms for ending hostilities and establishing a framework for lasting peace.",
+    "simple": "An agreement to stop fighting.",
+    "example": "Like two students deciding to stop arguing and shake hands."
+  },
+  {
+    "term": "Ceasefire",
+    "advanced": "A temporary halt to fighting agreed by parties as a step toward negotiation or peace.",
+    "simple": "A temporary stop in fighting.",
+    "example": "Like students pausing a fight until a teacher arrives."
+  },
+  {
+    "term": "Peace Negotiation",
+    "advanced": "The processes and agreements used to resolve disputes peacefully, reduce violence, and build stability between actors.",
+    "simple": "Talking to solve a conflict peacefully.",
+    "example": "Like two classmates discussing a problem instead of fighting."
+  },
+  {
+    "term": "Mediator",
+    "advanced": "A neutral person helping both sides talk. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "A neutral person helping both sides talk.",
+    "example": "Like a teacher helping two students solve a disagreement."
+  },
+  {
+    "term": "Reconciliation",
+    "advanced": "The processes and agreements used to resolve disputes peacefully, reduce violence, and build stability between actors.",
+    "simple": "Making peace after conflict.",
+    "example": "Like friends forgiving each other after a big argument."
+  },
+  {
+    "term": "Peacebuilding",
+    "advanced": "The processes and agreements used to resolve disputes peacefully, reduce violence, and build stability between actors.",
+    "simple": "Actions to create long-lasting peace.",
+    "example": "Like creating school rules so students don't fight again."
+  },
+  {
+    "term": "Armed Conflict",
+    "advanced": "The processes and agreements used to resolve disputes peacefully, reduce violence, and build stability between actors.",
+    "simple": "A fight where weapons are used.",
+    "example": "Like a very serious fight between groups."
+  },
+  {
+    "term": "Civil War",
+    "advanced": "A war within the same country. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "A war within the same country.",
+    "example": "Like two groups in the same school fighting each other."
+  },
+  {
+    "term": "Conflict Resolution",
+    "advanced": "Methods and processes aimed at peacefully resolving disputes and restoring stability between states or groups.",
+    "simple": "Solving a problem peacefully.",
+    "example": "Like students talking with a teacher to solve a dispute."
+  },
+  {
+    "term": "Peacekeeping Mission",
+    "advanced": "An operation involving military and civilian personnel deployed to help maintain stability and peace in conflict zones.",
+    "simple": "International forces keeping peace in conflict areas.",
+    "example": "Like teachers supervising students after a fight."
+  },
+  {
+    "term": "Post-Conflict Recovery",
+    "advanced": "The processes and agreements used to resolve disputes peacefully, reduce violence, and build stability between actors.",
+    "simple": "Rebuilding after war ends.",
+    "example": "Like repairing a classroom after a big mess."
+  },
+  {
+    "term": "Tension",
+    "advanced": "A situation where conflict might happen. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "A situation where conflict might happen.",
+    "example": "Like two students angry but not yet fighting."
+  },
+  {
+    "term": "Dialogue",
+    "advanced": "Open conversation between groups. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Open conversation between groups.",
+    "example": "Like students sitting down to discuss their problems."
+  },
+  {
+    "term": "Demilitarization",
+    "advanced": "Removing weapons from an area. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Removing weapons from an area.",
+    "example": "Like taking away sticks from students who were fighting."
+  },
+  {
+    "term": "Peace Treaty",
+    "advanced": "The processes and agreements used to resolve disputes peacefully, reduce violence, and build stability between actors.",
+    "simple": "A formal agreement ending war.",
+    "example": "Like signing a contract promising not to fight again."
+  },
+  {
+    "term": "Peace Education",
+    "advanced": "The processes and agreements used to resolve disputes peacefully, reduce violence, and build stability between actors.",
+    "simple": "Teaching people how to live peacefully.",
+    "example": "Like learning about kindness and cooperation in school."
+  },
+  {
+    "term": "Early Warning System",
+    "advanced": "Signals that conflict might start soon. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Signals that conflict might start soon.",
+    "example": "Like noticing students getting angry before a fight starts."
+  },
+  {
+    "term": "Confidence Building",
+    "advanced": "Actions that build trust between groups. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Actions that build trust between groups.",
+    "example": "Like teammates learning to trust each other."
+  },
+  {
+    "term": "Restorative Justice",
+    "advanced": "Repairing harm after conflict. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Repairing harm after conflict.",
+    "example": "Like a student apologizing and fixing what they broke."
+  },
+  {
+    "term": "Long-term Peace",
+    "advanced": "The processes and agreements used to resolve disputes peacefully, reduce violence, and build stability between actors.",
+    "simple": "Lasting peace maintained over time.",
+    "example": "Like keeping peace in class throughout the school year."
+  }
 ]

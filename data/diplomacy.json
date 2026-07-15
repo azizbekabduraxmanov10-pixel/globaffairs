@@ -1,22 +1,122 @@
 [
-  {"term":"Negotiation","definition":"Talking to agree on something.","example":"Like two kids deciding who goes first in a game."},
-  {"term":"Diplomatic Channel","definition":"Official ways countries communicate.","example":"Like passing notes through a teacher."},
-  {"term":"Treaty Signing","definition":"Formally agreeing on rules.","example":"Like shaking hands after making a deal."},
-  {"term":"Summit Meeting","definition":"Top leaders meet to discuss issues.","example":"Like class captains meeting to plan an event."},
-  {"term":"Mediation","definition":"Helping two sides solve a conflict.","example":"Like a teacher helping friends stop arguing."},
-  {"term":"Protocol","definition":"Official rules for meetings.","example":"Like classroom rules for talking."},
-  {"term":"Ambassador","definition":"Person representing their country.","example":"Like a student council representative."},
-  {"term":"Envoy","definition":"Someone sent to deliver messages or help.","example":"Like a friend sent to invite classmates."},
-  {"term":"Good Offices","definition":"Offering a place or help to negotiate.","example":"Like letting friends use your room to discuss a project."},
-  {"term":"Cultural Diplomacy","definition":"Using art, music, or culture to connect countries.","example":"Like sharing toys or games to make friends."},
-  {"term":"Economic Diplomacy","definition":"Using money or trade to influence other countries.","example":"Like offering snacks to trade for help."},
-  {"term":"Public Diplomacy","definition":"Communicating with the people of another country.","example":"Like sending letters or messages to new classmates."},
-  {"term":"Track II Diplomacy","definition":"Private, informal talks between people.","example":"Like a secret conversation to solve a problem."},
-  {"term":"Diplomatic Mission","definition":"Team working in another country.","example":"Like a small group visiting another class to help."},
-  {"term":"Peace Talks","definition":"Meetings to stop fighting.","example":"Like friends talking to stop a playground fight."},
-  {"term":"Negotiation Table","definition":"Place to discuss agreements.","example":"Like sitting at a table to decide on game rules."},
-  {"term":"Conflict Mediation","definition":"Helping fix problems between countries.","example":"Like teachers resolving fights."},
-  {"term":"Bilateral Diplomacy","definition":"Two countries talking directly.","example":"Like two friends talking privately."},
-  {"term":"Multilateral Diplomacy","definition":"Many countries discussing together.","example":"Like a group project meeting."},
-  {"term":"Diplomatic Note","definition":"Official written message between countries.","example":"Like a polite note sent to a friend."}
+  {
+    "term": "Negotiation",
+    "advanced": "A deliberate diplomatic process in which states or actors discuss terms, manage conflict, and seek mutually acceptable outcomes without resorting to force.",
+    "simple": "Talking to agree on something.",
+    "example": "Like two kids deciding who goes first in a game."
+  },
+  {
+    "term": "Diplomatic Channel",
+    "advanced": "Formal communication pathways used by governments to exchange messages, negotiate policy, and manage bilateral relations securely.",
+    "simple": "Official ways countries communicate.",
+    "example": "Like passing notes through a teacher."
+  },
+  {
+    "term": "Treaty Signing",
+    "advanced": "The formal act of executing a legal agreement between states, after which the document enters the international legal framework once ratified.",
+    "simple": "Formally agreeing on rules.",
+    "example": "Like shaking hands after making a deal."
+  },
+  {
+    "term": "Summit Meeting",
+    "advanced": "A high-level conference of heads of state or government to discuss strategic issues, manage crises, and set the agenda for international cooperation.",
+    "simple": "Top leaders meet to discuss issues.",
+    "example": "Like class captains meeting to plan an event."
+  },
+  {
+    "term": "Mediation",
+    "advanced": "The process of introducing a neutral third party to facilitate dialogue and help disputing states reach a peaceful resolution.",
+    "simple": "Helping two sides solve a conflict.",
+    "example": "Like a teacher helping friends stop arguing."
+  },
+  {
+    "term": "Protocol",
+    "advanced": "Official rules and conventions governing diplomatic interaction, ceremonial behavior, and the conduct of state representatives to maintain respect and order.",
+    "simple": "Official rules for meetings.",
+    "example": "Like classroom rules for talking."
+  },
+  {
+    "term": "Ambassador",
+    "advanced": "A senior diplomat representing a country abroad and tasked with advancing bilateral relations and national interests.",
+    "simple": "Person representing their country.",
+    "example": "Like a student council representative."
+  },
+  {
+    "term": "Envoy",
+    "advanced": "A diplomat sent on a specific mission, often to negotiate, deliver messages, or advance particular foreign policy goals.",
+    "simple": "Someone sent to deliver messages or help.",
+    "example": "Like a friend sent to invite classmates."
+  },
+  {
+    "term": "Good Offices",
+    "advanced": "A form of diplomatic support where a third party offers a neutral venue or assistance to help disputants begin negotiations.",
+    "simple": "Offering a place or help to negotiate.",
+    "example": "Like letting friends use your room to discuss a project."
+  },
+  {
+    "term": "Cultural Diplomacy",
+    "advanced": "The use of cultural activities, exchanges, and creative outreach to build trust, project soft power, and strengthen international relations.",
+    "simple": "Using art, music, or culture to connect countries.",
+    "example": "Like sharing toys or games to make friends."
+  },
+  {
+    "term": "Economic Diplomacy",
+    "advanced": "The strategic use of trade, investment, sanctions, and economic policy to advance national interests and influence other states.",
+    "simple": "Using money or trade to influence other countries.",
+    "example": "Like offering snacks to trade for help."
+  },
+  {
+    "term": "Public Diplomacy",
+    "advanced": "Efforts by a state to communicate directly with foreign publics, shape international perceptions, and build support for its policies.",
+    "simple": "Communicating with the people of another country.",
+    "example": "Like sending letters or messages to new classmates."
+  },
+  {
+    "term": "Track II Diplomacy",
+    "advanced": "Informal, non-governmental dialogue between experts and stakeholders designed to explore solutions and complement official diplomacy.",
+    "simple": "Private, informal talks between people.",
+    "example": "Like a secret conversation to solve a problem."
+  },
+  {
+    "term": "Diplomatic Mission",
+    "advanced": "The permanent overseas establishment of a state, including its embassy or consulate, responsible for managing bilateral relations and protecting citizens abroad.",
+    "simple": "Team working in another country.",
+    "example": "Like a small group visiting another class to help."
+  },
+  {
+    "term": "Peace Talks",
+    "advanced": "Negotiations between parties in conflict aimed at reaching agreements that end hostilities and establish terms for peace.",
+    "simple": "Meetings to stop fighting.",
+    "example": "Like friends talking to stop a playground fight."
+  },
+  {
+    "term": "Negotiation Table",
+    "advanced": "The forum where representatives of different sides sit down to discuss terms, trade concessions, and resolve disputes diplomatically.",
+    "simple": "Place to discuss agreements.",
+    "example": "Like sitting at a table to decide on game rules."
+  },
+  {
+    "term": "Conflict Mediation",
+    "advanced": "A structured process in which a mediator helps parties de-escalate conflict and identify common ground for a settlement.",
+    "simple": "Helping fix problems between countries.",
+    "example": "Like teachers resolving fights."
+  },
+  {
+    "term": "Bilateral Diplomacy",
+    "advanced": "Diplomatic relations between two countries focused on managing shared interests, resolving disputes, and coordinating policy.",
+    "simple": "Two countries talking directly.",
+    "example": "Like two friends talking privately."
+  },
+  {
+    "term": "Multilateral Diplomacy",
+    "advanced": "Diplomatic engagement involving three or more countries, often through international organisations, to address common issues and build collective norms.",
+    "simple": "Many countries discussing together.",
+    "example": "Like a group project meeting."
+  },
+  {
+    "term": "Diplomatic Note",
+    "advanced": "A formal written communication used by governments to convey official positions, protests, or requests in a diplomatic exchange.",
+    "simple": "Official written message between countries.",
+    "example": "Like a polite note sent to a friend."
+  }
 ]

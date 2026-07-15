@@ -1,22 +1,122 @@
 [
-  {"term":"Strategic Location","definition":"A place that is important because of where it is.","example":"Like sitting in the best seat to see the whole classroom."},
-  {"term":"Territorial Dispute","definition":"Two countries arguing over land.","example":"Like two kids arguing about who owns a toy."},
-  {"term":"Sphere of Influence","definition":"Areas where a country has strong influence.","example":"Like the playground where your friend group usually hangs out."},
-  {"term":"Buffer State","definition":"A country between two powerful rivals.","example":"Like a student standing between two arguing classmates."},
-  {"term":"Geostrategy","definition":"Planning power based on geography.","example":"Like choosing the best spot in a game of chess."},
-  {"term":"Sea Routes","definition":"Important ocean paths for ships.","example":"Like roads used by school buses."},
-  {"term":"Energy Corridor","definition":"Routes used to transport oil or gas.","example":"Like pipelines acting like straws carrying drinks."},
-  {"term":"Strategic Resource","definition":"Important natural materials like oil.","example":"Like rare batteries needed for toys."},
-  {"term":"Border Control","definition":"Managing who enters a country.","example":"Like checking who enters a school."},
-  {"term":"Power Rivalry","definition":"Competition between strong countries.","example":"Like two teams competing to be the best."},
-  {"term":"Regional Power","definition":"A strong country in a certain region.","example":"Like the best team in a league."},
-  {"term":"Global Power","definition":"A country with influence worldwide.","example":"Like the most popular student in school."},
-  {"term":"Territorial Waters","definition":"Ocean areas belonging to a country.","example":"Like the yard around your house."},
-  {"term":"Strategic Alliance","definition":"Countries cooperating for power.","example":"Like teammates forming a strong team."},
-  {"term":"Geopolitical Tension","definition":"Stress between countries because of power struggles.","example":"Like tension between rival teams."},
-  {"term":"Border Conflict","definition":"Fighting over boundaries.","example":"Like arguing over the edge of a playground."},
-  {"term":"Resource Competition","definition":"Countries competing for resources.","example":"Like kids competing for the last slice of pizza."},
-  {"term":"Naval Power","definition":"Strength of a country's navy.","example":"Like having many strong boats in a race."},
-  {"term":"Strategic Region","definition":"Area important for world politics.","example":"Like the center square in tic-tac-toe."},
-  {"term":"Influence Projection","definition":"Extending power into other regions.","example":"Like a popular student influencing other classes."}
+  {
+    "term": "Strategic Location",
+    "advanced": "A geographic position that offers military, economic, or logistical advantages, often making the area a focal point of state competition.",
+    "simple": "A place that is important because of where it is.",
+    "example": "Like sitting in the best seat to see the whole classroom."
+  },
+  {
+    "term": "Territorial Dispute",
+    "advanced": "A conflict over land or maritime boundaries between states, which can destabilise neighboring relations and trigger diplomacy or conflict.",
+    "simple": "Two countries arguing over land.",
+    "example": "Like two kids arguing about who owns a toy."
+  },
+  {
+    "term": "Sphere of Influence",
+    "advanced": "A region where one country exerts dominant political, economic, or military pressure over others, often without formal control.",
+    "simple": "Areas where a country has strong influence.",
+    "example": "Like the playground where your friend group usually hangs out."
+  },
+  {
+    "term": "Buffer State",
+    "advanced": "A country situated between rival powers that can provide stability or strategic separation during geopolitical competition.",
+    "simple": "A country between two powerful rivals.",
+    "example": "Like a student standing between two arguing classmates."
+  },
+  {
+    "term": "Geostrategy",
+    "advanced": "A long-term plan for using geography, resources, and power to achieve national security and foreign policy objectives.",
+    "simple": "Planning power based on geography.",
+    "example": "Like choosing the best spot in a game of chess."
+  },
+  {
+    "term": "Sea Routes",
+    "advanced": "Major maritime pathways for international trade and military movement, critical to global commerce and strategic planning.",
+    "simple": "Important ocean paths for ships.",
+    "example": "Like roads used by school buses."
+  },
+  {
+    "term": "Energy Corridor",
+    "advanced": "A transportation route for oil, gas, or electricity that links producers with consumers and can become a strategic asset.",
+    "simple": "Routes used to transport oil or gas.",
+    "example": "Like pipelines acting like straws carrying drinks."
+  },
+  {
+    "term": "Strategic Resource",
+    "advanced": "A material or commodity essential to national security and economic strength, often subject to international competition.",
+    "simple": "Important natural materials like oil.",
+    "example": "Like rare batteries needed for toys."
+  },
+  {
+    "term": "Border Control",
+    "advanced": "State measures to regulate and secure borders, balancing sovereignty, migration, and cross-border trade.",
+    "simple": "Managing who enters a country.",
+    "example": "Like checking who enters a school."
+  },
+  {
+    "term": "Power Rivalry",
+    "advanced": "Competition between influential states to expand influence, protect interests, and shape regional or global order.",
+    "simple": "Competition between strong countries.",
+    "example": "Like two teams competing to be the best."
+  },
+  {
+    "term": "Regional Power",
+    "advanced": "A state with dominant influence in its geographic area, capable of shaping regional dynamics and alliances.",
+    "simple": "A strong country in a certain region.",
+    "example": "Like the best team in a league."
+  },
+  {
+    "term": "Global Power",
+    "advanced": "A state with significant economic, military, and diplomatic influence that affects global governance and security.",
+    "simple": "A country with influence worldwide.",
+    "example": "Like the most popular student in school."
+  },
+  {
+    "term": "Territorial Waters",
+    "advanced": "Coastal maritime zones over which a state exercises sovereignty and jurisdiction.",
+    "simple": "Ocean areas belonging to a country.",
+    "example": "Like the yard around your house."
+  },
+  {
+    "term": "Strategic Alliance",
+    "advanced": "A cooperative relationship between states formed to enhance security, economic interests, or political influence.",
+    "simple": "Countries cooperating for power.",
+    "example": "Like teammates forming a strong team."
+  },
+  {
+    "term": "Geopolitical Tension",
+    "advanced": "Stress or rivalry between states caused by conflicting interests over territory, resources, or influence.",
+    "simple": "Stress between countries because of power struggles.",
+    "example": "Like tension between rival teams."
+  },
+  {
+    "term": "Border Conflict",
+    "advanced": "Military or political confrontation along international boundaries, often rooted in disputed territory or security concerns.",
+    "simple": "Fighting over boundaries.",
+    "example": "Like arguing over the edge of a playground."
+  },
+  {
+    "term": "Resource Competition",
+    "advanced": "Conflict arising when states or actors compete for access to scarce natural resources that underpin economies and security.",
+    "simple": "Countries competing for resources.",
+    "example": "Like kids competing for the last slice of pizza."
+  },
+  {
+    "term": "Naval Power",
+    "advanced": "A country’s maritime military capability, important for protecting trade, projecting force, and controlling sea lanes.",
+    "simple": "Strength of a country's navy.",
+    "example": "Like having many strong boats in a race."
+  },
+  {
+    "term": "Strategic Region",
+    "advanced": "An area of geopolitical importance due to its location, resources, or role in global transit and influence.",
+    "simple": "Area important for world politics.",
+    "example": "Like the center square in tic-tac-toe."
+  },
+  {
+    "term": "Influence Projection",
+    "advanced": "The ability of a state to extend political, economic, or cultural power into other regions to shape outcomes.",
+    "simple": "Extending power into other regions.",
+    "example": "Like a popular student influencing other classes."
+  }
 ]

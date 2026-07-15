@@ -1,27 +1,152 @@
 [
-  {"term":"Poverty Reduction","definition":"Helping people earn enough money for basic needs.","example":"Like making sure everyone gets lunch."},
-  {"term":"Economic Development","definition":"Improving a country's economy.","example":"Like growing a small shop into a big store."},
-  {"term":"Infrastructure","definition":"Roads, bridges, and buildings needed for society.","example":"Like hallways and classrooms in school."},
-  {"term":"Foreign Aid","definition":"Money or supplies given to help another country.","example":"Like donating books to another class."},
-  {"term":"Microfinance","definition":"Small loans for poor entrepreneurs.","example":"Like lending a friend money to start selling lemonade."},
-  {"term":"Sustainable Development","definition":"Growing the economy while protecting nature.","example":"Like using resources wisely."},
-  {"term":"Urban Development","definition":"Improving cities.","example":"Like building new playground equipment."},
-  {"term":"Rural Development","definition":"Helping villages grow economically.","example":"Like improving farms."},
-  {"term":"Economic Opportunity","definition":"Chances for people to earn money.","example":"Like opportunities to work after school."},
-  {"term":"Education Access","definition":"Ensuring everyone can attend school.","example":"Like making sure every student has books."},
-  {"term":"Healthcare Development","definition":"Improving hospitals and clinics.","example":"Like upgrading the school nurse office."},
-  {"term":"Food Security","definition":"Ensuring people always have food.","example":"Like having enough snacks for everyone."},
-  {"term":"Job Creation","definition":"Creating employment opportunities.","example":"Like starting new projects for students."},
-  {"term":"Development Program","definition":"Organized efforts to improve living conditions.","example":"Like school improvement projects."},
-  {"term":"Economic Inclusion","definition":"Making sure everyone can participate in the economy.","example":"Like letting every student join clubs."},
-  {"term":"Infrastructure Investment","definition":"Spending money on roads or bridges.","example":"Like fixing broken playground equipment."},
-  {"term":"Growth Strategy","definition":"Plans for economic improvement.","example":"Like planning how to grow a garden."},
-  {"term":"Poverty Line","definition":"Income level defining poverty.","example":"Like minimum points needed to pass a test."},
-  {"term":"Development Goals","definition":"Targets for improving society.","example":"Like class goals for better grades."},
-  {"term":"Human Development","definition":"Improving education, health, and income.","example":"Like helping students grow smarter and healthier."},
-  {"term":"Economic Empowerment","definition":"Giving people power to improve their economy.","example":"Like teaching students how to earn money."},
-  {"term":"Trade Development","definition":"Improving buying and selling between countries.","example":"Like students trading toys fairly."},
-  {"term":"Technology Transfer","definition":"Sharing technology to help poorer countries.","example":"Like sharing computer access with others."},
-  {"term":"Skills Training","definition":"Teaching people job skills.","example":"Like learning how to use new tools."},
-  {"term":"Community Development","definition":"Improving local neighborhoods.","example":"Like improving your classroom together."}
+  {
+    "term": "Poverty Reduction",
+    "advanced": "Policies and programs designed to lower poverty rates by expanding income opportunities, social protection, and access to services.",
+    "simple": "Helping people earn enough money for basic needs.",
+    "example": "Like making sure everyone gets lunch."
+  },
+  {
+    "term": "Economic Development",
+    "advanced": "Sustained improvements in economic output, living standards, and infrastructure that promote long-term societal well-being.",
+    "simple": "Improving a country's economy.",
+    "example": "Like growing a small shop into a big store."
+  },
+  {
+    "term": "Infrastructure",
+    "advanced": "Physical and institutional systems such as roads, energy, and communications that support economic activity and development.",
+    "simple": "Roads, bridges, and buildings needed for society.",
+    "example": "Like hallways and classrooms in school."
+  },
+  {
+    "term": "Foreign Aid",
+    "advanced": "Financial or material assistance provided by one country to another, often aimed at development, stability, or humanitarian relief.",
+    "simple": "Money or supplies given to help another country.",
+    "example": "Like donating books to another class."
+  },
+  {
+    "term": "Microfinance",
+    "advanced": "Small financial services offered to low-income individuals to support entrepreneurship and reduce poverty barriers.",
+    "simple": "Small loans for poor entrepreneurs.",
+    "example": "Like lending a friend money to start selling lemonade."
+  },
+  {
+    "term": "Sustainable Development",
+    "advanced": "A model of growth that balances economic progress, social inclusion, and environmental protection for future generations.",
+    "simple": "Growing the economy while protecting nature.",
+    "example": "Like using resources wisely."
+  },
+  {
+    "term": "Urban Development",
+    "advanced": "Planning and investment in cities to improve housing, transport, services, and economic opportunities.",
+    "simple": "Improving cities.",
+    "example": "Like building new playground equipment."
+  },
+  {
+    "term": "Rural Development",
+    "advanced": "Programs to support agricultural communities, enhance local infrastructure, and improve rural livelihoods.",
+    "simple": "Helping villages grow economically.",
+    "example": "Like improving farms."
+  },
+  {
+    "term": "Economic Opportunity",
+    "advanced": "Access to decent work, credit, and markets that enables people to improve their incomes and living standards.",
+    "simple": "Chances for people to earn money.",
+    "example": "Like opportunities to work after school."
+  },
+  {
+    "term": "Education Access",
+    "advanced": "The ability of individuals to attend school and gain skills, which is essential for development and global competitiveness.",
+    "simple": "Ensuring everyone can attend school.",
+    "example": "Like making sure every student has books."
+  },
+  {
+    "term": "Healthcare Development",
+    "advanced": "Efforts to strengthen medical services, infrastructure, and public health systems for better population outcomes.",
+    "simple": "Improving hospitals and clinics.",
+    "example": "Like upgrading the school nurse office."
+  },
+  {
+    "term": "Food Security",
+    "advanced": "A condition in which all people have reliable access to sufficient, nutritious food, often requiring coordinated policy and aid.",
+    "simple": "Ensuring people always have food.",
+    "example": "Like having enough snacks for everyone."
+  },
+  {
+    "term": "Job Creation",
+    "advanced": "Strategies to generate employment opportunities, reduce unemployment, and sustain economic growth.",
+    "simple": "Creating employment opportunities.",
+    "example": "Like starting new projects for students."
+  },
+  {
+    "term": "Development Program",
+    "advanced": "Organized initiatives that target specific social or economic challenges in a country or region.",
+    "simple": "Organized efforts to improve living conditions.",
+    "example": "Like school improvement projects."
+  },
+  {
+    "term": "Economic Inclusion",
+    "advanced": "Policies that ensure marginalized groups can participate fully in economic life and benefit from growth.",
+    "simple": "Making sure everyone can participate in the economy.",
+    "example": "Like letting every student join clubs."
+  },
+  {
+    "term": "Infrastructure Investment",
+    "advanced": "Funding for physical assets like roads, power, and water systems that support long-term growth and resilience.",
+    "simple": "Spending money on roads or bridges.",
+    "example": "Like fixing broken playground equipment."
+  },
+  {
+    "term": "Growth Strategy",
+    "advanced": "A plan aimed at expanding an economy through investment, innovation, and policy reforms.",
+    "simple": "Plans for economic improvement.",
+    "example": "Like planning how to grow a garden."
+  },
+  {
+    "term": "Poverty Line",
+    "advanced": "An income threshold that defines who is considered poor and guides social assistance programs.",
+    "simple": "Income level defining poverty.",
+    "example": "Like minimum points needed to pass a test."
+  },
+  {
+    "term": "Development Goals",
+    "advanced": "Targets established to improve economic, social, and environmental outcomes for countries and communities.",
+    "simple": "Targets for improving society.",
+    "example": "Like class goals for better grades."
+  },
+  {
+    "term": "Human Development",
+    "advanced": "A multidimensional approach to development that focuses on health, education, and quality of life.",
+    "simple": "Improving education, health, and income.",
+    "example": "Like helping students grow smarter and healthier."
+  },
+  {
+    "term": "Economic Empowerment",
+    "advanced": "Actions that increase individuals’ control over resources, income, and decision-making.",
+    "simple": "Giving people power to improve their economy.",
+    "example": "Like teaching students how to earn money."
+  },
+  {
+    "term": "Trade Development",
+    "advanced": "Efforts to expand a country’s participation in international trade and strengthen its export capacity.",
+    "simple": "Improving buying and selling between countries.",
+    "example": "Like students trading toys fairly."
+  },
+  {
+    "term": "Technology Transfer",
+    "advanced": "The sharing of know-how, equipment, or systems between countries to support development and innovation.",
+    "simple": "Sharing technology to help poorer countries.",
+    "example": "Like sharing computer access with others."
+  },
+  {
+    "term": "Skills Training",
+    "advanced": "Programs that build vocational abilities and workforce readiness to match labor market needs.",
+    "simple": "Teaching people job skills.",
+    "example": "Like learning how to use new tools."
+  },
+  {
+    "term": "Community Development",
+    "advanced": "Local initiatives that improve social services, infrastructure, and participation within neighborhoods.",
+    "simple": "Improving local neighborhoods.",
+    "example": "Like improving your classroom together."
+  }
 ]

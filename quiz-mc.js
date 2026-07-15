@@ -72,7 +72,7 @@ async function loadQuizDataMultipleFields(fields) {
 			const data = await response.json();
 			const fieldData = data.map((item, index) => ({
 				...item,
-				correctAnswer: item.definition,
+				correctAnswer: item.advanced || item.definition,
 				field: field,
 				id: `${field}-${index}`
 			}));
@@ -150,7 +150,7 @@ function displayQuestion() {
 	if (!questionOptions[questionId]) {
 		const otherDefinitions = quizData
 			.filter((item, index) => index !== currentQuestionIndex)
-			.map(item => item.definition);
+			.map(item => item.advanced || item.definition);
 
 		// Shuffle to get 3 random incorrect options
 		const shuffledIncorrect = shuffleArray(otherDefinitions).slice(0, 3);

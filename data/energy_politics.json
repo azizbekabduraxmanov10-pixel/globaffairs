@@ -1,23 +1,128 @@
 [
-  {"term":"Energy Resource","definition":"A source of power like oil or gas.","example":"Like batteries powering a toy."},
-  {"term":"Oil Supply","definition":"The amount of oil available.","example":"Like how many batteries you have."},
-  {"term":"Energy Security","definition":"Having reliable energy supplies.","example":"Like making sure your phone stays charged."},
-  {"term":"Renewable Energy","definition":"Energy that never runs out.","example":"Like sunlight powering solar panels."},
-  {"term":"Fossil Fuels","definition":"Energy from coal, oil, and gas.","example":"Like old stored energy in the earth."},
-  {"term":"Energy Exporter","definition":"A country selling energy resources.","example":"Like a student selling extra batteries."},
-  {"term":"Energy Importer","definition":"A country buying energy resources.","example":"Like a student buying batteries."},
-  {"term":"Energy Policy","definition":"Government rules about energy use.","example":"Like school rules about electricity."},
-  {"term":"Energy Crisis","definition":"A big shortage of energy.","example":"Like running out of batteries during a game."},
-  {"term":"Pipeline","definition":"Pipes transporting oil or gas.","example":"Like tubes carrying water."},
-  {"term":"Energy Market","definition":"Where energy is bought and sold.","example":"Like a store selling batteries."},
-  {"term":"Energy Alliance","definition":"Countries cooperating on energy.","example":"Like students sharing chargers."},
-  {"term":"Strategic Reserves","definition":"Extra energy saved for emergencies.","example":"Like spare batteries kept for later."},
-  {"term":"Energy Infrastructure","definition":"Systems that produce and deliver energy.","example":"Like power lines bringing electricity."},
-  {"term":"Electric Grid","definition":"A network distributing electricity.","example":"Like wires connecting classrooms."},
-  {"term":"Energy Transition","definition":"Switching to cleaner energy.","example":"Like replacing old batteries with rechargeable ones."},
-  {"term":"Energy Independence","definition":"Producing your own energy.","example":"Like charging your own device instead of borrowing."},
-  {"term":"Fuel Price","definition":"Cost of energy resources.","example":"Like paying for batteries."},
-  {"term":"Energy Investment","definition":"Spending money to improve energy systems.","example":"Like buying better chargers."},
-  {"term":"Power Plant","definition":"A place producing electricity.","example":"Like a big battery generator."},
-  {"term":"Energy Diplomacy","definition":"Using energy to influence international relations.","example":"Like trading batteries for favors."}
+  {
+    "term": "Energy Resource",
+    "advanced": "Natural or produced sources of fuel and power that shape domestic development, geopolitical leverage, and international competition.",
+    "simple": "A source of power like oil or gas.",
+    "example": "Like batteries powering a toy."
+  },
+  {
+    "term": "Oil Supply",
+    "advanced": "The quantity and reliability of petroleum available to markets, which impacts energy security, economic stability, and foreign policy choices.",
+    "simple": "The amount of oil available.",
+    "example": "Like how many batteries you have."
+  },
+  {
+    "term": "Energy Security",
+    "advanced": "A state’s ability to secure reliable, affordable access to energy while managing geopolitical risks and supply disruptions.",
+    "simple": "Having reliable energy supplies.",
+    "example": "Like making sure your phone stays charged."
+  },
+  {
+    "term": "Renewable Energy",
+    "advanced": "Energy supplied by resources that naturally replenish, central to climate policy and reducing dependency on fossil fuels.",
+    "simple": "Energy that never runs out.",
+    "example": "Like sunlight powering solar panels."
+  },
+  {
+    "term": "Fossil Fuels",
+    "advanced": "Coal, oil, and natural gas extracted from geological deposits, foundational to modern economies but a major focus of climate diplomacy and energy transition debates.",
+    "simple": "Energy from coal, oil, and gas.",
+    "example": "Like old stored energy in the earth."
+  },
+  {
+    "term": "Energy Exporter",
+    "advanced": "A country that produces more energy than it consumes and sells the surplus abroad, often gaining influence through export relationships.",
+    "simple": "A country selling energy resources.",
+    "example": "Like a student selling extra batteries."
+  },
+  {
+    "term": "Energy Importer",
+    "advanced": "A country that relies on foreign energy supplies, making it sensitive to external market shifts and supply chain politics.",
+    "simple": "A country buying energy resources.",
+    "example": "Like a student buying batteries."
+  },
+  {
+    "term": "Energy Policy",
+    "advanced": "Government strategy for producing, distributing, and regulating energy, balancing economic growth, environmental goals, and national security.",
+    "simple": "Government rules about energy use.",
+    "example": "Like school rules about electricity."
+  },
+  {
+    "term": "Energy Crisis",
+    "advanced": "A severe disruption in fuel supply or pricing that can destabilise economies and trigger urgent diplomatic negotiations.",
+    "simple": "A big shortage of energy.",
+    "example": "Like running out of batteries during a game."
+  },
+  {
+    "term": "Pipeline",
+    "advanced": "Infrastructure for transporting oil or gas across borders, often a strategic asset shaped by geopolitics and international agreements.",
+    "simple": "Pipes transporting oil or gas.",
+    "example": "Like tubes carrying water."
+  },
+  {
+    "term": "Energy Market",
+    "advanced": "The global system where energy products are traded, priced, and regulated, influencing state revenue and policy decisions.",
+    "simple": "Where energy is bought and sold.",
+    "example": "Like a store selling batteries."
+  },
+  {
+    "term": "Energy Alliance",
+    "advanced": "A cooperative pact between countries to coordinate energy production, share resources, or manage strategic reserves.",
+    "simple": "Countries cooperating on energy.",
+    "example": "Like students sharing chargers."
+  },
+  {
+    "term": "Strategic Reserves",
+    "advanced": "Stored energy resources held by states to buffer against shortages and provide leverage during market or geopolitical disruptions.",
+    "simple": "Extra energy saved for emergencies.",
+    "example": "Like spare batteries kept for later."
+  },
+  {
+    "term": "Energy Infrastructure",
+    "advanced": "The physical facilities and systems for generating, transmitting, and distributing energy across domestic and international networks.",
+    "simple": "Systems that produce and deliver energy.",
+    "example": "Like power lines bringing electricity."
+  },
+  {
+    "term": "Electric Grid",
+    "advanced": "The interconnected network that delivers electricity from producers to consumers, whose reliability is vital to economic and national security.",
+    "simple": "A network distributing electricity.",
+    "example": "Like wires connecting classrooms."
+  },
+  {
+    "term": "Energy Transition",
+    "advanced": "The process of shifting from fossil fuels to low-carbon energy systems, driven by climate goals and changing geopolitical dynamics.",
+    "simple": "Switching to cleaner energy.",
+    "example": "Like replacing old batteries with rechargeable ones."
+  },
+  {
+    "term": "Energy Independence",
+    "advanced": "A state’s goal of meeting its energy needs domestically to reduce dependence on foreign suppliers and increase policy autonomy.",
+    "simple": "Producing your own energy.",
+    "example": "Like charging your own device instead of borrowing."
+  },
+  {
+    "term": "Fuel Price",
+    "advanced": "The cost of gasoline, diesel, or other energy products, which affects inflation, consumer behavior, and international economic relations.",
+    "simple": "Cost of energy resources.",
+    "example": "Like paying for batteries."
+  },
+  {
+    "term": "Energy Investment",
+    "advanced": "Capital directed toward energy production, infrastructure, and innovation, often considered a strategic national priority.",
+    "simple": "Spending money to improve energy systems.",
+    "example": "Like buying better chargers."
+  },
+  {
+    "term": "Power Plant",
+    "advanced": "A facility that converts energy sources into electricity, forming a key component of national energy systems and planning.",
+    "simple": "A place producing electricity.",
+    "example": "Like a big battery generator."
+  },
+  {
+    "term": "Energy Diplomacy",
+    "advanced": "The use of energy policy, negotiation, and trade to pursue diplomatic goals and manage relations among producer and consumer states.",
+    "simple": "Using energy to influence international relations.",
+    "example": "Like trading batteries for favors."
+  }
 ]

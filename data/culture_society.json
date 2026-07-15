@@ -1,22 +1,122 @@
 [
-  {"term":"Tradition","definition":"Customs passed down from older generations.","example":"Like celebrating holidays every year."},
-  {"term":"Festival","definition":"A celebration with fun activities.","example":"Like a school fair or sports day."},
-  {"term":"Language","definition":"Words we speak.","example":"Like Uzbek, English, or Russian."},
-  {"term":"Religion","definition":"Beliefs and practices.","example":"Like praying or celebrating certain holidays."},
-  {"term":"Customs","definition":"Normal behaviors in a society.","example":"Like shaking hands or greeting friends."},
-  {"term":"Heritage","definition":"Things passed down from ancestors.","example":"Like old stories or toys from grandparents."},
-  {"term":"Norms","definition":"Rules about how to behave.","example":"Like lining up in the playground."},
-  {"term":"Rituals","definition":"Special repeated actions.","example":"Like saying a prayer before meals."},
-  {"term":"Social Roles","definition":"Jobs or duties people have.","example":"Like class monitor or team captain."},
-  {"term":"Community","definition":"People living or working together.","example":"Like your classroom or neighborhood."},
-  {"term":"Identity","definition":"Who you are.","example":"Like your name, culture, and likes."},
-  {"term":"Multiculturalism","definition":"Many cultures living together.","example":"Like students from different countries in one school."},
-  {"term":"Art","definition":"Creative expression.","example":"Like drawing, painting, or singing."},
-  {"term":"Music","definition":"Sounds people make for fun or expression.","example":"Like songs played in school concerts."},
-  {"term":"Dance","definition":"Moving to music.","example":"Like dances at parties or celebrations."},
-  {"term":"Cuisine","definition":"Foods of a culture.","example":"Like plov, pizza, or sushi."},
-  {"term":"Folklore","definition":"Stories passed down.","example":"Like fairy tales or legends."},
-  {"term":"Ceremony","definition":"Formal event or celebration.","example":"Like graduation or awards day."},
-  {"term":"Social Media","definition":"Platforms to connect with people.","example":"Like sharing photos with friends."},
-  {"term":"Cultural Exchange","definition":"Sharing and learning about other cultures.","example":"Like swapping games or food with friends."}
+  {
+    "term": "Tradition",
+    "advanced": "Enduring cultural practices, rituals, and social norms transmitted across generations, often shaping national identity and influencing how states project soft power abroad.",
+    "simple": "Customs passed down from older generations.",
+    "example": "Like celebrating holidays every year."
+  },
+  {
+    "term": "Festival",
+    "advanced": "Large cultural events that showcase national identity, build social cohesion, and can be leveraged diplomatically to strengthen international relationships.",
+    "simple": "A celebration with fun activities.",
+    "example": "Like a school fair or sports day."
+  },
+  {
+    "term": "Language",
+    "advanced": "A system of communication that underpins diplomacy, international negotiations, and cultural exchange across borders.",
+    "simple": "Words we speak.",
+    "example": "Like Uzbek, English, or Russian."
+  },
+  {
+    "term": "Religion",
+    "advanced": "A set of shared beliefs and practices that informs societal values, can shape domestic policy, and occasionally influences state relations globally.",
+    "simple": "Beliefs and practices.",
+    "example": "Like praying or celebrating certain holidays."
+  },
+  {
+    "term": "Customs",
+    "advanced": "Border authorities and procedures that monitor and control the movement of goods into and out of a country.",
+    "simple": "Normal behaviors in a society.",
+    "example": "Like shaking hands or greeting friends."
+  },
+  {
+    "term": "Heritage",
+    "advanced": "The historic cultural, architectural, and artistic legacy of a society that shapes national image and can be used in cultural diplomacy and international branding.",
+    "simple": "Things passed down from ancestors.",
+    "example": "Like old stories or toys from grandparents."
+  },
+  {
+    "term": "Norms",
+    "advanced": "Widely accepted standards of behaviour within a society that help maintain order and guide how states and communities interact in international contexts.",
+    "simple": "Rules about how to behave.",
+    "example": "Like lining up in the playground."
+  },
+  {
+    "term": "Rituals",
+    "advanced": "Formalised, repeated cultural practices that reinforce community bonds and can serve as symbols of national identity during diplomatic events.",
+    "simple": "Special repeated actions.",
+    "example": "Like saying a prayer before meals."
+  },
+  {
+    "term": "Social Roles",
+    "advanced": "Positions and expectations assigned to individuals in society that influence social cohesion, governance, and the way states mobilise human capital for international goals.",
+    "simple": "Jobs or duties people have.",
+    "example": "Like class monitor or team captain."
+  },
+  {
+    "term": "Community",
+    "advanced": "A group of people with shared identity or interests whose cohesion and social dynamics can affect domestic stability and international reputation.",
+    "simple": "People living or working together.",
+    "example": "Like your classroom or neighborhood."
+  },
+  {
+    "term": "Identity",
+    "advanced": "A collective sense of national or cultural self that shapes foreign policy, national narratives, and international alignment.",
+    "simple": "Who you are.",
+    "example": "Like your name, culture, and likes."
+  },
+  {
+    "term": "Multiculturalism",
+    "advanced": "A policy or social condition in which multiple cultures coexist, often influencing a country’s international image and capacity for intercultural diplomacy.",
+    "simple": "Many cultures living together.",
+    "example": "Like students from different countries in one school."
+  },
+  {
+    "term": "Art",
+    "advanced": "Creative expression that can communicate national values, support cultural diplomacy, and shape perceptions in global cultural exchange.",
+    "simple": "Creative expression.",
+    "example": "Like drawing, painting, or singing."
+  },
+  {
+    "term": "Music",
+    "advanced": "A form of artistic expression used by states and societies to build cultural bridges, shape soft power, and convey shared values internationally.",
+    "simple": "Sounds people make for fun or expression.",
+    "example": "Like songs played in school concerts."
+  },
+  {
+    "term": "Dance",
+    "advanced": "A cultural art form that can symbolize national identity, strengthen public diplomacy, and foster cross-cultural connections.",
+    "simple": "Moving to music.",
+    "example": "Like dances at parties or celebrations."
+  },
+  {
+    "term": "Cuisine",
+    "advanced": "National food traditions that can become part of cultural diplomacy, tourism strategies, and international cultural exchange.",
+    "simple": "Foods of a culture.",
+    "example": "Like plov, pizza, or sushi."
+  },
+  {
+    "term": "Folklore",
+    "advanced": "Traditional stories and legends passed through generations that contribute to cultural heritage and can be used to explain national perspectives abroad.",
+    "simple": "Stories passed down.",
+    "example": "Like fairy tales or legends."
+  },
+  {
+    "term": "Ceremony",
+    "advanced": "Formal public rituals that communicate state values, mark diplomatic occasions, and reinforce authority and national identity.",
+    "simple": "Formal event or celebration.",
+    "example": "Like graduation or awards day."
+  },
+  {
+    "term": "Social Media",
+    "advanced": "Digital communication platforms that shape public discourse, influence international narratives, and can affect state reputation and diplomacy.",
+    "simple": "Platforms to connect with people.",
+    "example": "Like sharing photos with friends."
+  },
+  {
+    "term": "Cultural Exchange",
+    "advanced": "Programs and interactions in which people, art, or ideas are shared across borders to build understanding, friendship, and diplomatic ties.",
+    "simple": "Sharing and learning about other cultures.",
+    "example": "Like swapping games or food with friends."
+  }
 ]

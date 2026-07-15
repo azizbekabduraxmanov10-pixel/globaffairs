@@ -1,23 +1,128 @@
 [
-  {"term":"Cybersecurity","definition":"Protecting computers and networks.","example":"Like locking your phone."},
-  {"term":"Cyber Attack","definition":"Hacking or damaging digital systems.","example":"Like someone breaking into your online account."},
-  {"term":"Digital Diplomacy","definition":"Using the internet for international communication.","example":"Like leaders posting messages online."},
-  {"term":"Artificial Intelligence (AI)","definition":"Machines that can think or learn.","example":"Like a smart robot helping students."},
-  {"term":"Data Privacy","definition":"Protecting personal information online.","example":"Like keeping your password secret."},
-  {"term":"Tech Regulation","definition":"Rules controlling technology companies.","example":"Like school rules for using phones."},
-  {"term":"Information Warfare","definition":"Spreading false information to influence people.","example":"Like rumors spreading in school."},
-  {"term":"Social Media Influence","definition":"Impact of online platforms on politics.","example":"Like students forming opinions through social media."},
-  {"term":"Digital Surveillance","definition":"Monitoring online activity.","example":"Like teachers checking school computers."},
-  {"term":"Tech Innovation","definition":"Creating new technology.","example":"Like inventing a new school app."},
-  {"term":"Online Propaganda","definition":"Messages used to influence opinions online.","example":"Like persuasive posts on social media."},
-  {"term":"Global Internet Governance","definition":"Rules for how the internet works worldwide.","example":"Like rules for using the school network."},
-  {"term":"Tech Competition","definition":"Countries competing in technology development.","example":"Like students competing in robotics competitions."},
-  {"term":"Digital Economy","definition":"Economic activity online.","example":"Like buying items in online games."},
-  {"term":"Smart Technology","definition":"Devices that connect and communicate.","example":"Like smart watches."},
-  {"term":"Cloud Computing","definition":"Storing data on internet servers.","example":"Like saving homework online."},
-  {"term":"Tech Sanctions","definition":"Restrictions on technology trade.","example":"Like banning certain devices in school."},
-  {"term":"Digital Infrastructure","definition":"Systems supporting internet communication.","example":"Like school Wi-Fi networks."},
-  {"term":"AI Ethics","definition":"Rules about responsible AI use.","example":"Like rules for using robots safely."},
-  {"term":"Global Tech Companies","definition":"Large companies influencing technology worldwide.","example":"Like big tech brands shaping digital life."},
-  {"term":"Digital Rights","definition":"Protections for people online.","example":"Like privacy rules for students on school networks."}
+  {
+    "term": "Cybersecurity",
+    "advanced": "Measures to protect digital systems, networks, and data from cyber attacks and espionage by states and non-state actors.",
+    "simple": "Protecting computers and networks.",
+    "example": "Like locking your phone."
+  },
+  {
+    "term": "Cyber Attack",
+    "advanced": "Hacking or damaging digital systems. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Hacking or damaging digital systems.",
+    "example": "Like someone breaking into your online account."
+  },
+  {
+    "term": "Digital Diplomacy",
+    "advanced": "The practice of managing relationships, negotiations, and communications between states and international actors to advance strategic interests.",
+    "simple": "Using the internet for international communication.",
+    "example": "Like leaders posting messages online."
+  },
+  {
+    "term": "Artificial Intelligence (AI)",
+    "advanced": "The beliefs, practices, or expressions that shape social identity and can influence how states relate to each other culturally and politically.",
+    "simple": "Machines that can think or learn.",
+    "example": "Like a smart robot helping students."
+  },
+  {
+    "term": "Data Privacy",
+    "advanced": "Protecting personal information online. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Protecting personal information online.",
+    "example": "Like keeping your password secret."
+  },
+  {
+    "term": "Tech Regulation",
+    "advanced": "Rules controlling technology companies. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Rules controlling technology companies.",
+    "example": "Like school rules for using phones."
+  },
+  {
+    "term": "Information Warfare",
+    "advanced": "Spreading false information to influence people. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Spreading false information to influence people.",
+    "example": "Like rumors spreading in school."
+  },
+  {
+    "term": "Social Media Influence",
+    "advanced": "Impact of online platforms on politics. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Impact of online platforms on politics.",
+    "example": "Like students forming opinions through social media."
+  },
+  {
+    "term": "Digital Surveillance",
+    "advanced": "Monitoring online activity. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Monitoring online activity.",
+    "example": "Like teachers checking school computers."
+  },
+  {
+    "term": "Tech Innovation",
+    "advanced": "Creating new technology. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Creating new technology.",
+    "example": "Like inventing a new school app."
+  },
+  {
+    "term": "Online Propaganda",
+    "advanced": "Messages used to influence opinions online. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Messages used to influence opinions online.",
+    "example": "Like persuasive posts on social media."
+  },
+  {
+    "term": "Global Internet Governance",
+    "advanced": "The frameworks, institutions, and collaborative processes used by states to make collective decisions and manage common challenges.",
+    "simple": "Rules for how the internet works worldwide.",
+    "example": "Like rules for using the school network."
+  },
+  {
+    "term": "Tech Competition",
+    "advanced": "Countries competing in technology development. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Countries competing in technology development.",
+    "example": "Like students competing in robotics competitions."
+  },
+  {
+    "term": "Digital Economy",
+    "advanced": "Economic activity online. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Economic activity online.",
+    "example": "Like buying items in online games."
+  },
+  {
+    "term": "Smart Technology",
+    "advanced": "The beliefs, practices, or expressions that shape social identity and can influence how states relate to each other culturally and politically.",
+    "simple": "Devices that connect and communicate.",
+    "example": "Like smart watches."
+  },
+  {
+    "term": "Cloud Computing",
+    "advanced": "Storing data on internet servers. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Storing data on internet servers.",
+    "example": "Like saving homework online."
+  },
+  {
+    "term": "Tech Sanctions",
+    "advanced": "Restrictions on technology trade. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Restrictions on technology trade.",
+    "example": "Like banning certain devices in school."
+  },
+  {
+    "term": "Digital Infrastructure",
+    "advanced": "Systems supporting internet communication. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Systems supporting internet communication.",
+    "example": "Like school Wi-Fi networks."
+  },
+  {
+    "term": "AI Ethics",
+    "advanced": "Rules about responsible AI use. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Rules about responsible AI use.",
+    "example": "Like rules for using robots safely."
+  },
+  {
+    "term": "Global Tech Companies",
+    "advanced": "Large companies influencing technology worldwide. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Large companies influencing technology worldwide.",
+    "example": "Like big tech brands shaping digital life."
+  },
+  {
+    "term": "Digital Rights",
+    "advanced": "Protections for people online. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Protections for people online.",
+    "example": "Like privacy rules for students on school networks."
+  }
 ]

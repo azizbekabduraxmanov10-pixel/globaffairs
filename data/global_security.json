@@ -1,22 +1,122 @@
 [
-  {"term":"Cybersecurity","definition":"Protecting computers and the internet.","example":"Like locking your online accounts."},
-  {"term":"Terrorism","definition":"Violence used to scare people for political reasons.","example":"Like bullies trying to scare the whole school."},
-  {"term":"National Defense","definition":"Protecting a country from threats.","example":"Like security guards protecting a building."},
-  {"term":"Intelligence","definition":"Secret information about threats.","example":"Like spies gathering clues."},
-  {"term":"Military Alliance","definition":"Countries joining forces for defense.","example":"Like teammates protecting each other."},
-  {"term":"Nuclear Deterrence","definition":"Weapons that discourage attacks because they are powerful.","example":"Like a big warning sign saying \"don't start trouble.\""},
-  {"term":"Border Security","definition":"Protecting the edges of a country.","example":"Like fences around a playground."},
-  {"term":"Counterterrorism","definition":"Stopping terrorist attacks.","example":"Like teachers preventing bullying."},
-  {"term":"Arms Control","definition":"Agreements to limit weapons.","example":"Like rules limiting dangerous toys."},
-  {"term":"Security Threat","definition":"Something that could harm safety.","example":"Like a broken playground swing."},
-  {"term":"Peacekeeping Forces","definition":"Soldiers helping keep peace.","example":"Like referees during a game."},
-  {"term":"Strategic Defense","definition":"Long-term plans to stay safe.","example":"Like planning escape drills."},
-  {"term":"Surveillance","definition":"Watching carefully for danger.","example":"Like security cameras."},
-  {"term":"Crisis Management","definition":"Handling emergencies quickly.","example":"Like teachers managing a fire drill."},
-  {"term":"Defense Budget","definition":"Money spent on security.","example":"Like saving money for safety equipment."},
-  {"term":"Geopolitical Risk","definition":"Danger caused by global politics.","example":"Like tension between rival teams."},
-  {"term":"Security Alliance","definition":"Countries protecting each other.","example":"Like a group of friends sticking together."},
-  {"term":"Disarmament","definition":"Reducing weapons.","example":"Like removing dangerous toys."},
-  {"term":"Military Strategy","definition":"Planning how to defend or win battles.","example":"Like planning moves in chess."},
-  {"term":"Homeland Security","definition":"Protecting a country's people and infrastructure.","example":"Like guards protecting a school building."}
+  {
+    "term": "Cybersecurity",
+    "advanced": "Measures to protect digital systems, networks, and data from cyber attacks and espionage by states and non-state actors.",
+    "simple": "Protecting computers and the internet.",
+    "example": "Like locking your online accounts."
+  },
+  {
+    "term": "Terrorism",
+    "advanced": "Politically motivated violence against civilians aimed at creating fear and influencing policy or public opinion.",
+    "simple": "Violence used to scare people for political reasons.",
+    "example": "Like bullies trying to scare the whole school."
+  },
+  {
+    "term": "National Defense",
+    "advanced": "The military and security posture a state maintains to deter aggression and defend sovereignty.",
+    "simple": "Protecting a country from threats.",
+    "example": "Like security guards protecting a building."
+  },
+  {
+    "term": "Intelligence",
+    "advanced": "The collection and analysis of information about foreign threats, capabilities, and intentions to inform policy and security decisions.",
+    "simple": "Secret information about threats.",
+    "example": "Like spies gathering clues."
+  },
+  {
+    "term": "Military Alliance",
+    "advanced": "A formal agreement among states to provide mutual defense and coordinate military strategy.",
+    "simple": "Countries joining forces for defense.",
+    "example": "Like teammates protecting each other."
+  },
+  {
+    "term": "Nuclear Deterrence",
+    "advanced": "A strategic doctrine where nuclear weapons discourage attack by promising devastating retaliation.",
+    "simple": "Weapons that discourage attacks because they are powerful.",
+    "example": "Like a big warning sign saying \"don't start trouble.\""
+  },
+  {
+    "term": "Border Security",
+    "advanced": "The systems and policies that control and protect a country’s borders from threats, smuggling, and illegal entry.",
+    "simple": "Protecting the edges of a country.",
+    "example": "Like fences around a playground."
+  },
+  {
+    "term": "Counterterrorism",
+    "advanced": "Actions by governments to prevent, disrupt, and respond to terrorist activities and networks.",
+    "simple": "Stopping terrorist attacks.",
+    "example": "Like teachers preventing bullying."
+  },
+  {
+    "term": "Arms Control",
+    "advanced": "Treaties and agreements that limit the production, deployment, or use of weapons to reduce risk and promote stability.",
+    "simple": "Agreements to limit weapons.",
+    "example": "Like rules limiting dangerous toys."
+  },
+  {
+    "term": "Security Threat",
+    "advanced": "Any actor, condition, or event that endangers national safety, infrastructure, or stability.",
+    "simple": "Something that could harm safety.",
+    "example": "Like a broken playground swing."
+  },
+  {
+    "term": "Peacekeeping Forces",
+    "advanced": "International military and civilian personnel deployed to monitor ceasefires and support conflict resolution.",
+    "simple": "Soldiers helping keep peace.",
+    "example": "Like referees during a game."
+  },
+  {
+    "term": "Strategic Defense",
+    "advanced": "Plans and systems intended to protect national territory and interests against external attack.",
+    "simple": "Long-term plans to stay safe.",
+    "example": "Like planning escape drills."
+  },
+  {
+    "term": "Surveillance",
+    "advanced": "Monitoring activity and communications to detect threats and support security operations.",
+    "simple": "Watching carefully for danger.",
+    "example": "Like security cameras."
+  },
+  {
+    "term": "Crisis Management",
+    "advanced": "Coordinated response mechanisms for handling emergencies and restoring stability.",
+    "simple": "Handling emergencies quickly.",
+    "example": "Like teachers managing a fire drill."
+  },
+  {
+    "term": "Defense Budget",
+    "advanced": "Government spending on armed forces, equipment, and operations essential to national security.",
+    "simple": "Money spent on security.",
+    "example": "Like saving money for safety equipment."
+  },
+  {
+    "term": "Geopolitical Risk",
+    "advanced": "The potential for political or security events to disrupt international stability and markets.",
+    "simple": "Danger caused by global politics.",
+    "example": "Like tension between rival teams."
+  },
+  {
+    "term": "Security Alliance",
+    "advanced": "A cooperative security arrangement in which states pledge mutual support against common threats.",
+    "simple": "Countries protecting each other.",
+    "example": "Like a group of friends sticking together."
+  },
+  {
+    "term": "Disarmament",
+    "advanced": "The reduction or elimination of weapons, particularly weapons of mass destruction, through negotiated agreements.",
+    "simple": "Reducing weapons.",
+    "example": "Like removing dangerous toys."
+  },
+  {
+    "term": "Military Strategy",
+    "advanced": "The planning of military campaigns and force deployment to achieve national security objectives.",
+    "simple": "Planning how to defend or win battles.",
+    "example": "Like planning moves in chess."
+  },
+  {
+    "term": "Homeland Security",
+    "advanced": "Domestic efforts to prevent terrorism, protect infrastructure, and respond to disasters.",
+    "simple": "Protecting a country's people and infrastructure.",
+    "example": "Like guards protecting a school building."
+  }
 ]

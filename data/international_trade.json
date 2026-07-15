@@ -1,23 +1,128 @@
 [
-  {"term":"Trade","definition":"Buying and selling goods between countries.","example":"Like students exchanging snacks."},
-  {"term":"Export","definition":"Selling goods to another country.","example":"Like giving your snack to a friend in another class."},
-  {"term":"Import","definition":"Buying goods from another country.","example":"Like receiving snacks from another class."},
-  {"term":"Tariff","definition":"A tax on imported goods.","example":"Like paying a fee to bring snacks into class."},
-  {"term":"Trade Agreement","definition":"A deal between countries about trading.","example":"Like two classes agreeing to share supplies."},
-  {"term":"Free Trade","definition":"Trade without many restrictions.","example":"Like students freely sharing materials."},
-  {"term":"Trade Barrier","definition":"Anything making trade harder.","example":"Like rules stopping snack sharing."},
-  {"term":"Trade Route","definition":"Path goods travel between places.","example":"Like the hallway used to move between classrooms."},
-  {"term":"Trade Partner","definition":"A country you trade with often.","example":"Like a friend you exchange snacks with."},
-  {"term":"Customs","definition":"Officials checking goods entering a country.","example":"Like teachers checking students' bags."},
-  {"term":"Global Market","definition":"The worldwide buying and selling system.","example":"Like a huge school marketplace."},
-  {"term":"Supply","definition":"The amount of goods available.","example":"Like how many snacks are in class."},
-  {"term":"Demand","definition":"How much people want something.","example":"Like everyone wanting the same candy."},
-  {"term":"Trade Balance","definition":"Difference between exports and imports.","example":"Like giving more snacks than you receive."},
-  {"term":"Trade Negotiation","definition":"Countries discussing trade deals.","example":"Like students bargaining snack exchanges."},
-  {"term":"Trade Policy","definition":"Government rules about trade.","example":"Like classroom rules about sharing."},
-  {"term":"Economic Exchange","definition":"Trading goods or services.","example":"Like swapping books."},
-  {"term":"Trade Sanction","definition":"Stopping trade to punish a country.","example":"Like refusing to share snacks with someone."},
-  {"term":"Market Competition","definition":"Businesses competing to sell goods.","example":"Like students competing in a bake sale."},
-  {"term":"Global Commerce","definition":"Business activities across countries.","example":"Like selling items in a school fair."},
-  {"term":"Merchant","definition":"A person who buys and sells goods.","example":"Like a student running a snack stand."}
+  {
+    "term": "Trade",
+    "advanced": "Cross-border exchange of goods and services that drives international economic interdependence.",
+    "simple": "Buying and selling goods between countries.",
+    "example": "Like students exchanging snacks."
+  },
+  {
+    "term": "Export",
+    "advanced": "Goods or services sold to foreign markets, important for earning foreign exchange and supporting domestic production.",
+    "simple": "Selling goods to another country.",
+    "example": "Like giving your snack to a friend in another class."
+  },
+  {
+    "term": "Import",
+    "advanced": "Goods or services purchased from abroad, affecting domestic industries and trade balances.",
+    "simple": "Buying goods from another country.",
+    "example": "Like receiving snacks from another class."
+  },
+  {
+    "term": "Tariff",
+    "advanced": "Economic activity and rules governing cross-border exchange of goods and services, which shape state relations and national prosperity.",
+    "simple": "A tax on imported goods.",
+    "example": "Like paying a fee to bring snacks into class."
+  },
+  {
+    "term": "Trade Agreement",
+    "advanced": "A negotiated contract between countries specifying the rules, tariffs, and obligations governing cross-border trade.",
+    "simple": "A deal between countries about trading.",
+    "example": "Like two classes agreeing to share supplies."
+  },
+  {
+    "term": "Free Trade",
+    "advanced": "A policy regime that removes tariffs and barriers to allow goods and services to move freely between countries.",
+    "simple": "Trade without many restrictions.",
+    "example": "Like students freely sharing materials."
+  },
+  {
+    "term": "Trade Barrier",
+    "advanced": "Policies or measures that restrict imports or exports, such as tariffs, quotas, or regulations.",
+    "simple": "Anything making trade harder.",
+    "example": "Like rules stopping snack sharing."
+  },
+  {
+    "term": "Trade Route",
+    "advanced": "A path used for transporting goods between countries, vital to international commerce and logistics.",
+    "simple": "Path goods travel between places.",
+    "example": "Like the hallway used to move between classrooms."
+  },
+  {
+    "term": "Trade Partner",
+    "advanced": "Another country with which a state conducts a significant volume of commercial exchange.",
+    "simple": "A country you trade with often.",
+    "example": "Like a friend you exchange snacks with."
+  },
+  {
+    "term": "Customs",
+    "advanced": "Border authorities and procedures that monitor and control the movement of goods into and out of a country.",
+    "simple": "Officials checking goods entering a country.",
+    "example": "Like teachers checking students' bags."
+  },
+  {
+    "term": "Global Market",
+    "advanced": "An international system for buying and selling goods and services across borders.",
+    "simple": "The worldwide buying and selling system.",
+    "example": "Like a huge school marketplace."
+  },
+  {
+    "term": "Supply",
+    "advanced": "The quantity of goods or services available in the market, which interacts with demand to determine price.",
+    "simple": "The amount of goods available.",
+    "example": "Like how many snacks are in class."
+  },
+  {
+    "term": "Demand",
+    "advanced": "The desire and ability of consumers to purchase goods and services, shaping economic activity and price levels.",
+    "simple": "How much people want something.",
+    "example": "Like everyone wanting the same candy."
+  },
+  {
+    "term": "Trade Balance",
+    "advanced": "The difference between a country’s exports and imports, indicating surplus or deficit in trade.",
+    "simple": "Difference between exports and imports.",
+    "example": "Like giving more snacks than you receive."
+  },
+  {
+    "term": "Trade Negotiation",
+    "advanced": "Dialogues between countries to agree on tariffs, rules, and terms for commerce.",
+    "simple": "Countries discussing trade deals.",
+    "example": "Like students bargaining snack exchanges."
+  },
+  {
+    "term": "Trade Policy",
+    "advanced": "Government rules that regulate imports, exports, tariffs, and international economic relations.",
+    "simple": "Government rules about trade.",
+    "example": "Like classroom rules about sharing."
+  },
+  {
+    "term": "Economic Exchange",
+    "advanced": "The transfer of goods, services, or capital between countries as part of international trade.",
+    "simple": "Trading goods or services.",
+    "example": "Like swapping books."
+  },
+  {
+    "term": "Trade Sanction",
+    "advanced": "A penalty imposed on a country through trade restrictions to influence its political or military behavior.",
+    "simple": "Stopping trade to punish a country.",
+    "example": "Like refusing to share snacks with someone."
+  },
+  {
+    "term": "Market Competition",
+    "advanced": "Rivalry among producers and sellers in domestic and international markets for customers and share.",
+    "simple": "Businesses competing to sell goods.",
+    "example": "Like students competing in a bake sale."
+  },
+  {
+    "term": "Global Commerce",
+    "advanced": "Business activities across countries. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "Business activities across countries.",
+    "example": "Like selling items in a school fair."
+  },
+  {
+    "term": "Merchant",
+    "advanced": "A person who buys and sells goods. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "simple": "A person who buys and sells goods.",
+    "example": "Like a student running a snack stand."
+  }
 ]

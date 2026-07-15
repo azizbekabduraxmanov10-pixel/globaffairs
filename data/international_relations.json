@@ -1,22 +1,122 @@
 [
-  {"term":"Alliance","definition":"Countries promise to help each other.","example":"Like best friends agreeing to always support each other."},
-  {"term":"Treaty","definition":"A written agreement between countries.","example":"Like signing a rule sheet with your classmates."},
-  {"term":"Sanctions","definition":"Punishments countries give another country without fighting.","example":"Like being banned from playing a game because you broke the rules."},
-  {"term":"Foreign Policy","definition":"How a country decides to act with other countries.","example":"Like choosing how friendly you want to be with kids from another school."},
-  {"term":"Neutrality","definition":"When a country chooses not to take sides in a conflict.","example":"Like staying out of a fight between two friends."},
-  {"term":"Bilateral Relations","definition":"Two countries working together.","example":"Like two classmates doing a project together."},
-  {"term":"Multilateral Relations","definition":"Many countries working together.","example":"Like a group project with the whole class."},
-  {"term":"Peacekeeping","definition":"Helping countries stop fighting and keep peace.","example":"Like a teacher stopping students from arguing."},
-  {"term":"Embassy","definition":"A country’s office in another country.","example":"Like having a small home for your team inside another school."},
-  {"term":"Ambassador","definition":"A person who represents their country abroad.","example":"Like a class representative speaking for the class."},
-  {"term":"Globalization","definition":"Countries becoming more connected.","example":"Like students from different schools playing games together online."},
-  {"term":"Soft Power","definition":"Influence through culture, ideas, or friendship.","example":"Like making friends because you’re kind and fun."},
-  {"term":"Hard Power","definition":"Influence using military or money pressure.","example":"Like forcing someone to follow rules because you’re stronger."},
-  {"term":"Diplomatic Negotiation","definition":"Talking to solve problems between countries.","example":"Like two kids discussing how to share toys."},
-  {"term":"Conflict Resolution","definition":"Solving disagreements peacefully.","example":"Like finding a fair solution when friends argue."},
-  {"term":"Regional Cooperation","definition":"Countries in the same area helping each other.","example":"Like neighbors helping each other in a neighborhood."},
-  {"term":"International Aid","definition":"Helping another country with money or supplies.","example":"Like giving food to a friend who forgot their lunch."},
-  {"term":"Trade Relations","definition":"Countries buying and selling goods.","example":"Like swapping snacks with classmates."},
-  {"term":"Strategic Partnership","definition":"Countries working closely for long-term goals.","example":"Like best friends planning many projects together."},
-  {"term":"Global Governance","definition":"Countries creating rules for the world.","example":"Like school rules made for all students."}
+  {
+    "term": "Alliance",
+    "advanced": "A formal agreement between states to coordinate security, economic, or political action in pursuit of shared interests.",
+    "simple": "Countries promise to help each other.",
+    "example": "Like best friends agreeing to always support each other."
+  },
+  {
+    "term": "Treaty",
+    "advanced": "A binding agreement under international law that defines obligations and commitments between states.",
+    "simple": "A written agreement between countries.",
+    "example": "Like signing a rule sheet with your classmates."
+  },
+  {
+    "term": "Sanctions",
+    "advanced": "Punitive measures imposed by states or groups of states to influence another state’s behavior without military force.",
+    "simple": "Punishments countries give another country without fighting.",
+    "example": "Like being banned from playing a game because you broke the rules."
+  },
+  {
+    "term": "Foreign Policy",
+    "advanced": "A country’s strategic approach to managing its relationships and objectives with other states and international actors.",
+    "simple": "How a country decides to act with other countries.",
+    "example": "Like choosing how friendly you want to be with kids from another school."
+  },
+  {
+    "term": "Neutrality",
+    "advanced": "A state’s decision to remain impartial in conflicts, avoiding alliances and military involvement while maintaining sovereignty.",
+    "simple": "When a country chooses not to take sides in a conflict.",
+    "example": "Like staying out of a fight between two friends."
+  },
+  {
+    "term": "Bilateral Relations",
+    "advanced": "Direct diplomatic and political interaction between two countries, often involving trade, security, and cooperation agreements.",
+    "simple": "Two countries working together.",
+    "example": "Like two classmates doing a project together."
+  },
+  {
+    "term": "Multilateral Relations",
+    "advanced": "Interactions among multiple states in international forums or organisations to address shared issues collectively.",
+    "simple": "Many countries working together.",
+    "example": "Like a group project with the whole class."
+  },
+  {
+    "term": "Peacekeeping",
+    "advanced": "The deployment of international personnel to help enforce ceasefires, protect civilians, and stabilise conflict zones.",
+    "simple": "Helping countries stop fighting and keep peace.",
+    "example": "Like a teacher stopping students from arguing."
+  },
+  {
+    "term": "Embassy",
+    "advanced": "A country’s official diplomatic representation in another state, responsible for managing relations and consular services.",
+    "simple": "A country’s office in another country.",
+    "example": "Like having a small home for your team inside another school."
+  },
+  {
+    "term": "Ambassador",
+    "advanced": "A senior diplomat representing a country abroad and tasked with advancing bilateral relations and national interests.",
+    "simple": "A person who represents their country abroad.",
+    "example": "Like a class representative speaking for the class."
+  },
+  {
+    "term": "Globalization",
+    "advanced": "The growing interdependence of economies, cultures, and politics through trade, communication, and transnational networks.",
+    "simple": "Countries becoming more connected.",
+    "example": "Like students from different schools playing games together online."
+  },
+  {
+    "term": "Soft Power",
+    "advanced": "The ability to shape the preferences and actions of others through attraction, culture, and values rather than coercion.",
+    "simple": "Influence through culture, ideas, or friendship.",
+    "example": "Like making friends because you’re kind and fun."
+  },
+  {
+    "term": "Hard Power",
+    "advanced": "The use of military force, economic pressure, or coercion to influence the behavior of other states.",
+    "simple": "Influence using military or money pressure.",
+    "example": "Like forcing someone to follow rules because you’re stronger."
+  },
+  {
+    "term": "Diplomatic Negotiation",
+    "advanced": "A formal process where negotiators discuss terms, reconcile differences, and seek mutually acceptable agreements.",
+    "simple": "Talking to solve problems between countries.",
+    "example": "Like two kids discussing how to share toys."
+  },
+  {
+    "term": "Conflict Resolution",
+    "advanced": "Methods and processes aimed at peacefully resolving disputes and restoring stability between states or groups.",
+    "simple": "Solving disagreements peacefully.",
+    "example": "Like finding a fair solution when friends argue."
+  },
+  {
+    "term": "Regional Cooperation",
+    "advanced": "Collaboration among neighboring states to address shared challenges and pursue common development or security goals.",
+    "simple": "Countries in the same area helping each other.",
+    "example": "Like neighbors helping each other in a neighborhood."
+  },
+  {
+    "term": "International Aid",
+    "advanced": "Support provided by one country to another through finance, goods, or technical assistance to advance welfare or stability.",
+    "simple": "Helping another country with money or supplies.",
+    "example": "Like giving food to a friend who forgot their lunch."
+  },
+  {
+    "term": "Trade Relations",
+    "advanced": "Economic interactions between states involving imports, exports, and trade agreements that shape bilateral and global commerce.",
+    "simple": "Countries buying and selling goods.",
+    "example": "Like swapping snacks with classmates."
+  },
+  {
+    "term": "Strategic Partnership",
+    "advanced": "A long-term relationship between states based on shared interests, mutual trust, and coordinated action.",
+    "simple": "Countries working closely for long-term goals.",
+    "example": "Like best friends planning many projects together."
+  },
+  {
+    "term": "Global Governance",
+    "advanced": "The system of international institutions and norms that regulates shared global challenges and collective action.",
+    "simple": "Countries creating rules for the world.",
+    "example": "Like school rules made for all students."
+  }
 ]

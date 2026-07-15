@@ -1,27 +1,152 @@
 [
-  {"term":"Pandemic","definition":"Disease spreading worldwide.","example":"Like a cold spreading across the whole school."},
-  {"term":"Epidemic","definition":"Disease spreading quickly in one region.","example":"Like many students catching the flu."},
-  {"term":"Vaccination","definition":"Medicine protecting people from diseases.","example":"Like wearing armor against germs."},
-  {"term":"Public Health","definition":"Protecting health of communities.","example":"Like school hygiene rules."},
-  {"term":"Healthcare System","definition":"Hospitals and doctors in a country.","example":"Like the nurse's office in school."},
-  {"term":"Disease Prevention","definition":"Stopping illness before it spreads.","example":"Like washing hands."},
-  {"term":"Medical Research","definition":"Studying diseases to find cures.","example":"Like scientists solving puzzles."},
-  {"term":"Health Policy","definition":"Government rules about healthcare.","example":"Like school rules for health safety."},
-  {"term":"Global Immunization","definition":"Vaccination programs worldwide.","example":"Like giving every student protection."},
-  {"term":"Disease Surveillance","definition":"Tracking diseases.","example":"Like monitoring attendance for sick students."},
-  {"term":"Mental Health","definition":"Emotional and psychological wellbeing.","example":"Like helping students feel happy."},
-  {"term":"Nutrition Programs","definition":"Efforts to provide healthy food.","example":"Like school lunch programs."},
-  {"term":"Health Equity","definition":"Equal healthcare for everyone.","example":"Like every student getting help from the nurse."},
-  {"term":"Medical Aid","definition":"Doctors helping during disasters.","example":"Like emergency helpers."},
-  {"term":"Hospital Infrastructure","definition":"Buildings and equipment for healthcare.","example":"Like classrooms for doctors."},
-  {"term":"Health Education","definition":"Teaching people about healthy habits.","example":"Like learning about brushing teeth."},
-  {"term":"Disease Control","definition":"Stopping illnesses from spreading.","example":"Like isolating sick students."},
-  {"term":"Health Emergency","definition":"Serious disease outbreak.","example":"Like a sudden illness affecting many people."},
-  {"term":"Health Campaign","definition":"Programs promoting health awareness.","example":"Like posters reminding students to wash hands."},
-  {"term":"Global Health Cooperation","definition":"Countries working together on health issues.","example":"Like schools helping each other during illness outbreaks."},
-  {"term":"Infectious Disease","definition":"Illness that spreads from person to person.","example":"Like sharing a cold with friends."},
-  {"term":"Health Worker","definition":"Doctors, nurses, and medical staff.","example":"Like the school nurse helping students."},
-  {"term":"Preventive Care","definition":"Actions to stop people from getting sick.","example":"Like getting a flu shot."},
-  {"term":"Health Infrastructure","definition":"Clinics and hospitals.","example":"Like the nurse's office and doctor visits."},
-  {"term":"Maternal Health","definition":"Healthcare for pregnant women and mothers.","example":"Like special care for moms."}
+  {
+    "term": "Pandemic",
+    "advanced": "A worldwide outbreak of disease that requires coordinated international public health response and emergency planning.",
+    "simple": "Disease spreading worldwide.",
+    "example": "Like a cold spreading across the whole school."
+  },
+  {
+    "term": "Epidemic",
+    "advanced": "A sudden increase in disease cases within a region that can strain health systems and prompt international support.",
+    "simple": "Disease spreading quickly in one region.",
+    "example": "Like many students catching the flu."
+  },
+  {
+    "term": "Vaccination",
+    "advanced": "The administration of vaccines to build immunity, a key strategy for controlling infectious diseases globally.",
+    "simple": "Medicine protecting people from diseases.",
+    "example": "Like wearing armor against germs."
+  },
+  {
+    "term": "Public Health",
+    "advanced": "The science and practice of protecting population health through prevention, surveillance, and policy.",
+    "simple": "Protecting health of communities.",
+    "example": "Like school hygiene rules."
+  },
+  {
+    "term": "Healthcare System",
+    "advanced": "The institutions, personnel, and infrastructure organised to deliver medical care and health services.",
+    "simple": "Hospitals and doctors in a country.",
+    "example": "Like the nurse's office in school."
+  },
+  {
+    "term": "Disease Prevention",
+    "advanced": "Measures taken to avoid illness and contain outbreaks through vaccination, hygiene, and surveillance.",
+    "simple": "Stopping illness before it spreads.",
+    "example": "Like washing hands."
+  },
+  {
+    "term": "Medical Research",
+    "advanced": "Scientific study aimed at understanding diseases and developing treatments, vaccines, and health technologies.",
+    "simple": "Studying diseases to find cures.",
+    "example": "Like scientists solving puzzles."
+  },
+  {
+    "term": "Health Policy",
+    "advanced": "Government decisions and regulations that shape health services, coverage, and population wellbeing.",
+    "simple": "Government rules about healthcare.",
+    "example": "Like school rules for health safety."
+  },
+  {
+    "term": "Global Immunization",
+    "advanced": "Worldwide efforts to vaccinate populations and reduce the spread of infectious diseases.",
+    "simple": "Vaccination programs worldwide.",
+    "example": "Like giving every student protection."
+  },
+  {
+    "term": "Disease Surveillance",
+    "advanced": "The systematic collection and analysis of health data to detect and respond to outbreaks.",
+    "simple": "Tracking diseases.",
+    "example": "Like monitoring attendance for sick students."
+  },
+  {
+    "term": "Mental Health",
+    "advanced": "The state of psychological wellbeing, increasingly recognised as a global public health concern.",
+    "simple": "Emotional and psychological wellbeing.",
+    "example": "Like helping students feel happy."
+  },
+  {
+    "term": "Nutrition Programs",
+    "advanced": "Initiatives that ensure adequate food and micronutrients to support health and development.",
+    "simple": "Efforts to provide healthy food.",
+    "example": "Like school lunch programs."
+  },
+  {
+    "term": "Health Equity",
+    "advanced": "Efforts to ensure all people have fair access to healthcare regardless of income or location.",
+    "simple": "Equal healthcare for everyone.",
+    "example": "Like every student getting help from the nurse."
+  },
+  {
+    "term": "Medical Aid",
+    "advanced": "Healthcare assistance given during emergencies or to under-resourced populations.",
+    "simple": "Doctors helping during disasters.",
+    "example": "Like emergency helpers."
+  },
+  {
+    "term": "Hospital Infrastructure",
+    "advanced": "Physical facilities and equipment needed to deliver healthcare services safely and effectively.",
+    "simple": "Buildings and equipment for healthcare.",
+    "example": "Like classrooms for doctors."
+  },
+  {
+    "term": "Health Education",
+    "advanced": "Programs that inform people about healthy behaviors, disease risks, and available services.",
+    "simple": "Teaching people about healthy habits.",
+    "example": "Like learning about brushing teeth."
+  },
+  {
+    "term": "Disease Control",
+    "advanced": "Actions to reduce transmission and impact of diseases through treatment, quarantine, and prevention.",
+    "simple": "Stopping illnesses from spreading.",
+    "example": "Like isolating sick students."
+  },
+  {
+    "term": "Health Emergency",
+    "advanced": "A sudden medical crisis requiring rapid response, coordination, and often international assistance.",
+    "simple": "Serious disease outbreak.",
+    "example": "Like a sudden illness affecting many people."
+  },
+  {
+    "term": "Health Campaign",
+    "advanced": "Organised communications and interventions to promote public health goals among populations.",
+    "simple": "Programs promoting health awareness.",
+    "example": "Like posters reminding students to wash hands."
+  },
+  {
+    "term": "Global Health Cooperation",
+    "advanced": "Collaborative action by countries and organisations to tackle cross-border health threats and build resilient systems.",
+    "simple": "Countries working together on health issues.",
+    "example": "Like schools helping each other during illness outbreaks."
+  },
+  {
+    "term": "Infectious Disease",
+    "advanced": "An illness caused by transmissible pathogens that can spread rapidly and trigger national or international health responses.",
+    "simple": "Illness that spreads from person to person.",
+    "example": "Like sharing a cold with friends."
+  },
+  {
+    "term": "Health Worker",
+    "advanced": "A trained professional who delivers medical services and supports public health systems.",
+    "simple": "Doctors, nurses, and medical staff.",
+    "example": "Like the school nurse helping students."
+  },
+  {
+    "term": "Preventive Care",
+    "advanced": "Healthcare services focused on preventing disease rather than treating it after it occurs.",
+    "simple": "Actions to stop people from getting sick.",
+    "example": "Like getting a flu shot."
+  },
+  {
+    "term": "Health Infrastructure",
+    "advanced": "The network of hospitals, clinics, labs, and supply chains that supports public health delivery.",
+    "simple": "Clinics and hospitals.",
+    "example": "Like the nurse's office and doctor visits."
+  },
+  {
+    "term": "Maternal Health",
+    "advanced": "The wellbeing of pregnant women and mothers, critical to reducing mortality and improving family health outcomes.",
+    "simple": "Healthcare for pregnant women and mothers.",
+    "example": "Like special care for moms."
+  }
 ]

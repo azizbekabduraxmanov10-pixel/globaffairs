@@ -1,27 +1,152 @@
 [
-  {"term":"Equality","definition":"Everyone is treated the same.","example":"Like making sure everyone gets a turn."},
-  {"term":"Freedom of Speech","definition":"Being able to say your opinion.","example":"Like raising your hand to speak in class."},
-  {"term":"Right to Education","definition":"Everyone can go to school.","example":"Like every kid having a desk and books."},
-  {"term":"Child Rights","definition":"Special rules to protect kids.","example":"Like rules against bullying in school."},
-  {"term":"Freedom of Religion","definition":"Being able to follow your beliefs.","example":"Like letting friends pray or celebrate their festivals."},
-  {"term":"Right to Health","definition":"Everyone should be able to get medical help.","example":"Like a nurse helping sick students."},
-  {"term":"Right to Privacy","definition":"Your personal space and information is safe.","example":"Like your diary being private."},
-  {"term":"Anti-Discrimination","definition":"No one should be treated badly because of who they are.","example":"Like not excluding someone because of hair color."},
-  {"term":"Humanitarian Aid","definition":"Helping people in danger or poor conditions.","example":"Like giving food to a friend who forgot lunch."},
-  {"term":"Refugee Rights","definition":"Protection for people forced to leave home.","example":"Like letting a friend sleep over when their house is flooded."},
-  {"term":"Freedom of Assembly","definition":"People can gather peacefully.","example":"Like having a school club meeting."},
-  {"term":"Freedom of Press","definition":"Journalists can report news freely.","example":"Like letting the school newspaper write honestly."},
-  {"term":"Right to Work","definition":"Everyone can have a job.","example":"Like being allowed to help in a class project."},
-  {"term":"Right to Vote","definition":"People can choose their leaders.","example":"Like voting for class monitor."},
-  {"term":"Protection from Torture","definition":"Nobody should be hurt on purpose.","example":"Like strict rules against hurting anyone."},
-  {"term":"Right to Housing","definition":"Everyone should have a place to live.","example":"Like ensuring everyone has a desk at school."},
-  {"term":"Right to Food and Water","definition":"Everyone should have enough to eat and drink.","example":"Like sharing snacks so no one goes hungry."},
-  {"term":"Gender Equality","definition":"Boys and girls should have the same rights.","example":"Like letting everyone play the same games."},
-  {"term":"Freedom of Movement","definition":"People can travel safely.","example":"Like being allowed to move around the playground."},
-  {"term":"Right to Justice","definition":"Everyone should be treated fairly in court.","example":"Like a teacher being fair when solving conflicts."},
-  {"term":"Equal Opportunity","definition":"Everyone has the same chance to succeed.","example":"Like everyone being able to try out for a team."},
-  {"term":"Dignity","definition":"Treating people with respect.","example":"Like not making fun of someone's clothes."},
-  {"term":"Inclusivity","definition":"Making sure everyone is included.","example":"Like inviting everyone to join a game."},
-  {"term":"Fair Trial","definition":"Being judged honestly and fairly.","example":"Like hearing both sides of a story before deciding."},
-  {"term":"Social Justice","definition":"Fair treatment in society.","example":"Like making sure poor kids can go to school too."}
+  {
+    "term": "Equality",
+    "advanced": "The principle that all individuals deserve the same legal rights and protections regardless of identity.",
+    "simple": "Everyone is treated the same.",
+    "example": "Like making sure everyone gets a turn."
+  },
+  {
+    "term": "Freedom of Speech",
+    "advanced": "The right to express opinions and information without censorship, central to democratic governance and human rights law.",
+    "simple": "Being able to say your opinion.",
+    "example": "Like raising your hand to speak in class."
+  },
+  {
+    "term": "Right to Education",
+    "advanced": "The entitlement to access learning opportunities, which supports empowerment and economic development.",
+    "simple": "Everyone can go to school.",
+    "example": "Like every kid having a desk and books."
+  },
+  {
+    "term": "Child Rights",
+    "advanced": "Special protections and entitlements for children to ensure their wellbeing, education, and safety.",
+    "simple": "Special rules to protect kids.",
+    "example": "Like rules against bullying in school."
+  },
+  {
+    "term": "Freedom of Religion",
+    "advanced": "The right to practice or change one’s faith without state coercion or discrimination.",
+    "simple": "Being able to follow your beliefs.",
+    "example": "Like letting friends pray or celebrate their festivals."
+  },
+  {
+    "term": "Right to Health",
+    "advanced": "The claim to access adequate healthcare and conditions necessary for physical and mental wellbeing.",
+    "simple": "Everyone should be able to get medical help.",
+    "example": "Like a nurse helping sick students."
+  },
+  {
+    "term": "Right to Privacy",
+    "advanced": "The protection of personal information and freedom from unjustified surveillance or intrusion.",
+    "simple": "Your personal space and information is safe.",
+    "example": "Like your diary being private."
+  },
+  {
+    "term": "Anti-Discrimination",
+    "advanced": "Legal and policy measures that prevent unfair treatment based on race, gender, religion, or other traits.",
+    "simple": "No one should be treated badly because of who they are.",
+    "example": "Like not excluding someone because of hair color."
+  },
+  {
+    "term": "Humanitarian Aid",
+    "advanced": "Assistance provided to people affected by crises, focused on saving lives and meeting basic needs impartially.",
+    "simple": "Helping people in danger or poor conditions.",
+    "example": "Like giving food to a friend who forgot lunch."
+  },
+  {
+    "term": "Refugee Rights",
+    "advanced": "International protections granted to people fleeing persecution, including asylum and non-refoulement.",
+    "simple": "Protection for people forced to leave home.",
+    "example": "Like letting a friend sleep over when their house is flooded."
+  },
+  {
+    "term": "Freedom of Assembly",
+    "advanced": "The right to gather peacefully for protest, political action, or social causes.",
+    "simple": "People can gather peacefully.",
+    "example": "Like having a school club meeting."
+  },
+  {
+    "term": "Freedom of Press",
+    "advanced": "The right of media organisations to report news and opinion without censorship or undue interference.",
+    "simple": "Journalists can report news freely.",
+    "example": "Like letting the school newspaper write honestly."
+  },
+  {
+    "term": "Right to Work",
+    "advanced": "The ability to seek and obtain employment under fair conditions and without discrimination.",
+    "simple": "Everyone can have a job.",
+    "example": "Like being allowed to help in a class project."
+  },
+  {
+    "term": "Right to Vote",
+    "advanced": "The entitlement of citizens to participate in political decision-making through elections.",
+    "simple": "People can choose their leaders.",
+    "example": "Like voting for class monitor."
+  },
+  {
+    "term": "Protection from Torture",
+    "advanced": "A universal ban on cruel treatment and abuse, upheld by international law and human rights treaties.",
+    "simple": "Nobody should be hurt on purpose.",
+    "example": "Like strict rules against hurting anyone."
+  },
+  {
+    "term": "Right to Housing",
+    "advanced": "The claim to safe and adequate shelter as a foundation for dignity and stability.",
+    "simple": "Everyone should have a place to live.",
+    "example": "Like ensuring everyone has a desk at school."
+  },
+  {
+    "term": "Right to Food and Water",
+    "advanced": "The entitlement to sufficient, nutritious food and safe water for survival and health.",
+    "simple": "Everyone should have enough to eat and drink.",
+    "example": "Like sharing snacks so no one goes hungry."
+  },
+  {
+    "term": "Gender Equality",
+    "advanced": "The principle of equal rights and opportunities for all genders in law, society, and policy.",
+    "simple": "Boys and girls should have the same rights.",
+    "example": "Like letting everyone play the same games."
+  },
+  {
+    "term": "Freedom of Movement",
+    "advanced": "The right to travel, live, and work within and across borders without unreasonable restrictions.",
+    "simple": "People can travel safely.",
+    "example": "Like being allowed to move around the playground."
+  },
+  {
+    "term": "Right to Justice",
+    "advanced": "The guarantee of fair treatment within legal systems and access to courts and due process.",
+    "simple": "Everyone should be treated fairly in court.",
+    "example": "Like a teacher being fair when solving conflicts."
+  },
+  {
+    "term": "Equal Opportunity",
+    "advanced": "The aim that everyone has fair access to education, employment, and resources.",
+    "simple": "Everyone has the same chance to succeed.",
+    "example": "Like everyone being able to try out for a team."
+  },
+  {
+    "term": "Dignity",
+    "advanced": "The inherent worth of each person that human rights law seeks to protect.",
+    "simple": "Treating people with respect.",
+    "example": "Like not making fun of someone's clothes."
+  },
+  {
+    "term": "Inclusivity",
+    "advanced": "The practice of ensuring all groups can participate fully in social, political, and economic life.",
+    "simple": "Making sure everyone is included.",
+    "example": "Like inviting everyone to join a game."
+  },
+  {
+    "term": "Fair Trial",
+    "advanced": "The right to a legal process that is impartial, transparent, and respectful of defending rights.",
+    "simple": "Being judged honestly and fairly.",
+    "example": "Like hearing both sides of a story before deciding."
+  },
+  {
+    "term": "Social Justice",
+    "advanced": "The pursuit of fair distribution of resources and opportunities within society.",
+    "simple": "Fair treatment in society.",
+    "example": "Like making sure poor kids can go to school too."
+  }
 ]

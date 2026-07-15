@@ -1,27 +1,152 @@
 [
-  {"term":"Migration","definition":"People moving from one place to another.","example":"Like moving to a new school."},
-  {"term":"Immigration","definition":"Entering another country to live there.","example":"Like joining a new class."},
-  {"term":"Emigration","definition":"Leaving your home country.","example":"Like transferring schools."},
-  {"term":"Refugee","definition":"Someone fleeing danger or war.","example":"Like a friend escaping bullying."},
-  {"term":"Asylum","definition":"Protection given to refugees.","example":"Like letting a friend stay at your house."},
-  {"term":"Border Crossing","definition":"Moving across national borders.","example":"Like entering another school."},
-  {"term":"Migration Policy","definition":"Rules about immigration.","example":"Like rules for new students joining school."},
-  {"term":"Economic Migration","definition":"Moving for better job opportunities.","example":"Like changing schools for better education."},
-  {"term":"Forced Migration","definition":"People forced to leave homes.","example":"Like evacuating during a storm."},
-  {"term":"Diaspora","definition":"Community living outside its homeland.","example":"Like classmates from the same town."},
-  {"term":"Border Security","definition":"Protecting national borders.","example":"Like guards at school gates."},
-  {"term":"Integration","definition":"Helping newcomers fit into society.","example":"Like helping a new student make friends."},
-  {"term":"Resettlement","definition":"Helping refugees settle in new places.","example":"Like welcoming a transfer student."},
-  {"term":"Migrant Workers","definition":"People working in another country.","example":"Like students helping another class."},
-  {"term":"Migration Flow","definition":"Movement of many people.","example":"Like students moving between classrooms."},
-  {"term":"Refugee Camp","definition":"Temporary place for displaced people.","example":"Like emergency shelters."},
-  {"term":"Legal Migration","definition":"Moving according to laws.","example":"Like enrolling officially in school."},
-  {"term":"Irregular Migration","definition":"Moving without official permission.","example":"Like sneaking into a class."},
-  {"term":"Citizenship","definition":"Legal membership in a country.","example":"Like belonging to a school."},
-  {"term":"Naturalization","definition":"Process of becoming a citizen.","example":"Like officially joining a new team."},
-  {"term":"Humanitarian Protection","definition":"Safety for people in danger.","example":"Like protecting a friend from bullying."},
-  {"term":"Migration Rights","definition":"Laws protecting migrants.","example":"Like rules protecting students' safety."},
-  {"term":"Host Country","definition":"Country receiving immigrants.","example":"Like a school accepting new students."},
-  {"term":"Displacement","definition":"Forced movement from home.","example":"Like having to leave your classroom."},
-  {"term":"Repatriation","definition":"Returning people to their home country.","example":"Like transferring a student back to their original school."}
+  {
+    "term": "Migration",
+    "advanced": "The movement of people across borders for work, safety, or family reasons, with broad social and policy implications.",
+    "simple": "People moving from one place to another.",
+    "example": "Like moving to a new school."
+  },
+  {
+    "term": "Immigration",
+    "advanced": "The arrival of individuals into a country to live, work, or seek refuge, often regulated by national policies.",
+    "simple": "Entering another country to live there.",
+    "example": "Like joining a new class."
+  },
+  {
+    "term": "Emigration",
+    "advanced": "The departure of people from their home country to settle elsewhere, affecting demographics and labor markets.",
+    "simple": "Leaving your home country.",
+    "example": "Like transferring schools."
+  },
+  {
+    "term": "Refugee",
+    "advanced": "A person fleeing persecution or violence who is entitled to international protection under refugee law.",
+    "simple": "Someone fleeing danger or war.",
+    "example": "Like a friend escaping bullying."
+  },
+  {
+    "term": "Asylum",
+    "advanced": "The right to seek protection in another country from persecution or serious harm.",
+    "simple": "Protection given to refugees.",
+    "example": "Like letting a friend stay at your house."
+  },
+  {
+    "term": "Border Crossing",
+    "advanced": "Passing through an international boundary, typically subject to immigration and customs controls.",
+    "simple": "Moving across national borders.",
+    "example": "Like entering another school."
+  },
+  {
+    "term": "Migration Policy",
+    "advanced": "Government rules that manage the entry, stay, and rights of migrants and refugees.",
+    "simple": "Rules about immigration.",
+    "example": "Like rules for new students joining school."
+  },
+  {
+    "term": "Economic Migration",
+    "advanced": "Movement driven primarily by the search for better job opportunities or higher living standards.",
+    "simple": "Moving for better job opportunities.",
+    "example": "Like changing schools for better education."
+  },
+  {
+    "term": "Forced Migration",
+    "advanced": "Movement compelled by conflict, disaster, or persecution rather than personal choice.",
+    "simple": "People forced to leave homes.",
+    "example": "Like evacuating during a storm."
+  },
+  {
+    "term": "Diaspora",
+    "advanced": "A population of people living outside their ancestral homeland while maintaining ties to it.",
+    "simple": "Community living outside its homeland.",
+    "example": "Like classmates from the same town."
+  },
+  {
+    "term": "Border Security",
+    "advanced": "The systems and policies that control and protect a country’s borders from threats, smuggling, and illegal entry.",
+    "simple": "Protecting national borders.",
+    "example": "Like guards at school gates."
+  },
+  {
+    "term": "Integration",
+    "advanced": "The process by which migrants become part of the social, economic, and civic life of their host country.",
+    "simple": "Helping newcomers fit into society.",
+    "example": "Like helping a new student make friends."
+  },
+  {
+    "term": "Resettlement",
+    "advanced": "The relocation of refugees to a safe third country where they can rebuild their lives.",
+    "simple": "Helping refugees settle in new places.",
+    "example": "Like welcoming a transfer student."
+  },
+  {
+    "term": "Migrant Workers",
+    "advanced": "People who move to another country for employment, often filling labor shortages in key sectors.",
+    "simple": "People working in another country.",
+    "example": "Like students helping another class."
+  },
+  {
+    "term": "Migration Flow",
+    "advanced": "The volume and direction of people moving between countries over a given period.",
+    "simple": "Movement of many people.",
+    "example": "Like students moving between classrooms."
+  },
+  {
+    "term": "Refugee Camp",
+    "advanced": "A temporary settlement established to shelter people who have fled conflict or disaster.",
+    "simple": "Temporary place for displaced people.",
+    "example": "Like emergency shelters."
+  },
+  {
+    "term": "Legal Migration",
+    "advanced": "Movement that occurs through authorised channels and complies with national immigration laws.",
+    "simple": "Moving according to laws.",
+    "example": "Like enrolling officially in school."
+  },
+  {
+    "term": "Irregular Migration",
+    "advanced": "Movement that bypasses legal immigration procedures, often creating vulnerabilities and enforcement challenges.",
+    "simple": "Moving without official permission.",
+    "example": "Like sneaking into a class."
+  },
+  {
+    "term": "Citizenship",
+    "advanced": "Legal membership in a state that confers rights, obligations, and political participation.",
+    "simple": "Legal membership in a country.",
+    "example": "Like belonging to a school."
+  },
+  {
+    "term": "Naturalization",
+    "advanced": "The process by which a foreign national becomes a citizen of another country.",
+    "simple": "Process of becoming a citizen.",
+    "example": "Like officially joining a new team."
+  },
+  {
+    "term": "Humanitarian Protection",
+    "advanced": "Legal and practical measures designed to safeguard refugees and displaced persons.",
+    "simple": "Safety for people in danger.",
+    "example": "Like protecting a friend from bullying."
+  },
+  {
+    "term": "Migration Rights",
+    "advanced": "Protections and entitlements for migrants regarding safety, work, and basic services.",
+    "simple": "Laws protecting migrants.",
+    "example": "Like rules protecting students' safety."
+  },
+  {
+    "term": "Host Country",
+    "advanced": "The state that receives migrants or refugees and is responsible for their treatment under law.",
+    "simple": "Country receiving immigrants.",
+    "example": "Like a school accepting new students."
+  },
+  {
+    "term": "Displacement",
+    "advanced": "The forced movement of people from their homes due to conflict, disaster, or persecution.",
+    "simple": "Forced movement from home.",
+    "example": "Like having to leave your classroom."
+  },
+  {
+    "term": "Repatriation",
+    "advanced": "The return of displaced people to their country of origin, often as part of voluntary or assisted processes.",
+    "simple": "Returning people to their home country.",
+    "example": "Like transferring a student back to their original school."
+  }
 ]

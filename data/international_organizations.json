@@ -1,22 +1,122 @@
 [
-  {"term":"Global Institution","definition":"A group of countries working together.","example":"Like a big school club with students from many classes."},
-  {"term":"Peacekeeping Mission","definition":"An organization helping keep peace in conflict areas.","example":"Like teachers sent to stop playground fights."},
-  {"term":"International Cooperation","definition":"Countries working together.","example":"Like teamwork during a group project."},
-  {"term":"Humanitarian Organization","definition":"Groups helping people in disasters.","example":"Like volunteers giving food after a storm."},
-  {"term":"Development Agency","definition":"Organizations helping countries grow economically.","example":"Like tutors helping students improve."},
-  {"term":"Global Health Agency","definition":"Organizations fighting diseases worldwide.","example":"Like doctors helping an entire school stay healthy."},
-  {"term":"Environmental Organization","definition":"Groups protecting nature globally.","example":"Like students cleaning the park."},
-  {"term":"Trade Organization","definition":"Groups managing international trade rules.","example":"Like referees for trading games."},
-  {"term":"Regional Organization","definition":"Organizations for countries in one region.","example":"Like a club for students from the same neighborhood."},
-  {"term":"Membership State","definition":"Countries that belong to an organization.","example":"Like club members."},
-  {"term":"Charter","definition":"The rules of an organization.","example":"Like a club rulebook."},
-  {"term":"Secretary-General","definition":"Leader of an international organization.","example":"Like a club president."},
-  {"term":"International Mission","definition":"Teams sent to help other countries.","example":"Like volunteers helping another school."},
-  {"term":"Peace Conference","definition":"Meetings to solve conflicts.","example":"Like a meeting to settle class disputes."},
-  {"term":"Observer State","definition":"Countries watching but not full members.","example":"Like guests at a club meeting."},
-  {"term":"Funding Program","definition":"Money given to help projects.","example":"Like school funding for clubs."},
-  {"term":"Global Partnership","definition":"Organizations working together.","example":"Like clubs collaborating on events."},
-  {"term":"Aid Program","definition":"Help programs for poor areas.","example":"Like donating supplies to a friend."},
-  {"term":"International Summit","definition":"Meeting of world leaders.","example":"Like a big student council meeting."},
-  {"term":"Development Goals","definition":"Targets to improve the world.","example":"Like school goals for better learning."}
+  {
+    "term": "Global Institution",
+    "advanced": "A formal international body created by states to coordinate policy, manage collective problems, and provide governance.",
+    "simple": "A group of countries working together.",
+    "example": "Like a big school club with students from many classes."
+  },
+  {
+    "term": "Peacekeeping Mission",
+    "advanced": "An operation involving military and civilian personnel deployed to help maintain stability and peace in conflict zones.",
+    "simple": "An organization helping keep peace in conflict areas.",
+    "example": "Like teachers sent to stop playground fights."
+  },
+  {
+    "term": "International Cooperation",
+    "advanced": "Joint action among states and institutions to tackle cross-border challenges and deliver shared solutions.",
+    "simple": "Countries working together.",
+    "example": "Like teamwork during a group project."
+  },
+  {
+    "term": "Humanitarian Organization",
+    "advanced": "An entity that provides relief and protection to vulnerable populations, often operating across borders.",
+    "simple": "Groups helping people in disasters.",
+    "example": "Like volunteers giving food after a storm."
+  },
+  {
+    "term": "Development Agency",
+    "advanced": "An organisation that supports economic and social progress in developing countries through funding and technical assistance.",
+    "simple": "Organizations helping countries grow economically.",
+    "example": "Like tutors helping students improve."
+  },
+  {
+    "term": "Global Health Agency",
+    "advanced": "A specialised organisation that coordinates international efforts to prevent disease and promote health.",
+    "simple": "Organizations fighting diseases worldwide.",
+    "example": "Like doctors helping an entire school stay healthy."
+  },
+  {
+    "term": "Environmental Organization",
+    "advanced": "An institution focused on protecting natural resources and promoting sustainable policies globally.",
+    "simple": "Groups protecting nature globally.",
+    "example": "Like students cleaning the park."
+  },
+  {
+    "term": "Trade Organization",
+    "advanced": "A body that helps states negotiate trade rules, settle disputes, and liberalise commerce.",
+    "simple": "Groups managing international trade rules.",
+    "example": "Like referees for trading games."
+  },
+  {
+    "term": "Regional Organization",
+    "advanced": "A multilateral body of neighboring states that collaborate on security, economic, and political matters.",
+    "simple": "Organizations for countries in one region.",
+    "example": "Like a club for students from the same neighborhood."
+  },
+  {
+    "term": "Membership State",
+    "advanced": "A country that belongs to an international organisation and participates in its decision-making processes.",
+    "simple": "Countries that belong to an organization.",
+    "example": "Like club members."
+  },
+  {
+    "term": "Charter",
+    "advanced": "The founding document that establishes the purpose, structure, and rules of an international organisation.",
+    "simple": "The rules of an organization.",
+    "example": "Like a club rulebook."
+  },
+  {
+    "term": "Secretary-General",
+    "advanced": "The chief administrative officer of an international organisation who helps coordinate its work and represent it publicly.",
+    "simple": "Leader of an international organization.",
+    "example": "Like a club president."
+  },
+  {
+    "term": "International Mission",
+    "advanced": "A coordinated effort, often diplomatic or humanitarian, deployed by an organisation to address a specific challenge.",
+    "simple": "Teams sent to help other countries.",
+    "example": "Like volunteers helping another school."
+  },
+  {
+    "term": "Peace Conference",
+    "advanced": "A meeting where parties discuss terms for ending conflict and establishing conditions for peace.",
+    "simple": "Meetings to solve conflicts.",
+    "example": "Like a meeting to settle class disputes."
+  },
+  {
+    "term": "Observer State",
+    "advanced": "A country that participates in an international organisation without full membership, often attending meetings and contributing to discussions.",
+    "simple": "Countries watching but not full members.",
+    "example": "Like guests at a club meeting."
+  },
+  {
+    "term": "Funding Program",
+    "advanced": "A structured initiative that allocates resources to support projects and priorities of an international organisation.",
+    "simple": "Money given to help projects.",
+    "example": "Like school funding for clubs."
+  },
+  {
+    "term": "Global Partnership",
+    "advanced": "A collaborative arrangement among countries, organisations, or actors to achieve shared international goals.",
+    "simple": "Organizations working together.",
+    "example": "Like clubs collaborating on events."
+  },
+  {
+    "term": "Aid Program",
+    "advanced": "A program organised by an international body to deliver financial or material assistance to countries in need.",
+    "simple": "Help programs for poor areas.",
+    "example": "Like donating supplies to a friend."
+  },
+  {
+    "term": "International Summit",
+    "advanced": "A high-level meeting where leaders or ministers coordinate policy and address critical global issues.",
+    "simple": "Meeting of world leaders.",
+    "example": "Like a big student council meeting."
+  },
+  {
+    "term": "Development Goals",
+    "advanced": "Targets established to improve economic, social, and environmental outcomes for countries and communities.",
+    "simple": "Targets to improve the world.",
+    "example": "Like school goals for better learning."
+  }
 ]

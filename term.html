@@ -92,6 +92,44 @@
       text-align: center;
       margin-top: 14px;
     }
+    .explanation-toggle {
+      margin-top: 12px;
+      text-align: center;
+    }
+    .toggle-btn {
+      background: rgba(100, 200, 255, 0.3);
+      border: 1px solid rgba(100, 200, 255, 0.7);
+      color: #a0d8ff;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+    .toggle-btn:hover {
+      background: rgba(100, 200, 255, 0.5);
+      transform: translateY(-1px);
+    }
+    #simpleExplanation {
+      display: none;
+      margin-top: 12px;
+      padding: 14px;
+      background: rgba(100, 180, 255, 0.15);
+      border-left: 3px solid rgba(100, 200, 255, 0.6);
+      border-radius: 6px;
+    }
+    #simpleExplanation.show {
+      display: block;
+    }
+    #simpleExplanation p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    #simpleExplanation p strong {
+      color: #a0d8ff;
+    }
   </style>
 </head>
 <body>
@@ -102,6 +140,12 @@
     <div class="term-card">
       <p id="definition"><strong>Definition:</strong> ...</p>
       <p id="example"><strong>Example:</strong> ...</p>
+      <div class="explanation-toggle">
+        <button class="toggle-btn" id="toggleSimple">Struggling? Show simpler explanation</button>
+      </div>
+      <div id="simpleExplanation">
+        <p><strong>Simpler Explanation:</strong> <span id="simpleText">...</span></p>
+      </div>
     </div>
 
     <div class="nav">
@@ -164,6 +208,9 @@
       const termTitle = document.getElementById('termTitle');
       const defEl = document.getElementById('definition');
       const exEl = document.getElementById('example');
+      const simpleEl = document.getElementById('simpleText');
+      const simpleContainer = document.getElementById('simpleExplanation');
+      const toggleBtn = document.getElementById('toggleSimple');
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
       const backBtn = document.getElementById('backBtn');
@@ -175,14 +222,30 @@
       function render() {
         const term = terms[index];
         termTitle.innerText = term.term;
-        defEl.innerHTML = `<strong>Definition:</strong> ${term.definition || 'No definition available.'}`;
+        
+        // Display advanced definition by default
+        defEl.innerHTML = `<strong>Definition:</strong> ${term.advanced || term.definition || 'No definition available.'}`;
         exEl.innerHTML = `<strong>Example:</strong> ${term.example || 'No example available.'}`;
-
+        
+        // Set up simple explanation (hidden by default)
+        simpleEl.textContent = term.simple || 'No simpler explanation available.';
+        simpleContainer.classList.remove('show');
+        
         prevBtn.disabled = index === 0;
         nextBtn.disabled = index === terms.length - 1;
 
         history.replaceState(null, '', `term.html?category=${encodeURIComponent(category)}&index=${index}`);
       }
+
+      // Toggle simple explanation display
+      toggleBtn.addEventListener('click', () => {
+        simpleContainer.classList.toggle('show');
+        if (simpleContainer.classList.contains('show')) {
+          toggleBtn.textContent = 'Hide simpler explanation';
+        } else {
+          toggleBtn.textContent = 'Struggling? Show simpler explanation';
+        }
+      });
 
       prevBtn.addEventListener('click', () => {
         if (index > 0) {
