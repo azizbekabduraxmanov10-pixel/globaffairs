@@ -48,8 +48,11 @@
 	<div class="quiz-bg">
 		<div class="quiz-container">
 			<div class="quiz-header">
-				<h1 id="fieldTitle">Quiz</h1>
-				<p id="questionCounter">Question 1 of 20</p>
+				<div class="quiz-title-group">
+					<h1 id="fieldTitle">Quiz</h1>
+					<p id="questionCounter">Question 1 of 20</p>
+				</div>
+				<button id="overviewBtn" class="overview-btn">Question Overview</button>
 			</div>
 
 			<div class="quiz-content">
@@ -83,6 +86,63 @@
 				<button id="prevBtn" class="nav-btn prev-btn">Previous</button>
 				<button id="checkBtn" class="check-btn">Check</button>
 				<button id="nextBtn" class="nav-btn next-btn">Next</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Question Navigator Overlay -->
+	<div id="questionNavigatorOverlay" class="navigator-overlay" style="display: none;">
+		<div class="navigator-modal">
+			<div class="navigator-header">
+				<h2>Question Overview</h2>
+				<button id="navigatorCloseBtn" class="navigator-close-btn" aria-label="Close Question Overview">×</button>
+			</div>
+			<div id="questionNavigatorGrid" class="navigator-grid"></div>
+			<p class="navigator-hint">Click a question to jump to it.</p>
+		</div>
+	</div>
+
+	<!-- Quiz Completion Screen -->
+	<div id="completionScreen" class="completion-screen" style="display: none;">
+		<div class="completion-container">
+			<h1 id="completionMessage" class="completion-message">Quiz Complete!</h1>
+			<div class="summary-section">
+				<div class="final-score-summary">
+					<p class="summary-label">Final score</p>
+					<p class="summary-value" id="finalScoreSummary">0/20 correct (0%)</p>
+				</div>
+				<div class="comparison-summary">
+					<p class="summary-text" id="previousAttemptSummary">First attempt</p>
+					<p class="summary-text" id="bestAttemptSummary"></p>
+					<p class="summary-text" id="improvementSummary"></p>
+				</div>
+			</div>
+			
+			<div class="score-comparison">
+				<div class="score-box first-attempt">
+					<h3>First Attempt</h3>
+					<p class="score" id="firstAttemptScore">0/0 (0%)</p>
+				</div>
+				
+				<div class="score-box current-attempt">
+					<h3>Current Score</h3>
+					<p class="score" id="currentScore">0/0 (0%)</p>
+				</div>
+			</div>
+			
+			<div class="improvement-box" id="improvementBox">
+				<p id="improvementText">Improvement: <strong id="scoreImprovement">0</strong> points</p>
+			</div>
+
+			<div class="review-section">
+				<h3>Review Incorrect Questions</h3>
+				<div id="reviewList" class="review-list"></div>
+			</div>
+			
+			<div class="completion-actions">
+				<button id="retakeBtn" class="btn btn-primary">Retake this Quiz</button>
+				<button id="newQuizBtn" class="btn btn-secondary">Select Different Topics</button>
+				<button id="homeBtn" class="btn btn-tertiary">Back to Home</button>
 			</div>
 		</div>
 	</div>
