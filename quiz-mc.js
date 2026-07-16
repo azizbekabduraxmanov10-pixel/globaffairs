@@ -7,6 +7,7 @@ let questionFormats = {}; // Store question format (term->def or def->term) for 
 let firstAttemptAnswers = {}; // Track first attempt separately
 let isFirstAttempt = true;
 let quizStartTime = null;
+<<<<<<< HEAD
 
 const successMessages = ['Great!', 'Awesome!', 'Good job!', 'Excellent!', 'Well done!'];
 const questionFormatTypes = ['term-to-definition', 'definition-to-term'];
@@ -37,6 +38,12 @@ function formatScoreText(score, total) {
 	const percent = total === 0 ? 0 : Math.round((score / total) * 100);
 	return `${score}/${total} (${percent}%)`;
 }
+=======
+let quizSubmitted = false; // Track if quiz has been submitted (locks answers)
+
+const successMessages = ['Great!', 'Awesome!', 'Good job!', 'Excellent!', 'Well done!'];
+const questionFormatTypes = ['term-to-definition', 'definition-to-term'];
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 
 document.addEventListener('DOMContentLoaded', async function() {
 	// Get selected fields from sessionStorage
@@ -164,6 +171,7 @@ function setupEventListeners() {
 	checkBtn.addEventListener('click', checkAnswer);
 	prevBtn.addEventListener('click', goToPreviousQuestion);
 	nextBtn.addEventListener('click', goToNextQuestion);
+<<<<<<< HEAD
 	if (overviewBtn) overviewBtn.addEventListener('click', openQuestionNavigator);
 	if (navigatorCloseBtn) navigatorCloseBtn.addEventListener('click', closeQuestionNavigator);
 	if (navigatorOverlay) navigatorOverlay.addEventListener('click', function(event) {
@@ -171,6 +179,12 @@ function setupEventListeners() {
 			closeQuestionNavigator();
 		}
 	});
+=======
+	
+	if (retakeBtn) retakeBtn.addEventListener('click', retakeQuiz);
+	if (homeBtn) homeBtn.addEventListener('click', goHome);
+	if (newQuizBtn) newQuizBtn.addEventListener('click', selectNewQuiz);
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 
 	if (retakeBtn) retakeBtn.addEventListener('click', retakeQuiz);
 	if (homeBtn) homeBtn.addEventListener('click', goHome);
@@ -179,8 +193,36 @@ function setupEventListeners() {
 	options.forEach((option) => {
 		const radio = option.querySelector('input[type="radio"]');
 		option.addEventListener('click', function() {
+<<<<<<< HEAD
 			if (answeredQuestions[currentQuestionIndex]) {
 				return;
+=======
+			// If quiz is submitted, prevent any clicks
+			if (quizSubmitted) {
+				return;
+			}
+			
+			// If selecting a different option, re-enable Check button
+			const wasChecked = radio.checked;
+			radio.checked = true;
+			
+			// Re-enable check button when a new option is selected after an incorrect answer
+			if (!wasChecked) {
+				const checkBtn = document.getElementById('checkBtn');
+				const feedbackMessage = document.getElementById('feedbackMessage');
+				
+				// Only re-enable if there was an error message and a new option is selected
+				if (feedbackMessage.textContent === 'Try again!' && checkBtn.disabled) {
+					checkBtn.disabled = false;
+					
+					// Reset previous incorrect styling
+					document.querySelectorAll('.option').forEach(opt => {
+						if (opt !== option) {
+							opt.classList.remove('incorrect', 'correct');
+						}
+					});
+				}
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 			}
 			radio.checked = true;
 		});
@@ -347,8 +389,12 @@ function checkAnswer() {
 	answeredQuestions[currentQuestionIndex] = {
 		selectedIndex: selectedIndex,
 		isCorrect: isCorrect,
+<<<<<<< HEAD
 		selectedValue: selectedLabel.dataset.optionValue,
 		correctValue: correctLabel ? correctLabel.dataset.optionValue : ''
+=======
+		selectedValue: selectedLabel.dataset.optionValue
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 	};
 
 	// Track first attempt separately
@@ -410,7 +456,11 @@ function restoreAnswerState(questionIndex) {
 	}
 }
 
+<<<<<<< HEAD
 // Check if all questions have been answered
+=======
+// Check if all questions have been answered (regardless of correctness)
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 function areAllQuestionsAnswered() {
 	for (let i = 0; i < quizData.length; i++) {
 		if (!answeredQuestions[i]) {
@@ -420,6 +470,7 @@ function areAllQuestionsAnswered() {
 	return true;
 }
 
+<<<<<<< HEAD
 function openQuestionNavigator() {
 	document.getElementById('questionNavigatorOverlay').style.display = 'flex';
 	renderQuestionNavigator();
@@ -500,6 +551,8 @@ function populateReviewList() {
 	});
 }
 
+=======
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 // Calculate score
 function calculateScore() {
 	let totalCorrect = 0;
@@ -553,6 +606,18 @@ function checkAndShowCompletion() {
 
 // Show quiz completion screen
 function showCompletionScreen() {
+<<<<<<< HEAD
+=======
+	// Mark quiz as submitted - locks all answers
+	quizSubmitted = true;
+	
+	// Disable all radio buttons and check button
+	document.querySelectorAll('input[type="radio"]').forEach(radio => {
+		radio.disabled = true;
+	});
+	document.getElementById('checkBtn').disabled = true;
+	
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 	// Record that first attempt is complete
 	isFirstAttempt = false;
 	
@@ -573,6 +638,7 @@ function showCompletionScreen() {
 		timestamp: new Date().toISOString(),
 		timeTaken: Math.round((Date.now() - quizStartTime) / 1000)
 	};
+<<<<<<< HEAD
 
 	const previousHistory = loadQuizHistory();
 	const lastAttempt = previousHistory.length ? previousHistory[previousHistory.length - 1] : null;
@@ -624,6 +690,22 @@ function showCompletionScreen() {
 
 	document.getElementById('scoreImprovement').textContent = currentScore - firstAttemptScore;
 	populateReviewList();
+=======
+	
+	sessionStorage.setItem('lastQuizResults', JSON.stringify(quizResults));
+	
+	// Hide quiz container and show completion screen
+	document.querySelector('.quiz-container').style.display = 'none';
+	document.getElementById('completionScreen').style.display = 'flex';
+	
+	// Populate completion screen
+	document.getElementById('firstAttemptScore').textContent = `${firstAttemptScore}/${totalQuestions} (${firstAttemptPercentage}%)`;
+	document.getElementById('currentScore').textContent = `${currentScore}/${totalQuestions} (${currentPercentage}%)`;
+	document.getElementById('scoreImprovement').textContent = currentScore - firstAttemptScore;
+	
+	// Generate and show results review
+	generateResultsReview();
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 	
 	// Show appropriate message based on performance
 	const messageEl = document.getElementById('completionMessage');
@@ -642,6 +724,7 @@ function showCompletionScreen() {
 	}
 }
 
+<<<<<<< HEAD
 // Retake quiz - reset without creating new quiz session
 function retakeQuiz() {
 	currentQuestionIndex = 0;
@@ -659,6 +742,13 @@ function retakeQuiz() {
 	// Reset UI
 	resetQuestionUI();
 	displayQuestion();
+=======
+// Retake quiz - creates a new fresh quiz attempt with new question order
+function retakeQuiz() {
+	// Go back to quiz selection to start a completely new attempt
+	// This ensures new question order and resets all tracking
+	window.location.href = 'quiz-selection.html';
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 }
 
 // Return to home
@@ -671,6 +761,65 @@ function selectNewQuiz() {
 	window.location.href = 'quiz-selection.html';
 }
 
+<<<<<<< HEAD
+=======
+// Generate and display results review showing correct/wrong answers
+function generateResultsReview() {
+	const reviewContainer = document.getElementById('resultsReview');
+	if (!reviewContainer) return;
+	
+	let reviewHTML = '<h2>Review Your Answers</h2>';
+	
+	for (let i = 0; i < quizData.length; i++) {
+		const question = quizData[i];
+		const answer = answeredQuestions[i];
+		const format = questionFormats[i];
+		
+		// Determine correct answer display
+		let correctAnswerDisplay = '';
+		let questionText = '';
+		
+		if (format === 'term-to-definition') {
+			questionText = `What is the meaning of <strong>${question.term}</strong>?`;
+			correctAnswerDisplay = question.advanced || question.definition;
+		} else {
+			questionText = `Which term matches this definition: <strong>"${question.advanced || question.definition}"</strong>?`;
+			correctAnswerDisplay = question.term;
+		}
+		
+		const isCorrect = answer.selectedValue === correctAnswerDisplay;
+		const resultClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+		const resultIcon = isCorrect ? '✓' : '✗';
+		
+		reviewHTML += `
+			<div class="review-item ${resultClass}">
+				<div class="review-question">
+					<strong>Question ${i + 1}:</strong> ${questionText}
+				</div>
+				<div class="review-user-answer">
+					<span class="result-icon ${isCorrect ? 'icon-correct' : 'icon-incorrect'}">${resultIcon}</span>
+					<strong>Your Answer:</strong> ${answer.selectedValue}
+		`;
+		
+		if (!isCorrect) {
+			reviewHTML += `
+					<div class="review-correct-answer">
+						<strong>Correct Answer:</strong> ${correctAnswerDisplay}
+					</div>
+			`;
+		}
+		
+		reviewHTML += `
+				</div>
+			</div>
+		`;
+	}
+	
+	reviewContainer.innerHTML = reviewHTML;
+	reviewContainer.style.display = 'block';
+}
+
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 // Update button states
 function updateButtonStates() {
 	const prevBtn = document.getElementById('prevBtn');

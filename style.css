@@ -1114,8 +1114,14 @@ header {
 	right: 0;
 	bottom: 0;
 	background: rgba(0, 0, 0, 0.7);
+<<<<<<< HEAD
 	display: block;
 	overflow-y: auto;
+=======
+	display: flex;
+	justify-content: center;
+	align-items: center;
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 	z-index: 100;
 	padding: 20px;
 }
@@ -1126,12 +1132,20 @@ header {
 	padding: 40px;
 	max-width: 600px;
 	width: 100%;
+<<<<<<< HEAD
 	margin: 20px auto;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 	text-align: center;
 	animation: slideUp 0.4s ease-out;
 	max-height: calc(100vh - 40px);
 	overflow-y: auto;
+=======
+	max-height: 90vh;
+	overflow-y: auto;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	animation: slideUp 0.4s ease-out;
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 }
 
 @keyframes slideUp {
@@ -1152,6 +1166,7 @@ header {
 	color: #333;
 }
 
+<<<<<<< HEAD
 .summary-section {
 	margin-bottom: 24px;
 	text-align: left;
@@ -1189,6 +1204,8 @@ header {
 	margin: 0;
 }
 
+=======
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 .completion-message.perfect {
 	color: #2ecc71;
 }
@@ -1333,6 +1350,87 @@ header {
 	}
 }
 
+<<<<<<< HEAD
+=======
+/* Results Review Styles */
+.results-review {
+	border-top: 2px solid #ddd;
+	padding-top: 20px;
+	margin: 20px 0;
+}
+
+.results-review h2 {
+	font-size: 20px;
+	color: #333;
+	margin-top: 0;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.review-item {
+	margin-bottom: 20px;
+	padding: 15px;
+	border-radius: 8px;
+	border-left: 4px solid #ddd;
+}
+
+.review-item.correct-answer {
+	background: #e8f5e9;
+	border-left-color: #2ecc71;
+}
+
+.review-item.incorrect-answer {
+	background: #ffebee;
+	border-left-color: #e74c3c;
+}
+
+.review-question {
+	margin-bottom: 12px;
+	font-size: 15px;
+	color: #333;
+	font-weight: 500;
+}
+
+.review-question strong {
+	color: #1a1a1a;
+}
+
+.review-user-answer {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	padding: 10px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+.result-icon {
+	font-weight: 700;
+	font-size: 18px;
+	min-width: 24px;
+	text-align: center;
+}
+
+.result-icon.icon-correct {
+	color: #2ecc71;
+}
+
+.result-icon.icon-incorrect {
+	color: #e74c3c;
+}
+
+.review-correct-answer {
+	margin-top: 10px;
+	padding: 10px;
+	background: #c8e6c9;
+	border-radius: 6px;
+	font-size: 14px;
+	color: #1b5e20;
+	font-weight: 500;
+}
+
+>>>>>>> fee5aa50acd4cf95c32b20885d13b38b3ba2dacb
 .article-section h2 {
 	color: #1e3a8a;
 	font-size: 1.8rem;
