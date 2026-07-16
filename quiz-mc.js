@@ -7,6 +7,7 @@ let questionFormats = {}; // Store question format (term->def or def->term) for 
 let firstAttemptAnswers = {}; // Track first attempt separately
 let isFirstAttempt = true;
 let quizStartTime = null;
+let quizSubmitted = false; // Track if quiz has been submitted (locks answers)
 
 const successMessages = ['Great!', 'Awesome!', 'Good job!', 'Excellent!', 'Well done!'];
 const questionFormatTypes = ['term-to-definition', 'definition-to-term'];
@@ -179,10 +180,32 @@ function setupEventListeners() {
 	options.forEach((option) => {
 		const radio = option.querySelector('input[type="radio"]');
 		option.addEventListener('click', function() {
-			if (answeredQuestions[currentQuestionIndex]) {
+			// If quiz is submitted, prevent any clicks
+			if (quizSubmitted) {
 				return;
 			}
+			
+			// If selecting a different option, re-enable Check button
+			const wasChecked = radio.checked;
 			radio.checked = true;
+			
+			// Re-enable check button when a new option is selected after an incorrect answer
+			if (!wasChecked) {
+				const checkBtn = document.getElementById('checkBtn');
+				const feedbackMessage = document.getElementById('feedbackMessage');
+				
+				// Only re-enable if there was an error message and a new option is selected
+				if (feedbackMessage.textContent === 'Try again!' && checkBtn.disabled) {
+					checkBtn.disabled = false;
+					
+					// Reset previous incorrect styling
+					document.querySelectorAll('.option').forEach(opt => {
+						if (opt !== option) {
+							opt.classList.remove('incorrect', 'correct');
+						}
+					});
+				}
+			}
 		});
 	});
 }
@@ -410,7 +433,7 @@ function restoreAnswerState(questionIndex) {
 	}
 }
 
-// Check if all questions have been answered
+// Check if all questions have been answered (regardless of correctness)
 function areAllQuestionsAnswered() {
 	for (let i = 0; i < quizData.length; i++) {
 		if (!answeredQuestions[i]) {
@@ -553,6 +576,15 @@ function checkAndShowCompletion() {
 
 // Show quiz completion screen
 function showCompletionScreen() {
+	// Mark quiz as submitted - locks all answers
+	quizSubmitted = true;
+	
+	// Disable all radio buttons and check button
+	document.querySelectorAll('input[type="radio"]').forEach(radio => {
+		radio.disabled = true;
+	});
+	document.getElementById('checkBtn').disabled = true;
+	
 	// Record that first attempt is complete
 	isFirstAttempt = false;
 	
@@ -648,6 +680,7 @@ function retakeQuiz() {
 	answeredQuestions = {}; // Reset attempts but keep first attempt tracked
 	firstAttemptAnswers = {};
 	isFirstAttempt = true;
+	quizSubmitted = false;
 	questionFormats = {};
 	randomizeQuestionOrder();
 	quizStartTime = Date.now();
