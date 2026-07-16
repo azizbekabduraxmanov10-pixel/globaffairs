@@ -118,6 +118,76 @@ header {
 	z-index: 100;
 }
 
+.streak-display {
+	position: fixed;
+	top: 24px;
+	right: 178px;
+	z-index: 95;
+	display: none;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.09);
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+	.streak-display {
+		right: 150px;
+		font-size: 13px;
+		padding: 8px 12px;
+	}
+}
+
+@media (max-width: 480px) {
+	.streak-display {
+		top: 60px;
+		right: 12px;
+		font-size: 12px;
+		padding: 8px 10px;
+	}
+}
+
+.streak-toast {
+	position: fixed;
+	bottom: 24px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 300;
+	background: rgba(15, 23, 42, 0.96);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 999px;
+	padding: 14px 18px;
+	font-size: 14px;
+	font-weight: 600;
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.streak-toast.show {
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+}
+
+@keyframes streakToastIn {
+	from {
+		opacity: 0;
+		transform: translateX(-50%) translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+	}
+}
+
 /* Profile Menu Styles */
 .profile-menu {
 	position: relative;
@@ -216,6 +286,39 @@ header {
 	.profile-dropdown {
 		min-width: 160px;
 	}
+}
+
+.about-page-main {
+	padding: 110px 24px 60px;
+	max-width: 900px;
+	margin: 0 auto;
+	color: #fff;
+}
+
+.about-page-content {
+	background: rgba(10, 18, 35, 0.82);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 28px;
+	padding: 42px 36px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.about-page-content h1 {
+	font-size: 3rem;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.about-page-content p {
+	font-size: 1.05rem;
+	line-height: 1.8;
+	margin-bottom: 20px;
+	opacity: 0.95;
+}
+
+.about-page-content p:last-child {
+	margin-bottom: 0;
 }
 
 .hero{

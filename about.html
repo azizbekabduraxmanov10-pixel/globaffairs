@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GlobAffairs</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - GlobAffairs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -31,19 +31,20 @@
             </div>
         </div>
     </header>
-    <div class="hero">
-        <h1>GlobAffairs</h1>
-        <p>Explore International Relations, Diplomacy, and Global Politics</p>
-        <a href="terminology.html" class="start-learning-btn">Start Learning</a>
-    </div>
 
-    <!-- Firebase SDK (Compat) -->
+    <main class="about-page-main">
+        <div class="about-page-content">
+            <h1>About GlobAffairs</h1>
+            <p>GlobAffairs is a platform built for students anywhere in the world who want to understand global affairs without needing to attend any offline classes or programs.</p>
+            <p>The site combines a terminology library, knowledge testing, and hands-on practice tools like Model UN simulation and debate practice, so students don't just memorize concepts — they get to actually use them. Whether you're preparing for a real MUN conference, building debate skills, or just want to genuinely understand how the world works, GlobAffairs is designed to meet you at any level and grow with you.</p>
+            <p>GlobAffairs was created by Azizbek Abduraxmanov and Mirjaxon Ziyadullayev, two students who believe that access to quality global affairs education shouldn't depend on where you live or what you can afford. Together, they built this platform to make global affairs learning welcoming, practical, and easy to access for learners everywhere.</p>
+        </div>
+    </main>
+
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
     <script>
-        // Firebase Configuration
-        // TODO: Replace with your Firebase project config from Firebase Console
         const firebaseConfig = {
             apiKey: "AIzaSyCeOLKoVRl_F4fddNCO7ba1hUtx5WrDXU4",
             authDomain: "globaffairs-b0a9d.firebaseapp.com",
@@ -52,8 +53,6 @@
             messagingSenderId: "538491953738",
             appId: "1:538491953738:web:5abb29a3760cd297e23cb3"
         };
-
-        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
     <script src="script.js"></script>

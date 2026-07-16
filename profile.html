@@ -18,10 +18,11 @@
 				<li><a href="quiz-selection.html">Quiz</a></li>
 				<li><a href="terminology.html">Terminology</a></li>
 				<li><a href="articles.html">Articles</a></li>
-				<li><a href="#about">About</a></li>
+				<li><a href="about.html">About</a></li>
 				<li id="authLink"><a href="auth.html" class="login-link">Login</a></li>
 			</ul>
 		</nav>
+		<div id="streakDisplay" class="streak-display" style="display:none;"></div>
 		<!-- Profile Section (Top Right) -->
 		<div id="profileSection" class="profile-section" style="display:none;">
 			<button class="profile-btn" id="profileBtn">👤 <span id="profileName"></span></button>
@@ -45,6 +46,10 @@
 				<div class="info-group">
 					<label>Email</label>
 					<p id="displayEmail" class="info-value">-</p>
+				</div>
+				<div class="info-group">
+					<label>Current Streak</label>
+					<p id="profileStreakValue" class="info-value">-</p>
 				</div>
 				<div class="info-group">
 					<label>Member Since</label>
@@ -77,6 +82,7 @@
 	<!-- Firebase SDK (Compat) -->
 	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 	<script>
 		// Firebase Configuration
 		// TODO: Replace with your Firebase project config from Firebase Console

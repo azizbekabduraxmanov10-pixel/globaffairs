@@ -3,6 +3,9 @@
   window.GlobAffairsAuth = {
     auth: null,
     currentUser: null,
+    firestore: null,
+    streakUpdatedToday: false,
+    streakMilestones: [7, 30],
 
     logout: function() {
       if (!this.auth) return;
@@ -34,20 +37,162 @@
       }
     },
 
+    getLocalDateString: function(date = new Date()) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    },
+
+    getYesterdayDateString: function(todayDateString) {
+      const parts = todayDateString.split('-').map(Number);
+      const date = new Date(parts[0], parts[1] - 1, parts[2]);
+      date.setDate(date.getDate() - 1);
+      return this.getLocalDateString(date);
+    },
+
+    initFirestore: function() {
+      if (this.firestore) return true;
+      if (typeof firebase === 'undefined' || !firebase.firestore) {
+        return false;
+      }
+
+      try {
+        this.firestore = firebase.firestore();
+        return true;
+      } catch (error) {
+        console.warn('Firestore initialization failed:', error);
+        return false;
+      }
+    },
+
+    getStreakDocRef: function(uid) {
+      if (!this.initFirestore()) return null;
+      return this.firestore.collection('userStreaks').doc(uid);
+    },
+
+    updateStreakDisplay: function(streak) {
+      const badge = document.getElementById('streakDisplay');
+      if (!badge) return;
+
+      badge.style.display = 'flex';
+      badge.textContent = `🔥 ${streak} ${streak === 1 ? 'day' : 'days'} streak`;
+    },
+
+    updateProfileStreakUI: function(streak) {
+      const profileStreak = document.getElementById('profileStreakValue');
+      if (!profileStreak) return;
+      profileStreak.textContent = `${streak} ${streak === 1 ? 'day' : 'days'}`;
+    },
+
+    showStreakToast: function(message) {
+      let toast = document.getElementById('streakToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'streakToast';
+        toast.className = 'streak-toast';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = message;
+      toast.style.opacity = '1';
+      toast.style.pointerEvents = 'auto';
+
+      clearTimeout(toast.dismissTimer);
+      toast.dismissTimer = setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.pointerEvents = 'none';
+      }, 4200);
+    },
+
+    getMilestoneKey: function(streak) {
+      return `globaffairsStreakMilestone:${streak}`;
+    },
+
+    hasShownMilestone: function(streak) {
+      return localStorage.getItem(this.getMilestoneKey(streak)) === 'true';
+    },
+
+    markMilestoneShown: function(streak) {
+      localStorage.setItem(this.getMilestoneKey(streak), 'true');
+    },
+
+    showStreakMilestoneIfNeeded: function(streak) {
+      if (!this.streakMilestones.includes(streak)) return;
+      if (this.hasShownMilestone(streak)) return;
+
+      const message = streak === 7
+        ? '🔥 7-day streak! Great momentum.'
+        : '🔥 30-day streak! Incredible dedication.';
+      this.showStreakToast(message);
+      this.markMilestoneShown(streak);
+    },
+
+    recordDailyStreak: function() {
+      if (!this.isLoggedIn() || !this.initFirestore() || this.streakUpdatedToday) {
+        return;
+      }
+
+      const uid = this.currentUser.uid;
+      const today = this.getLocalDateString();
+      const yesterday = this.getYesterdayDateString(today);
+      const streakRef = this.getStreakDocRef(uid);
+      if (!streakRef) return;
+
+      streakRef.get()
+        .then((doc) => {
+          const data = doc.exists ? doc.data() : null;
+          let nextStreak = 1;
+          let lastActiveDate = today;
+
+          if (data && data.lastActiveDate) {
+            const lastDate = data.lastActiveDate;
+            const currentStreak = Number(data.currentStreak) || 0;
+
+            if (lastDate === today) {
+              nextStreak = currentStreak || 1;
+            } else if (lastDate === yesterday) {
+              nextStreak = currentStreak + 1;
+            } else {
+              nextStreak = 1;
+            }
+          }
+
+          const updatePayload = {
+            currentStreak: nextStreak,
+            lastActiveDate: lastActiveDate,
+            updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+          };
+
+          if (!doc.exists || doc.data().currentStreak !== nextStreak || doc.data().lastActiveDate !== lastActiveDate) {
+            streakRef.set(updatePayload, { merge: true }).catch((error) => {
+              console.warn('Could not save streak data:', error);
+            });
+          }
+
+          this.streakUpdatedToday = true;
+          this.updateStreakDisplay(nextStreak);
+          this.updateProfileStreakUI(nextStreak);
+          this.showStreakMilestoneIfNeeded(nextStreak);
+        })
+        .catch((error) => {
+          console.warn('Could not load streak data:', error);
+        });
+    },
+
     updateProfileUI: function() {
       const authLink = document.getElementById('authLink');
       const profileSection = document.getElementById('profileSection');
       const profileName = document.getElementById('profileName');
-      
-      if (!authLink || !profileSection) return;
-
       const user = this.getCurrentUser();
-      
+
       if (user) {
-        authLink.style.display = 'none';
-        profileSection.style.display = 'block';
-        profileName.textContent = user.name;
-      } else {
+        if (authLink && profileSection && profileName) {
+          authLink.style.display = 'none';
+          profileSection.style.display = 'block';
+          profileName.textContent = user.name;
+        }
+        this.recordDailyStreak();
+      } else if (authLink && profileSection) {
         authLink.style.display = 'list-item';
         profileSection.style.display = 'none';
       }
