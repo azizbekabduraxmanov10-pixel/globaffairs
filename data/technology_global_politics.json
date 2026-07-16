@@ -7,7 +7,7 @@
   },
   {
     "term": "Cyber Attack",
-    "advanced": "Hacking or damaging digital systems. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Hacking or damaging digital systems.",
     "simple": "Hacking or damaging digital systems.",
     "example": "Like someone breaking into your online account."
   },
@@ -25,43 +25,43 @@
   },
   {
     "term": "Data Privacy",
-    "advanced": "Protecting personal information online. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Protecting personal information online.",
     "simple": "Protecting personal information online.",
     "example": "Like keeping your password secret."
   },
   {
     "term": "Tech Regulation",
-    "advanced": "Rules controlling technology companies. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Rules controlling technology companies.",
     "simple": "Rules controlling technology companies.",
     "example": "Like school rules for using phones."
   },
   {
     "term": "Information Warfare",
-    "advanced": "Spreading false information to influence people. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Spreading false information to influence people.",
     "simple": "Spreading false information to influence people.",
     "example": "Like rumors spreading in school."
   },
   {
     "term": "Social Media Influence",
-    "advanced": "Impact of online platforms on politics. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Impact of online platforms on politics.",
     "simple": "Impact of online platforms on politics.",
     "example": "Like students forming opinions through social media."
   },
   {
     "term": "Digital Surveillance",
-    "advanced": "Monitoring online activity. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Monitoring online activity.",
     "simple": "Monitoring online activity.",
     "example": "Like teachers checking school computers."
   },
   {
     "term": "Tech Innovation",
-    "advanced": "Creating new technology. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Creating new technology.",
     "simple": "Creating new technology.",
     "example": "Like inventing a new school app."
   },
   {
     "term": "Online Propaganda",
-    "advanced": "Messages used to influence opinions online. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Messages used to influence opinions online.",
     "simple": "Messages used to influence opinions online.",
     "example": "Like persuasive posts on social media."
   },
@@ -73,13 +73,13 @@
   },
   {
     "term": "Tech Competition",
-    "advanced": "Countries competing in technology development. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Countries competing in technology development.",
     "simple": "Countries competing in technology development.",
     "example": "Like students competing in robotics competitions."
   },
   {
     "term": "Digital Economy",
-    "advanced": "Economic activity online. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Economic activity online.",
     "simple": "Economic activity online.",
     "example": "Like buying items in online games."
   },
@@ -91,37 +91,37 @@
   },
   {
     "term": "Cloud Computing",
-    "advanced": "Storing data on internet servers. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Storing data on internet servers.",
     "simple": "Storing data on internet servers.",
     "example": "Like saving homework online."
   },
   {
     "term": "Tech Sanctions",
-    "advanced": "Restrictions on technology trade. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Restrictions on technology trade.",
     "simple": "Restrictions on technology trade.",
     "example": "Like banning certain devices in school."
   },
   {
     "term": "Digital Infrastructure",
-    "advanced": "Systems supporting internet communication. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Systems supporting internet communication.",
     "simple": "Systems supporting internet communication.",
     "example": "Like school Wi-Fi networks."
   },
   {
     "term": "AI Ethics",
-    "advanced": "Rules about responsible AI use. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Rules about responsible AI use.",
     "simple": "Rules about responsible AI use.",
     "example": "Like rules for using robots safely."
   },
   {
     "term": "Global Tech Companies",
-    "advanced": "Large companies influencing technology worldwide. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Large companies influencing technology worldwide.",
     "simple": "Large companies influencing technology worldwide.",
     "example": "Like big tech brands shaping digital life."
   },
   {
     "term": "Digital Rights",
-    "advanced": "Protections for people online. In international relations, this concept is used to describe how states or communities shape policy, influence diplomacy, or manage shared resources.",
+    "advanced": "Protections for people online.",
     "simple": "Protections for people online.",
     "example": "Like privacy rules for students on school networks."
   }
