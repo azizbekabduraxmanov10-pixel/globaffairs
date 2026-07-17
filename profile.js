@@ -1,4 +1,32 @@
 // Profile page functionality - Firebase Edition
+const CATEGORY_PROGRESS = [
+	{ id: 'international_relations', name: 'International Relations' },
+	{ id: 'international_law', name: 'International Law' },
+	{ id: 'global_security', name: 'Global Security' },
+	{ id: 'diplomacy', name: 'Diplomacy' },
+	{ id: 'international_organizations', name: 'International Organizations' },
+	{ id: 'global_economics', name: 'Global Economics' },
+	{ id: 'human_rights', name: 'Human Rights' },
+	{ id: 'environment', name: 'Environment' },
+	{ id: 'culture_society', name: 'Culture & Society' },
+	{ id: 'geopolitics', name: 'Geopolitics' },
+	{ id: 'global_development', name: 'Global Development' },
+	{ id: 'global_health', name: 'Global Health' },
+	{ id: 'migration_refugee_studies', name: 'Migration & Refugee Studies' },
+	{ id: 'peace_conflict_studies', name: 'Peace & Conflict Studies' },
+	{ id: 'global_governance', name: 'Global Governance' },
+	{ id: 'international_trade', name: 'International Trade' },
+	{ id: 'energy_politics', name: 'Energy Politics' },
+	{ id: 'technology_global_politics', name: 'Technology & Global Politics' },
+	{ id: 'global_finance', name: 'Global Finance' },
+	{ id: 'humanitarian_affairs', name: 'Humanitarian Affairs' }
+];
+
+const CATEGORY_ID_TO_FIELD = CATEGORY_PROGRESS.reduce((map, category) => {
+	map[category.id] = category.name;
+	return map;
+}, {});
+
 class ProfileManager {
 	constructor() {
 		this.auth = firebase.auth();
@@ -55,6 +83,120 @@ class ProfileManager {
 		} else if (displayCreatedAt) {
 			displayCreatedAt.textContent = 'Unknown';
 		}
+
+		this.loadCategoryProgress();
+	}
+
+	getStoredTermViews() {
+		const saved = localStorage.getItem('globaffairsTermViews');
+		if (!saved) return {};
+		try {
+			return JSON.parse(saved) || {};
+		} catch (error) {
+			console.warn('Failed to parse term view data:', error);
+			return {};
+		}
+	}
+
+	async fetchCategoryTotals() {
+		const totals = {};
+		const requests = CATEGORY_PROGRESS.map(async (category) => {
+			try {
+				const response = await fetch(`data/${category.id}.json`);
+				if (!response.ok) throw new Error('Load failed');
+				const data = await response.json();
+				totals[category.id] = Array.isArray(data) ? data.length : 0;
+			} catch (error) {
+				console.warn('Could not load term total for', category.id, error);
+				totals[category.id] = 0;
+			}
+		});
+		await Promise.all(requests);
+		return totals;
+	}
+
+	getBestQuizScoreForCategory(categoryId) {
+		const categoryName = CATEGORY_ID_TO_FIELD[categoryId];
+		if (!categoryName) return null;
+		let bestPercentage = -1;
+		let bestScore = null;
+		for (let i = 0; i < localStorage.length; i++) {
+			const key = localStorage.key(i);
+			if (!key || !key.startsWith('quizHistory:')) continue;
+			const keyCategories = key.slice('quizHistory:'.length).split('|');
+			if (!keyCategories.includes(categoryName)) continue;
+			const saved = localStorage.getItem(key);
+			if (!saved) continue;
+			try {
+				const entries = JSON.parse(saved);
+				if (!Array.isArray(entries)) continue;
+				entries.forEach((entry) => {
+					if (typeof entry.percentage !== 'number') return;
+					if (entry.percentage > bestPercentage) {
+						bestPercentage = entry.percentage;
+						bestScore = entry;
+					}
+				});
+			} catch (error) {
+				console.warn('Failed to parse quiz history for', key, error);
+			}
+		}
+		return bestScore;
+	}
+
+	async loadCategoryProgress() {
+		const progressContainer = document.getElementById('categoryProgressContainer');
+		if (!progressContainer) return;
+
+		const allKeys = [];
+		for (let i = 0; i < localStorage.length; i++) {
+			const key = localStorage.key(i);
+			const isQuizHistory = typeof key === 'string' && key.startsWith('quizHistory:');
+			allKeys.push({ key, isQuizHistory });
+		}
+		console.log(`ALL KEYS: ${Object.keys(localStorage).join(', ')}`);
+		console.log('ALL KEYS JSON:', JSON.stringify(Object.keys(localStorage)));
+		console.log('DEBUG profile loadCategoryProgress quizHistory key details:', allKeys);
+
+		const totals = await this.fetchCategoryTotals();
+		const views = this.getStoredTermViews();
+		const rows = CATEGORY_PROGRESS.map((category) => {
+			const viewedCount = Array.isArray(views[category.id]) ? views[category.id].length : 0;
+			const bestAttempt = this.getBestQuizScoreForCategory(category.id);
+			return {
+				id: category.id,
+				name: category.name,
+				viewed: viewedCount,
+				total: totals[category.id] || 0,
+				bestAttempt
+			};
+		});
+		this.renderCategoryProgress(rows);
+	}
+
+	renderCategoryProgress(rows) {
+		const progressContainer = document.getElementById('categoryProgressContainer');
+		if (!progressContainer) return;
+		progressContainer.innerHTML = '';
+
+		rows.forEach((row) => {
+			const item = document.createElement('div');
+			item.className = 'progress-item';
+
+			const left = document.createElement('div');
+			left.innerHTML = `<strong>${row.name}</strong>` +
+				`<div class="progress-details">Viewed ${row.viewed} of ${row.total} terms</div>`;
+
+			const right = document.createElement('div');
+			right.className = 'progress-details';
+			right.innerHTML = row.bestAttempt
+				? `Best score: ${row.bestAttempt.score}/${row.bestAttempt.totalQuestions} (${row.bestAttempt.percentage}%)`
+				: 'No quiz attempts yet';
+
+			item.appendChild(left);
+			item.appendChild(right);
+			progressContainer.appendChild(item);
+		});
 	}
 
 	setupEventListeners() {

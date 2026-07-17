@@ -184,6 +184,37 @@
         .replace(/\b\w/g, c => c.toUpperCase());
     }
 
+    function getTermViews() {
+      const saved = localStorage.getItem('globaffairsTermViews');
+      if (!saved) return {};
+      try {
+        return JSON.parse(saved) || {};
+      } catch (error) {
+        console.warn('Failed to parse term view data:', error);
+        return {};
+      }
+    }
+
+    function saveTermViews(data) {
+      localStorage.setItem('globaffairsTermViews', JSON.stringify(data));
+    }
+
+    function recordTermView(category, index) {
+      if (!category) return;
+      const views = getTermViews();
+      const normalizedIndex = Number(index);
+      if (Number.isNaN(normalizedIndex)) return;
+
+      if (!Array.isArray(views[category])) {
+        views[category] = [];
+      }
+
+      if (!views[category].includes(normalizedIndex)) {
+        views[category].push(normalizedIndex);
+        saveTermViews(views);
+      }
+    }
+
     (async () => {
       const params = new URLSearchParams(window.location.search);
       const category = params.get('category');
@@ -236,6 +267,7 @@
         nextBtn.disabled = index === terms.length - 1;
 
         history.replaceState(null, '', `term.html?category=${encodeURIComponent(category)}&index=${index}`);
+        recordTermView(category, index);
       }
 
       // Toggle simple explanation display

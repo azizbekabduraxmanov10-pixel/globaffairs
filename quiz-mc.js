@@ -30,7 +30,11 @@ function loadQuizHistory() {
 function saveQuizResult(historyEntry) {
 	const history = loadQuizHistory();
 	history.push(historyEntry);
-	localStorage.setItem(getQuizHistoryKey(), JSON.stringify(history));
+	const key = getQuizHistoryKey();
+	const value = JSON.stringify(history);
+	console.log(`SAVE KEY: ${key}`);
+	console.log(`SAVE VALUE: ${value}`);
+	localStorage.setItem(key, value);
 	return history;
 }
 

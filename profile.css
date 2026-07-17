@@ -39,6 +39,53 @@
 	letter-spacing: 0.3px;
 }
 
+.profile-progress-section {
+	margin-bottom: 32px;
+	padding-bottom: 32px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-progress-section h2 {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0 0 24px 0;
+	letter-spacing: 0.3px;
+}
+
+.progress-list {
+	display: grid;
+	gap: 12px;
+}
+
+.progress-item {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 12px;
+	padding: 14px 16px;
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	color: #fff;
+}
+
+.progress-item strong {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 6px;
+}
+
+.progress-item .progress-details {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.progress-loading {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 14px;
+}
+
 .info-group {
 	margin-bottom: 20px;
 }
