@@ -1,0 +1,56 @@
+﻿[
+  {
+    "title": "What is MUN?",
+    "advanced": "Model United Nations is an educational simulation in which students act as diplomats representing countries or organizations in a mock session of the United Nations. Delegates research their assigned country's real policies and voting history, prepare evidence-based positions, and engage in structured debate and negotiation under formal rules of procedure. Through drafting resolutions, building coalitions, and making strategic compromises, participants recreate the key mechanics of international diplomacy and learn how states advance interests while balancing law, precedent, and political constraint.",
+    "simple": "MUN is a learning activity where students play the role of countries at a pretend United Nations. You study what your country believes, speak for it during meetings, and work with others to write agreements - similar to how real diplomats negotiate.",
+    "example": "A student represents Japan and explains Japan's view on climate finance, using real votes and policies as evidence."
+  },
+  {
+    "title": "Committee Structure & Delegate Roles",
+    "advanced": "Each MUN committee is organized around a chairing team (often called the Chair or Dais) that moderates the session, enforces procedural rules, and recognizes speakers. Delegates are assigned specific countries and are expected to argue strictly from those countries' foreign policy perspectives rather than their personal opinions. Committees range from broad General Assembly bodies, which address wide-reaching global issues, to specialized organs like the Security Council or ECOSOC, which focus on narrower topics and sometimes follow distinct procedural norms and voting rules.",
+    "simple": "Every committee has leaders who run the meeting and students who represent countries. Delegates must speak for their assigned country, not themselves. Some committees deal with lots of topics, while others focus on one area and may use slightly different rules.",
+    "example": "In the Security Council, a delegate representing France follows France's official policy when debating sanctions, and the Chair enforces the Council's speaking order."
+  },
+  {
+    "title": "Position Papers",
+    "advanced": "Before a conference, delegates normally prepare a position paper: a concise, researched statement that outlines the assigned country's stance on each agenda topic, summarizes relevant national policy and international law, and proposes concrete solutions the delegation will support. Position papers demonstrate preparedness, help shape early negotiation strategies, and serve as a reference for other delegates and chairs during formal debate.",
+    "simple": "A position paper is a short research paper you write before the conference that explains your country's views and suggests what it would like to see happen. It shows you know your country's position and gives you ideas to use in debate.",
+    "example": "A position paper from Brazil explains Brazil's priorities on sustainable agriculture and suggests funding and technology-transfer measures."
+  },
+  {
+    "title": "Formal vs Informal Debate",
+    "advanced": "MUN alternates between formal debate—where the committee is in session, delegates speak one at a time from a Speakers List and strict decorum is observed—and informal debate or caucusing, where procedural constraints are relaxed to foster negotiation. Formal debate preserves order and allows prepared speeches to be heard, while informal debate enables rapid back-and-forth bargaining, clause drafting, and coalition-building.",
+    "simple": "Sometimes delegates speak one after another in a formal, orderly way; at other times the committee takes a break from strict rules so delegates can move around and negotiate more freely. Both styles are important: one keeps order, the other helps you reach agreements.",
+    "example": "During formal debate a delegate gives a prepared speech; later the committee holds an unmoderated caucus so delegates can meet and co-write a draft resolution."
+  },
+  {
+    "title": "Moderated Caucus",
+    "advanced": "A moderated caucus is a timed segment where the Chair permits short, focused remarks on a specific sub-topic and calls on delegates in turn. A delegate proposing a moderated caucus motions with a clear topic, the total duration, and the speaking time per delegate (for example, 'I move for a moderated caucus on climate financing for 10 minutes, with 45 seconds per speaker'). The committee then votes; if the motion passes by the required majority, the Chair manages the queue and enforces the time limits.",
+    "simple": "A moderated caucus is a short, timed discussion led by the Chair where many delegates give quick speeches about one specific question. Someone proposes it with how long it should last and how long each person can speak, and delegates vote to allow it.",
+    "example": "A delegate motions: 'Moderated caucus on climate finance, 10 minutes total, 45 seconds per speaker.' If it passes, the Chair calls on speakers one after another for short comments."
+  },
+  {
+    "title": "Unmoderated Caucus",
+    "advanced": "An unmoderated caucus temporarily suspends formal speaking rules so delegates can move freely in the room to hold informal negotiations, form blocs, and collaboratively draft the language of resolutions and amendments. Like other procedural actions, an unmoderated caucus is proposed by motion that specifies a duration and is adopted by a majority vote; during the caucus, delegates coordinate privately and produce working papers or draft text to reintroduce during formal debate.",
+    "simple": "An unmoderated caucus is free time where delegates stand up, talk directly to others, and work together on proposal text without speaking through the Chair. It helps groups reach compromises quickly.",
+    "example": "Delegates leave their seats, form a small bloc to negotiate funding language, and write a short draft clause they plan to add to a resolution."
+  },
+  {
+    "title": "Points & Motions",
+    "advanced": "Points and motions are the formal mechanisms delegates use to manage procedure and ask for clarification. Points of Order are raised when a delegate believes the rules are being broken; Points of Information allow a delegate to ask brief, relevant questions of a speaker after that speaker's remarks (when permitted); and motions propose concrete procedural changes such as opening a caucus or moving to close debate. The Chair evaluates each motion's admissibility, ruling it 'in order', 'out of order', or 'dilatory' (legitimate but obstructive) based on the rules and the committee's objectives.",
+    "simple": "Points and motions are tools to control how the meeting runs. You can raise a point if a rule was broken, ask a short question after someone speaks, or motion for actions like a caucus. The Chair decides whether the motion is allowed.",
+    "example": "A delegate raises a Point of Order about timekeeping; another motions to close debate, and the Chair rules whether that motion can be voted on."
+  },
+  {
+    "title": "Draft Resolutions",
+    "advanced": "A draft resolution is a formal, written proposal that addresses the committee's agenda. It combines preambulatory clauses—which set context and justify action—with operative clauses that specify the concrete measures being recommended. Draft resolutions typically require a minimum number of signatories or co-sponsors to be introduced; once introduced, they enter debate, can be amended, and are ultimately put to a vote.",
+    "simple": "A draft resolution is a formal proposal made of background statements and specific actions the committee should take. Delegates co-sponsor drafts to show support, debate them, and may change them before a final vote.",
+    "example": "A draft resolution proposing international technical assistance for disaster response lists reasons why it's needed and then outlines steps for funding and coordination."
+  },
+  {
+    "title": "Voting Procedure",
+    "advanced": "When debate is concluded or a motion to move to voting passes, the committee proceeds to voting procedure. Substantive questions normally require a simple majority of those present and voting (more than 50% of votes cast) to pass, though some motions or rules may specify higher thresholds. Delegates may vote 'for', 'against', or 'abstain'; abstentions do not count as votes cast in many rulesets, which affects whether a majority is reached. The Chair announces results and records the outcome.",
+    "simple": "After discussion, delegates vote on resolutions and amendments. Most decisions pass if more than half of the votes are in favor. Delegates can vote yes, no, or abstain.",
+    "example": "If 30 delegates vote 'for', 10 vote 'against', and 5 abstain, the resolution passes by a simple majority."
+  }
+]

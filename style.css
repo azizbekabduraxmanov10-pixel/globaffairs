@@ -121,7 +121,7 @@ header {
 .streak-display {
 	position: fixed;
 	top: 24px;
-	right: 178px;
+	right: 320px;
 	z-index: 95;
 	display: none;
 	align-items: center;
@@ -134,11 +134,29 @@ header {
 	font-size: 14px;
 	font-weight: 600;
 	backdrop-filter: blur(10px);
+	white-space: nowrap;
+}
+
+.profile-btn {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color 0.2s;
+	letter-spacing: 0.5px;
+	padding: 8px 12px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border-radius: 6px;
+	white-space: nowrap;
 }
 
 @media (max-width: 768px) {
 	.streak-display {
-		right: 150px;
+		right: 280px;
 		font-size: 13px;
 		padding: 8px 12px;
 	}
